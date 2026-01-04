@@ -2,11 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://joshuagoth.com/tags/ai/</loc>
+    <lastmod>2026-01-04T11:13:24+00:00</lastmod>
+  </url><url>
     <loc>https://joshuagoth.com/blog/</loc>
-    <lastmod>2026-01-04T10:18:47+00:00</lastmod>
+    <lastmod>2026-01-04T11:13:24+00:00</lastmod>
   </url><url>
     <loc>https://joshuagoth.com/categories/</loc>
-    <lastmod>2026-01-04T10:18:47+00:00</lastmod>
+    <lastmod>2026-01-04T11:13:24+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hans"
@@ -18,17 +21,11 @@
                 href="https://joshuagoth.com/categories/"
                 />
   </url><url>
-    <loc>https://joshuagoth.com/tags/envy/</loc>
-    <lastmod>2026-01-04T10:18:47+00:00</lastmod>
-  </url><url>
-    <loc>https://joshuagoth.com/tags/happiness/</loc>
-    <lastmod>2026-01-04T10:18:47+00:00</lastmod>
-  </url><url>
-    <loc>https://joshuagoth.com/blog/2026/01/is-your-lens-limiting-you-how-to-change-your-perspective-for-a-better-life/</loc>
-    <lastmod>2026-01-04T10:18:47+00:00</lastmod>
+    <loc>https://joshuagoth.com/tags/hope/</loc>
+    <lastmod>2026-01-04T11:13:24+00:00</lastmod>
   </url><url>
     <loc>https://joshuagoth.com/</loc>
-    <lastmod>2026-01-04T10:18:47+00:00</lastmod>
+    <lastmod>2026-01-04T11:13:24+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hans"
@@ -40,11 +37,11 @@
                 href="https://joshuagoth.com/"
                 />
   </url><url>
-    <loc>https://joshuagoth.com/categories/mental-health/</loc>
-    <lastmod>2026-01-04T10:18:47+00:00</lastmod>
+    <loc>https://joshuagoth.com/tags/survival/</loc>
+    <lastmod>2026-01-04T11:13:24+00:00</lastmod>
   </url><url>
     <loc>https://joshuagoth.com/tags/</loc>
-    <lastmod>2026-01-04T10:18:47+00:00</lastmod>
+    <lastmod>2026-01-04T11:13:24+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hans"
@@ -55,6 +52,24 @@
                 hreflang="en"
                 href="https://joshuagoth.com/tags/"
                 />
+  </url><url>
+    <loc>https://joshuagoth.com/categories/technology/</loc>
+    <lastmod>2026-01-04T11:13:24+00:00</lastmod>
+  </url><url>
+    <loc>https://joshuagoth.com/blog/2026/01/the-last-hope-hypothesis-debating-ais-role-in-securing-humanitys-survival/</loc>
+    <lastmod>2026-01-04T11:13:24+00:00</lastmod>
+  </url><url>
+    <loc>https://joshuagoth.com/tags/envy/</loc>
+    <lastmod>2026-01-04T10:18:47+00:00</lastmod>
+  </url><url>
+    <loc>https://joshuagoth.com/tags/happiness/</loc>
+    <lastmod>2026-01-04T10:18:47+00:00</lastmod>
+  </url><url>
+    <loc>https://joshuagoth.com/blog/2026/01/is-your-lens-limiting-you-how-to-change-your-perspective-for-a-better-life/</loc>
+    <lastmod>2026-01-04T10:18:47+00:00</lastmod>
+  </url><url>
+    <loc>https://joshuagoth.com/categories/mental-health/</loc>
+    <lastmod>2026-01-04T10:18:47+00:00</lastmod>
   </url><url>
     <loc>https://joshuagoth.com/tags/well-being/</loc>
     <lastmod>2026-01-04T10:18:47+00:00</lastmod>
@@ -292,9 +307,6 @@
     <loc>https://joshuagoth.com/tags/secret/</loc>
     <lastmod>2025-11-17T14:14:14-08:00</lastmod>
   </url><url>
-    <loc>https://joshuagoth.com/categories/technology/</loc>
-    <lastmod>2025-11-17T14:14:14-08:00</lastmod>
-  </url><url>
     <loc>https://joshuagoth.com/blog/2025/11/the-ballroom-mirage-decoding-the-secret-project-at-the-heart-of-power/</loc>
     <lastmod>2025-11-17T14:14:14-08:00</lastmod>
   </url><url>
@@ -321,9 +333,6 @@
   </url><url>
     <loc>https://joshuagoth.com/categories/vaping/</loc>
     <lastmod>2025-11-17T13:39:23-08:00</lastmod>
-  </url><url>
-    <loc>https://joshuagoth.com/tags/ai/</loc>
-    <lastmod>2025-11-11T16:13:13-08:00</lastmod>
   </url><url>
     <loc>https://joshuagoth.com/categories/artificial-intelligence/</loc>
     <lastmod>2025-11-11T16:13:13-08:00</lastmod>
