@@ -2,312 +2,319 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on The Objective Perspective</title>
-    <link>https://joshuagoth.com/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on The Objective Perspective</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright © 2026 Joshua Goth All Rights Reserved.</copyright>
-    <lastBuildDate>Sat, 03 Jan 2026 23:06:49 +0000</lastBuildDate>
-    <atom:link href="https://joshuagoth.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Jan 2026 03:56:42 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mental Health</title>
-      <link>https://joshuagoth.com/categories/mental-health/</link>
-      <pubDate>Sat, 03 Jan 2026 23:06:49 +0000</pubDate>
-      <guid>https://joshuagoth.com/categories/mental-health/</guid>
+      <link>http://localhost:1313/categories/mental-health/</link>
+      <pubDate>Sun, 04 Jan 2026 03:56:42 +0000</pubDate>
+      <guid>http://localhost:1313/categories/mental-health/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Parentizing</title>
+      <link>http://localhost:1313/categories/parentizing/</link>
+      <pubDate>Sun, 04 Jan 2026 03:56:42 +0000</pubDate>
+      <guid>http://localhost:1313/categories/parentizing/</guid>
       <description></description>
     </item>
     <item>
       <title>Family</title>
-      <link>https://joshuagoth.com/categories/family/</link>
+      <link>http://localhost:1313/categories/family/</link>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://joshuagoth.com/categories/family/</guid>
+      <guid>http://localhost:1313/categories/family/</guid>
       <description></description>
     </item>
     <item>
       <title>Struggle</title>
-      <link>https://joshuagoth.com/categories/struggle/</link>
+      <link>http://localhost:1313/categories/struggle/</link>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://joshuagoth.com/categories/struggle/</guid>
+      <guid>http://localhost:1313/categories/struggle/</guid>
       <description></description>
     </item>
     <item>
       <title>Tools</title>
-      <link>https://joshuagoth.com/categories/tools/</link>
+      <link>http://localhost:1313/categories/tools/</link>
       <pubDate>Sat, 06 Dec 2025 01:14:55 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/tools/</guid>
+      <guid>http://localhost:1313/categories/tools/</guid>
       <description></description>
     </item>
     <item>
       <title>Application</title>
-      <link>https://joshuagoth.com/categories/application/</link>
+      <link>http://localhost:1313/categories/application/</link>
       <pubDate>Wed, 26 Nov 2025 12:08:03 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/application/</guid>
+      <guid>http://localhost:1313/categories/application/</guid>
       <description></description>
     </item>
     <item>
       <title>Documentation</title>
-      <link>https://joshuagoth.com/categories/documentation/</link>
+      <link>http://localhost:1313/categories/documentation/</link>
       <pubDate>Wed, 26 Nov 2025 12:08:03 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/documentation/</guid>
+      <guid>http://localhost:1313/categories/documentation/</guid>
       <description></description>
     </item>
     <item>
       <title>Guides</title>
-      <link>https://joshuagoth.com/categories/guides/</link>
+      <link>http://localhost:1313/categories/guides/</link>
       <pubDate>Wed, 26 Nov 2025 12:08:03 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/guides/</guid>
+      <guid>http://localhost:1313/categories/guides/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>https://joshuagoth.com/categories/linux/</link>
+      <link>http://localhost:1313/categories/linux/</link>
       <pubDate>Wed, 26 Nov 2025 12:08:03 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/linux/</guid>
+      <guid>http://localhost:1313/categories/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Self Help</title>
-      <link>https://joshuagoth.com/categories/self-help/</link>
+      <link>http://localhost:1313/categories/self-help/</link>
       <pubDate>Tue, 25 Nov 2025 18:18:52 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/self-help/</guid>
+      <guid>http://localhost:1313/categories/self-help/</guid>
       <description></description>
     </item>
     <item>
       <title>Support</title>
-      <link>https://joshuagoth.com/categories/support/</link>
+      <link>http://localhost:1313/categories/support/</link>
       <pubDate>Tue, 25 Nov 2025 18:18:52 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/support/</guid>
+      <guid>http://localhost:1313/categories/support/</guid>
       <description></description>
     </item>
     <item>
       <title>Applications</title>
-      <link>https://joshuagoth.com/categories/applications/</link>
+      <link>http://localhost:1313/categories/applications/</link>
       <pubDate>Tue, 25 Nov 2025 02:53:45 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/applications/</guid>
+      <guid>http://localhost:1313/categories/applications/</guid>
       <description></description>
     </item>
     <item>
       <title>Gaming</title>
-      <link>https://joshuagoth.com/categories/gaming/</link>
+      <link>http://localhost:1313/categories/gaming/</link>
       <pubDate>Tue, 25 Nov 2025 02:53:45 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/gaming/</guid>
+      <guid>http://localhost:1313/categories/gaming/</guid>
       <description></description>
     </item>
     <item>
       <title>Projects</title>
-      <link>https://joshuagoth.com/categories/projects/</link>
+      <link>http://localhost:1313/categories/projects/</link>
       <pubDate>Tue, 25 Nov 2025 02:53:45 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/projects/</guid>
+      <guid>http://localhost:1313/categories/projects/</guid>
       <description></description>
     </item>
     <item>
       <title>Mindfulness</title>
-      <link>https://joshuagoth.com/categories/mindfulness/</link>
+      <link>http://localhost:1313/categories/mindfulness/</link>
       <pubDate>Fri, 21 Nov 2025 16:19:45 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/mindfulness/</guid>
+      <guid>http://localhost:1313/categories/mindfulness/</guid>
       <description></description>
     </item>
     <item>
       <title>Novel</title>
-      <link>https://joshuagoth.com/categories/novel/</link>
+      <link>http://localhost:1313/categories/novel/</link>
       <pubDate>Fri, 21 Nov 2025 16:19:45 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/novel/</guid>
+      <guid>http://localhost:1313/categories/novel/</guid>
       <description></description>
     </item>
     <item>
       <title>Philosophy</title>
-      <link>https://joshuagoth.com/categories/philosophy/</link>
+      <link>http://localhost:1313/categories/philosophy/</link>
       <pubDate>Fri, 21 Nov 2025 16:19:45 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/philosophy/</guid>
+      <guid>http://localhost:1313/categories/philosophy/</guid>
       <description></description>
     </item>
     <item>
       <title>Politics</title>
-      <link>https://joshuagoth.com/categories/politics/</link>
+      <link>http://localhost:1313/categories/politics/</link>
       <pubDate>Mon, 17 Nov 2025 14:14:14 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/politics/</guid>
+      <guid>http://localhost:1313/categories/politics/</guid>
       <description></description>
     </item>
     <item>
       <title>Technology</title>
-      <link>https://joshuagoth.com/categories/technology/</link>
+      <link>http://localhost:1313/categories/technology/</link>
       <pubDate>Mon, 17 Nov 2025 14:14:14 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/technology/</guid>
+      <guid>http://localhost:1313/categories/technology/</guid>
       <description></description>
     </item>
     <item>
       <title>Thought Trot</title>
-      <link>https://joshuagoth.com/categories/thought-trot/</link>
+      <link>http://localhost:1313/categories/thought-trot/</link>
       <pubDate>Mon, 17 Nov 2025 14:14:14 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/thought-trot/</guid>
+      <guid>http://localhost:1313/categories/thought-trot/</guid>
       <description></description>
     </item>
     <item>
       <title>Review</title>
-      <link>https://joshuagoth.com/categories/review/</link>
+      <link>http://localhost:1313/categories/review/</link>
       <pubDate>Mon, 17 Nov 2025 13:39:23 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/review/</guid>
+      <guid>http://localhost:1313/categories/review/</guid>
       <description></description>
     </item>
     <item>
       <title>Vaping</title>
-      <link>https://joshuagoth.com/categories/vaping/</link>
+      <link>http://localhost:1313/categories/vaping/</link>
       <pubDate>Mon, 17 Nov 2025 13:39:23 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/vaping/</guid>
+      <guid>http://localhost:1313/categories/vaping/</guid>
       <description></description>
     </item>
     <item>
       <title>Artificial Intelligence</title>
-      <link>https://joshuagoth.com/categories/artificial-intelligence/</link>
+      <link>http://localhost:1313/categories/artificial-intelligence/</link>
       <pubDate>Tue, 11 Nov 2025 16:13:13 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/artificial-intelligence/</guid>
+      <guid>http://localhost:1313/categories/artificial-intelligence/</guid>
       <description></description>
     </item>
     <item>
       <title>Humanity</title>
-      <link>https://joshuagoth.com/categories/humanity/</link>
+      <link>http://localhost:1313/categories/humanity/</link>
       <pubDate>Tue, 11 Nov 2025 16:13:13 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/humanity/</guid>
+      <guid>http://localhost:1313/categories/humanity/</guid>
       <description></description>
     </item>
     <item>
       <title>Artifical Intelligence</title>
-      <link>https://joshuagoth.com/categories/artifical-intelligence/</link>
+      <link>http://localhost:1313/categories/artifical-intelligence/</link>
       <pubDate>Mon, 10 Nov 2025 18:36:56 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/artifical-intelligence/</guid>
+      <guid>http://localhost:1313/categories/artifical-intelligence/</guid>
       <description></description>
     </item>
     <item>
       <title>Cinema</title>
-      <link>https://joshuagoth.com/categories/cinema/</link>
+      <link>http://localhost:1313/categories/cinema/</link>
       <pubDate>Thu, 06 Nov 2025 17:35:17 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/cinema/</guid>
+      <guid>http://localhost:1313/categories/cinema/</guid>
       <description></description>
     </item>
     <item>
       <title>Entertainment</title>
-      <link>https://joshuagoth.com/categories/entertainment/</link>
+      <link>http://localhost:1313/categories/entertainment/</link>
       <pubDate>Thu, 06 Nov 2025 17:35:17 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/entertainment/</guid>
+      <guid>http://localhost:1313/categories/entertainment/</guid>
       <description></description>
     </item>
     <item>
       <title>Windows</title>
-      <link>https://joshuagoth.com/categories/windows/</link>
+      <link>http://localhost:1313/categories/windows/</link>
       <pubDate>Thu, 06 Nov 2025 15:17:47 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/windows/</guid>
+      <guid>http://localhost:1313/categories/windows/</guid>
       <description></description>
     </item>
     <item>
       <title>Assistance</title>
-      <link>https://joshuagoth.com/categories/assistance/</link>
+      <link>http://localhost:1313/categories/assistance/</link>
       <pubDate>Wed, 05 Nov 2025 01:59:05 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/assistance/</guid>
+      <guid>http://localhost:1313/categories/assistance/</guid>
       <description></description>
     </item>
     <item>
       <title>Health</title>
-      <link>https://joshuagoth.com/categories/health/</link>
+      <link>http://localhost:1313/categories/health/</link>
       <pubDate>Wed, 05 Nov 2025 01:59:05 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/health/</guid>
+      <guid>http://localhost:1313/categories/health/</guid>
       <description></description>
     </item>
     <item>
       <title>Hugo</title>
-      <link>https://joshuagoth.com/categories/hugo/</link>
+      <link>http://localhost:1313/categories/hugo/</link>
       <pubDate>Tue, 04 Nov 2025 22:51:28 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/hugo/</guid>
+      <guid>http://localhost:1313/categories/hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>Web Design</title>
-      <link>https://joshuagoth.com/categories/web-design/</link>
+      <link>http://localhost:1313/categories/web-design/</link>
       <pubDate>Tue, 04 Nov 2025 22:51:28 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/web-design/</guid>
+      <guid>http://localhost:1313/categories/web-design/</guid>
       <description></description>
     </item>
     <item>
       <title>WordPress</title>
-      <link>https://joshuagoth.com/categories/wordpress/</link>
+      <link>http://localhost:1313/categories/wordpress/</link>
       <pubDate>Tue, 04 Nov 2025 22:51:28 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/wordpress/</guid>
+      <guid>http://localhost:1313/categories/wordpress/</guid>
       <description></description>
     </item>
     <item>
       <title>Meditation</title>
-      <link>https://joshuagoth.com/categories/meditation/</link>
+      <link>http://localhost:1313/categories/meditation/</link>
       <pubDate>Tue, 04 Nov 2025 16:40:37 -0800</pubDate>
-      <guid>https://joshuagoth.com/categories/meditation/</guid>
+      <guid>http://localhost:1313/categories/meditation/</guid>
       <description></description>
     </item>
     <item>
       <title>Self Harm</title>
-      <link>https://joshuagoth.com/categories/self-harm/</link>
+      <link>http://localhost:1313/categories/self-harm/</link>
       <pubDate>Mon, 06 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://joshuagoth.com/categories/self-harm/</guid>
+      <guid>http://localhost:1313/categories/self-harm/</guid>
       <description></description>
     </item>
     <item>
       <title>Success</title>
-      <link>https://joshuagoth.com/categories/success/</link>
+      <link>http://localhost:1313/categories/success/</link>
       <pubDate>Mon, 06 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://joshuagoth.com/categories/success/</guid>
+      <guid>http://localhost:1313/categories/success/</guid>
       <description></description>
     </item>
     <item>
       <title>Courage</title>
-      <link>https://joshuagoth.com/categories/courage/</link>
+      <link>http://localhost:1313/categories/courage/</link>
       <pubDate>Sat, 04 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://joshuagoth.com/categories/courage/</guid>
+      <guid>http://localhost:1313/categories/courage/</guid>
       <description></description>
     </item>
     <item>
       <title>Parenting</title>
-      <link>https://joshuagoth.com/categories/parenting/</link>
+      <link>http://localhost:1313/categories/parenting/</link>
       <pubDate>Sat, 04 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://joshuagoth.com/categories/parenting/</guid>
+      <guid>http://localhost:1313/categories/parenting/</guid>
       <description></description>
     </item>
     <item>
       <title>Depression</title>
-      <link>https://joshuagoth.com/categories/depression/</link>
+      <link>http://localhost:1313/categories/depression/</link>
       <pubDate>Sat, 27 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://joshuagoth.com/categories/depression/</guid>
+      <guid>http://localhost:1313/categories/depression/</guid>
       <description></description>
     </item>
     <item>
       <title>Careers</title>
-      <link>https://joshuagoth.com/categories/careers/</link>
+      <link>http://localhost:1313/categories/careers/</link>
       <pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://joshuagoth.com/categories/careers/</guid>
+      <guid>http://localhost:1313/categories/careers/</guid>
       <description></description>
     </item>
     <item>
       <title>Homelessness</title>
-      <link>https://joshuagoth.com/categories/homelessness/</link>
+      <link>http://localhost:1313/categories/homelessness/</link>
       <pubDate>Sun, 03 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://joshuagoth.com/categories/homelessness/</guid>
+      <guid>http://localhost:1313/categories/homelessness/</guid>
       <description></description>
     </item>
     <item>
       <title>Reality</title>
-      <link>https://joshuagoth.com/categories/reality/</link>
+      <link>http://localhost:1313/categories/reality/</link>
       <pubDate>Sun, 03 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://joshuagoth.com/categories/reality/</guid>
+      <guid>http://localhost:1313/categories/reality/</guid>
       <description></description>
     </item>
     <item>
       <title>Dreams</title>
-      <link>https://joshuagoth.com/categories/dreams/</link>
+      <link>http://localhost:1313/categories/dreams/</link>
       <pubDate>Fri, 01 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://joshuagoth.com/categories/dreams/</guid>
+      <guid>http://localhost:1313/categories/dreams/</guid>
       <description></description>
     </item>
     <item>
       <title>Awareness</title>
-      <link>https://joshuagoth.com/categories/awareness/</link>
+      <link>http://localhost:1313/categories/awareness/</link>
       <pubDate>Thu, 03 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://joshuagoth.com/categories/awareness/</guid>
+      <guid>http://localhost:1313/categories/awareness/</guid>
       <description></description>
     </item>
   </channel>

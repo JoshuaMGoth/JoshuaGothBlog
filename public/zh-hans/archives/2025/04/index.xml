@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>四月 on The Objective Perspective</title>
-    <link>https://joshuagoth.com/zh-hans/archives/2025/04/</link>
+    <link>http://localhost:1313/zh-hans/archives/2025/04/</link>
     <description>Recent content in 四月 on The Objective Perspective</description>
     <generator>Hugo</generator>
     <language>zh-hans</language>
     <copyright>Copyright © 2026 Joshua Goth All Rights Reserved.</copyright>
-    <atom:link href="https://joshuagoth.com/zh-hans/archives/2025/04/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/zh-hans/archives/2025/04/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
