@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Windows on The Objective Perspective</title>
-    <link>http://localhost:1313/categories/windows/</link>
+    <link>https://joshuagoth.com/categories/windows/</link>
     <description>Recent content in Windows on The Objective Perspective</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright © 2026 Joshua Goth All Rights Reserved.</copyright>
     <lastBuildDate>Thu, 06 Nov 2025 15:17:47 -0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/windows/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://joshuagoth.com/categories/windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The One Windows Feature That Solves Everything: A Public Service Announcement</title>
-      <link>http://localhost:1313/blog/2025/11/the-one-windows-feature-that-solves-everything-a-public-service-announcement/</link>
+      <link>https://joshuagoth.com/blog/2025/11/the-one-windows-feature-that-solves-everything-a-public-service-announcement/</link>
       <pubDate>Thu, 06 Nov 2025 15:17:47 -0800</pubDate>
-      <guid>http://localhost:1313/blog/2025/11/the-one-windows-feature-that-solves-everything-a-public-service-announcement/</guid>
+      <guid>https://joshuagoth.com/blog/2025/11/the-one-windows-feature-that-solves-everything-a-public-service-announcement/</guid>
       <description>&lt;h1 id=&#34;the-one-windows-feature-that-solves-everything-a-public-service-announcement&#34;&gt;The One Windows Feature That Solves Everything: A Public Service Announcement&lt;/h1&gt;&#xA;&lt;p&gt;Long before nerds were cool, cell phones and the internet itself, I remember upgrading from Dos to MS Windows 3.1. There was nothing back then that could condition your patience like the installation of an operating system&amp;hellip;1.44 megabytes of data (and countesses floppy disks) at a time.&lt;/p&gt;&#xA;&lt;p&gt;Fast forward through the decades. We’ve survived the psychedelic paisley of Windows 95, the existential dread of the Clippy paperclip, the bold experiment that was Windows ME (we don’t talk about ME), and the soothing blue tones of Windows XP. We’ve witnessed the rise of the internet, the fall of the dial-up tone, and the mysterious migration of all our data to a celestial entity we call “the cloud.”&lt;/p&gt;</description>
     </item>
     <item>
       <title>Why I Gave Up Windows for Linux</title>
-      <link>http://localhost:1313/blog/2025/11/why-i-gave-up-windows-for-linux/</link>
+      <link>https://joshuagoth.com/blog/2025/11/why-i-gave-up-windows-for-linux/</link>
       <pubDate>Mon, 03 Nov 2025 18:15:17 -0800</pubDate>
-      <guid>http://localhost:1313/blog/2025/11/why-i-gave-up-windows-for-linux/</guid>
+      <guid>https://joshuagoth.com/blog/2025/11/why-i-gave-up-windows-for-linux/</guid>
       <description>&lt;h1 id=&#34;trading-up-to-linux-why-i-dumped-windows&#34;&gt;Trading up to Linux. Why I dumped Windows.&lt;/h1&gt;&#xA;&lt;p&gt;Put simply, I know what I don&amp;rsquo;t know.&lt;/p&gt;&#xA;&lt;p&gt;This means I am aware that there is a whole lot going on behind the scenes that I am not privy to and, furthermore, can do little to change. Crypticism aside, what it all boils down to, at least for me, is &lt;strong&gt;trust&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h3 id=&#34;major-trust-issues&#34;&gt;Major Trust Issues&lt;/h3&gt;&#xA;&lt;p&gt;I have trust issues, and rightfully so. I have hacked and been hacked. I have gained and I have lost. My journey toward taking security seriously, on a personal level, went far beyond the methods I employed and trained in while working as a network engineer for the better half of my career.&lt;/p&gt;</description>
     </item>
   </channel>

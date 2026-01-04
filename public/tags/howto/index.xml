@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Howto on The Objective Perspective</title>
-    <link>http://localhost:1313/tags/howto/</link>
+    <link>https://joshuagoth.com/tags/howto/</link>
     <description>Recent content in Howto on The Objective Perspective</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright © 2026 Joshua Goth All Rights Reserved.</copyright>
     <lastBuildDate>Thu, 06 Nov 2025 16:13:02 -0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/howto/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://joshuagoth.com/tags/howto/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>5 Linux Shortcuts That Changed How I Work</title>
-      <link>http://localhost:1313/blog/2025/11/5-linux-shortcuts-that-changed-how-i-work/</link>
+      <link>https://joshuagoth.com/blog/2025/11/5-linux-shortcuts-that-changed-how-i-work/</link>
       <pubDate>Thu, 06 Nov 2025 16:13:02 -0800</pubDate>
-      <guid>http://localhost:1313/blog/2025/11/5-linux-shortcuts-that-changed-how-i-work/</guid>
+      <guid>https://joshuagoth.com/blog/2025/11/5-linux-shortcuts-that-changed-how-i-work/</guid>
       <description>&lt;h1 id=&#34;5-linux-command-line-shortcuts-that-will-make-you-10x-more-productive&#34;&gt;5 Linux Command Line Shortcuts That Will Make You 10x More Productive&lt;/h1&gt;&#xA;&lt;p&gt;Although having to work with Linux throughout my career, only within the last year have I switched to use Linux as a full-time, daily driver. Although very comfortable, I still consider myself a laymen (lacking in-depth knowledge of programming languages).&lt;/p&gt;&#xA;&lt;p&gt;However, I wanted to share some commands that I picked up along the way that have made my every day life easier. I made a conscience effort&amp;ndash;in the early days of full-time Linux&amp;ndash; to stay away from the GUI, and unlock the power of the terminal / command line. This, by far, was the best choice I have made, as I cannot tell you the amount of control that I have (not to mention the time I have saved) when working on my many projects.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Getting your foot in the door - Tips from an IT Vet</title>
-      <link>http://localhost:1313/blog/2025/08/getting-your-foot-in-the-door-tips-from-an-it-vet/</link>
+      <link>https://joshuagoth.com/blog/2025/08/getting-your-foot-in-the-door-tips-from-an-it-vet/</link>
       <pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2025/08/getting-your-foot-in-the-door-tips-from-an-it-vet/</guid>
+      <guid>https://joshuagoth.com/blog/2025/08/getting-your-foot-in-the-door-tips-from-an-it-vet/</guid>
       <description>&lt;h3 id=&#34;how-to-land-a-job-in-it-without-prior-work-experience&#34;&gt;&lt;strong&gt;How To Land a Job in IT Without Prior Work Experience&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Getting hired can be difficult enough, but getting hired without any experience is damn near impossible. After all, how can you get hired without experience in order to obtain the experience you need in order to get hired in the first place?&lt;/p&gt;&#xA;&lt;p&gt;I hope to answer that question for you.&lt;/p&gt;&#xA;&lt;p&gt;I will be writing this with the assumption that you do not have any work history, a fresh degree, and not a whole lot of real world experience. Please pick and choose what applies to your unique situation according to your skill set and what you feel comfortable with.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on The Objective Perspective</title>
-    <link>http://localhost:1313/authors/</link>
+    <link>https://joshuagoth.com/authors/</link>
     <description>Recent content in Authors on The Objective Perspective</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright © 2026 Joshua Goth All Rights Reserved.</copyright>
     <lastBuildDate>Sat, 06 Dec 2025 01:14:55 -0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/authors/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://joshuagoth.com/authors/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Joshua Munson Goth</title>
-      <link>http://localhost:1313/authors/joshuagoth/</link>
+      <link>https://joshuagoth.com/authors/joshuagoth/</link>
       <pubDate>Sat, 06 Dec 2025 01:14:55 -0800</pubDate>
-      <guid>http://localhost:1313/authors/joshuagoth/</guid>
+      <guid>https://joshuagoth.com/authors/joshuagoth/</guid>
       <description></description>
     </item>
   </channel>
