@@ -1,0 +1,45 @@
+main:
+
+  - identifier: menu
+    name: Menu
+    params:
+      header: Navigation Menu
+      icon:
+        name: list
+        vendor: bootstrap
+        weight: 5
+
+  - name: Home
+    params:
+      description: The Objective Perspective
+      icon:
+        color: blue
+        name: house-fill
+        vendor: bootstrap
+    parent: menu
+    url: /
+    weight: 6
+
+  - name: About
+    params:
+      description: About Joshua
+      icon:
+        color: green
+        name: person-fill
+        vendor: bootstrap
+    parent: menu
+    url: /about/
+    weight: 7
+
+  - name: Contact
+    params:
+      description: Reach Out
+      icon:
+        color: orange
+        name: envelope-fill
+        vendor: bootstrap
+    parent: menu
+    url: /contact/
+    weight: 8
+
+

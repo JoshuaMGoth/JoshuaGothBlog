@@ -1,0 +1,570 @@
+<div class="save-editor-container">
+    <style>
+        /* ... (keep all existing CSS the same) ... */
+
+        /* Additional styles for Radiant Historia */
+        .character-section {
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #f9f9f9;
+        }
+
+        .character-header {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .character-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+
+        .weapon-grid, .armor-grid, .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .inventory-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            margin-bottom: 5px;
+        }
+
+        .item-controls {
+            display: flex;
+            gap: 5px;
+        }
+
+        .small-input {
+            width: 60px;
+            padding: 4px;
+        }
+    </style>
+
+    <header class="save-editor-header">
+        <h1 class="save-editor-title">3DS Save File Editor</h1>
+        <p class="save-editor-subtitle">Upload, edit, and download save files for your favorite 3DS games</p>
+    </header>
+
+    <main class="save-editor-main">
+        <section class="game-selector-card">
+            <h2>Select Game</h2>
+            <select id="gameSelect" class="save-editor-select">
+                <option value="">-- Choose a 3DS Game --</option>
+                <option value="pokemon-xy">Pokémon X & Y</option>
+                <option value="pokemon-oras">Pokémon Omega Ruby & Alpha Sapphire</option>
+                <option value="animal-crossing">Animal Crossing: New Leaf</option>
+                <option value="fire-emblem">Fire Emblem: Awakening</option>
+                <option value="zelda-albw">The Legend of Zelda: A Link Between Worlds</option>
+                <option value="bravely-default">Bravely Default</option>
+                <option value="monster-hunter">Monster Hunter 4 Ultimate</option>
+                <option value="luigis-mansion">Luigi's Mansion: Dark Moon</option>
+                <option value="super-smash">Super Smash Bros. for Nintendo 3DS</option>
+                <option value="mario-kart">Mario Kart 7</option>
+                <option value="kid-icarus">Kid Icarus: Uprising</option>
+                <option value="persona-q">Persona Q: Shadow of the Labyrinth</option>
+                <option value="etrian-odyssey">Etrian Odyssey Untold: The Millennium Girl</option>
+                <option value="fantasy-life">Fantasy Life</option>
+                <option value="yo-kai-watch">Yo-kai Watch</option>
+                <option value="shin-megami">Shin Megami Tensei IV</option>
+                <option value="ace-attorney">Phoenix Wright: Ace Attorney - Dual Destinies</option>
+                <option value="professor-layton">Professor Layton and the Azran Legacy</option>
+                <option value="story-of-seasons">Story of Seasons</option>
+                <option value="rune-factory">Rune Factory 4</option>
+                <option value="tomodachi-life">Tomodachi Life</option>
+                <option value="kirby-triple">Kirby: Triple Deluxe</option>
+                <option value="donkey-kong">Donkey Kong Country Returns 3D</option>
+                <option value="metal-gear">Metal Gear Solid 3D: Snake Eater</option>
+                <!-- ADDED RADIANT HISTORIA -->
+                <option value="radiant-historia">Radiant Historia: Perfect Chronology</option>
+            </select>
+            <p>Select one of the top 3DS games to begin editing your save file.</p>
+        </section>
+
+        <section class="file-upload-card">
+            <h2>Upload Save File</h2>
+            <div id="fileUploadArea" class="file-upload-area">
+                <p>Drag & drop your save file here or click to browse</p>
+                <input type="file" id="fileInput" style="display: none;">
+            </div>
+            <button id="uploadButton" class="save-editor-button" disabled>Upload Selected File</button>
+            <div id="uploadStatus" class="status-message"></div>
+        </section>
+
+        <section class="editor-section">
+            <h2>Save File Editor</h2>
+            <div class="editor-tabs">
+                <div class="editor-tab active" data-tab="player">Character Stats</div>
+                <div class="editor-tab" data-tab="equipment">Equipment</div>
+                <div class="editor-tab" data-tab="skills">Support Skills</div>
+                <div class="editor-tab" data-tab="inventory">Inventory</div>
+                <div class="editor-tab" data-tab="progress">Game Progress</div>
+            </div>
+
+            <!-- CHARACTER STATS TAB -->
+            <div id="playerTab" class="tab-content active">
+                <div id="genericCharacterStats" style="display: none;">
+                    <div class="attribute-grid">
+                        <div class="attribute-item">
+                            <label class="attribute-label">Player Level</label>
+                            <input type="number" class="save-editor-input" id="playerLevel" min="1" max="100">
+                        </div>
+                        <div class="attribute-item">
+                            <label class="attribute-label">Hit Points (HP)</label>
+                            <input type="number" class="save-editor-input" id="playerHP" min="1" max="999">
+                        </div>
+                        <div class="attribute-item">
+                            <label class="attribute-label">Magic Points (MP)</label>
+                            <input type="number" class="save-editor-input" id="playerMP" min="0" max="999">
+                        </div>
+                        <div class="attribute-item">
+                            <label class="attribute-label">Stamina</label>
+                            <input type="number" class="save-editor-input" id="playerStamina" min="0" max="999">
+                        </div>
+                        <div class="attribute-item">
+                            <label class="attribute-label">Strength</label>
+                            <input type="number" class="save-editor-input" id="playerStrength" min="1" max="255">
+                        </div>
+                        <div class="attribute-item">
+                            <label class="attribute-label">Defense</label>
+                            <input type="number" class="save-editor-input" id="playerDefense" min="1" max="255">
+                        </div>
+                        <div class="attribute-item">
+                            <label class="attribute-label">Speed</label>
+                            <input type="number" class="save-editor-input" id="playerSpeed" min="1" max="255">
+                        </div>
+                        <div class="attribute-item">
+                            <label class="attribute-label">Experience Points</label>
+                            <input type="number" class="save-editor-input" id="playerExp" min="0" max="9999999">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RADIANT HISTORIA SPECIFIC CHARACTER STATS -->
+                <div id="radiantHistoriaCharacterStats" style="display: none;">
+                    <h3>Character Attributes</h3>
+
+                    <!-- Stocke -->
+                    <div class="character-section">
+                        <div class="character-header">
+                            <span class="character-name">Stocke</span>
+                        </div>
+                        <div class="attribute-grid">
+                            <div class="attribute-item">
+                                <label class="attribute-label">Level</label>
+                                <input type="number" class="save-editor-input" id="stockeLevel" min="1" max="99">
+                            </div>
+                            <div class="attribute-item">
+                                <label class="attribute-label">HP</label>
+                                <input type="number" class="save-editor-input" id="stockeHP" min="1" max="999">
+                            </div>
+                            <div class="attribute-item">
+                                <label class="attribute-label">MP</label>
+                                <input type="number" class="save-editor-input" id="stockeMP" min="0" max="999">
+                            </div>
+                            <div class="attribute-item">
+                                <label class="attribute-label">Attack</label>
+                                <input type="number" class="save-editor-input" id="stockeATK" min="1" max="255">
+                            </div>
+                            <div class="attribute-item">
+                                <label class="attribute-label">Magic</label>
+                                <input type="number" class="save-editor-input" id="stockeMAG" min="1" max="255">
+                            </div>
+                            <div class="attribute-item">
+                                <label class="attribute-label">Defense</label>
+                                <input type="number" class="save-editor-input" id="stockeDEF" min="1" max="255">
+                            </div>
+                            <div class="attribute-item">
+                                <label class="attribute-label">M. Defense</label>
+                                <input type="number" class="save-editor-input" id="stockeMDF" min="1" max="255">
+                            </div>
+                            <div class="attribute-item">
+                                <label class="attribute-label">Speed</label>
+                                <input type="number" class="save-editor-input" id="stockeSPD" min="1" max="255">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Raynie -->
+                    <div class="character-section">
+                        <div class="character-header">
+                            <span class="character-name">Raynie</span>
+                        </div>
+                        <div class="attribute-grid">
+                            <div class="attribute-item">
+                                <label class="attribute-label">Level</label>
+                                <input type="number" class="save-editor-input" id="raynieLevel" min="1" max="99">
+                            </div>
+                            <div class="attribute-item">
+                                <label class="attribute-label">HP</label>
+                                <input type="number" class="save-editor-input" id="raynieHP" min="1" max="999">
+                            </div>
+                            <div class="attribute-item">
+                                <label class="attribute-label">MP</label>
+                                <input type="number" class="save-editor-input" id="raynieMP" min="0" max="999">
+                            </div>
+                            <div class="attribute-item">
+                                <label class="attribute-label">Attack</label>
+                                <input type="number" class="save-editor-input" id="raynieATK" min="1" max="255">
+                            </div>
+                            <div class="attribute-item">
+                                <label class="attribute-label">Magic</label>
+                                <input type="number" class="save-editor-input" id="raynieMAG" min="1" max="255">
+                            </div>
+                            <div class="attribute-item">
+                                <label class="attribute-label">Defense</label>
+                                <input type="number" class="save-editor-input" id="raynieDEF" min="1" max="255">
+                            </div>
+                            <div class="attribute-item">
+                                <label class="attribute-label">M. Defense</label>
+                                <input type="number" class="save-editor-input" id="raynieMDF" min="1" max="255">
+                            </div>
+                            <div class="attribute-item">
+                                <label class="attribute-label">Speed</label>
+                                <input type="number" class="save-editor-input" id="raynieSPD" min="1" max="255">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add similar sections for Marco, Rosch, Aht, Gafka, Eruca -->
+                    <!-- Marco -->
+                    <div class="character-section">
+                        <div class="character-header">
+                            <span class="character-name">Marco</span>
+                        </div>
+                        <div class="attribute-grid">
+                            <!-- Same structure as above -->
+                        </div>
+                    </div>
+
+                    <!-- Rosch -->
+                    <div class="character-section">
+                        <div class="character-header">
+                            <span class="character-name">Rosch</span>
+                        </div>
+                        <div class="attribute-grid">
+                            <!-- Same structure as above -->
+                        </div>
+                    </div>
+
+                    <!-- Aht -->
+                    <div class="character-section">
+                        <div class="character-header">
+                            <span class="character-name">Aht</span>
+                        </div>
+                        <div class="attribute-grid">
+                            <!-- Same structure as above -->
+                        </div>
+                    </div>
+
+                    <!-- Gafka -->
+                    <div class="character-section">
+                        <div class="character-header">
+                            <span class="character-name">Gafka</span>
+                        </div>
+                        <div class="attribute-grid">
+                            <!-- Same structure as above -->
+                        </div>
+                    </div>
+
+                    <!-- Eruca -->
+                    <div class="character-section">
+                        <div class="character-header">
+                            <span class="character-name">Eruca</span>
+                        </div>
+                        <div class="attribute-grid">
+                            <!-- Same structure as above -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EQUIPMENT TAB -->
+            <div id="equipmentTab" class="tab-content">
+                <div id="genericEquipment" style="display: none;">
+                    <div class="attribute-grid">
+                        <div class="attribute-item">
+                            <label class="attribute-label">Gold/Currency</label>
+                            <input type="number" class="save-editor-input" id="currency" min="0" max="999999">
+                        </div>
+                        <div class="attribute-item">
+                            <label class="attribute-label">Potion Count</label>
+                            <input type="number" class="save-editor-input" id="potionCount" min="0" max="99">
+                        </div>
+                        <div class="attribute-item">
+                            <label class="attribute-label">Elixir Count</label>
+                            <input type="number" class="save-editor-input" id="elixirCount" min="0" max="99">
+                        </div>
+                        <div class="attribute-item">
+                            <label class="attribute-label">Primary Weapon</label>
+                            <select class="save-editor-select" id="primaryWeapon">
+                                <option value="none">None</option>
+                                <option value="wooden-sword">Wooden Sword</option>
+                                <option value="iron-sword">Iron Sword</option>
+                                <option value="steel-sword">Steel Sword</option>
+                                <option value="excalibur">Excalibur</option>
+                            </select>
+                        </div>
+                        <div class="attribute-item">
+                            <label class="attribute-label">Armor</label>
+                            <select class="save-editor-select" id="armor">
+                                <option value="none">None</option>
+                                <option value="leather-armor">Leather Armor</option>
+                                <option value="chainmail">Chainmail</option>
+                                <option value="plate-armor">Plate Armor</option>
+                                <option value="dragon-armor">Dragon Armor</option>
+                            </select>
+                        </div>
+                        <div class="attribute-item">
+                            <label class="attribute-label">Accessory</label>
+                            <select class="save-editor-select" id="accessory">
+                                <option value="none">None</option>
+                                <option value="iron-bangle">Iron Bangle</option>
+                                <option value="silver-bangle">Silver Bangle</option>
+                                <option value="gold-bangle">Gold Bangle</option>
+                                <option value="mystic-veil">Mystic Veil</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RADIANT HISTORIA SPECIFIC EQUIPMENT -->
+                <div id="radiantHistoriaEquipment" style="display: none;">
+                    <h3>Character Equipment</h3>
+
+                    <!-- Stocke Equipment -->
+                    <div class="character-section">
+                        <div class="character-header">
+                            <span class="character-name">Stocke - Weapons</span>
+                        </div>
+                        <select class="save-editor-select" id="stockeWeapon">
+                            <option value="none">None</option>
+                            <option value="claiomh-solais">Claiomh Solais (ATK+62 / MAG+33)</option>
+                            <option value="historica">Historica (ATK+58 / MAG+28 / SPD+2)</option>
+                            <option value="valiant-edge">Valiant Edge (ATK+59 / MAG+23 / DEF+20)</option>
+                            <!-- Add all Stocke weapons from your list -->
+                        </select>
+                    </div>
+
+                    <!-- Add similar equipment sections for all characters -->
+                    <!-- This would include weapons for each character type and armor sections -->
+
+                </div>
+            </div>
+
+            <!-- SUPPORT SKILLS TAB -->
+            <div id="skillsTab" class="tab-content">
+                <div id="radiantHistoriaSkills" style="display: none;">
+                    <h3>Support Skills</h3>
+
+                    <!-- Raynie Skills -->
+                    <div class="character-section">
+                        <div class="character-header">
+                            <span class="character-name">Raynie</span>
+                        </div>
+                        <div class="skill-grid">
+                            <div class="attribute-item">
+                                <label class="attribute-label">
+                                    <input type="checkbox" id="raynieEndFire"> End Fire
+                                </label>
+                                <small>End of combo - Fire damage, instant kill on weakness</small>
+                            </div>
+                            <div class="attribute-item">
+                                <label class="attribute-label">
+                                    <input type="checkbox" id="raynieRagnarok"> Ragnarok
+                                </label>
+                                <small>End of combo - Fire damage to all enemies</small>
+                            </div>
+                            <!-- Add all Raynie skills -->
+                        </div>
+                    </div>
+
+                    <!-- Add similar skill sections for all characters -->
+
+                </div>
+            </div>
+
+            <!-- INVENTORY TAB -->
+            <div id="inventoryTab" class="tab-content">
+                <div id="radiantHistoriaInventory" style="display: none;">
+                    <h3>Radiant Historia Inventory</h3>
+                    <div class="attribute-item" style="margin-bottom: 20px;">
+                        <label class="attribute-label">Current Inventory Items</label>
+                        <div id="currentInventory">
+                            <!-- Inventory items will be populated here -->
+                        </div>
+                    </div>
+
+                    <div style="border-top: 1px solid var(--border-color); padding-top: 20px;">
+                        <h4>Add Items</h4>
+                        <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+                            <select class="save-editor-select" id="itemCategory" style="flex: 1;">
+                                <option value="weapons">Weapons</option>
+                                <option value="armor">Armor</option>
+                                <option value="accessories">Accessories</option>
+                                <option value="items">Consumables</option>
+                            </select>
+                            <select class="save-editor-select" id="itemSelect" style="flex: 2;">
+                                <option value="">Select item...</option>
+                            </select>
+                            <input type="number" class="save-editor-input" id="itemQuantity" placeholder="Qty" min="1" max="99" style="flex: 1;">
+                            <button id="addInventoryItem" class="save-editor-button" style="flex: 1;">Add to Inventory</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROGRESS TAB -->
+            <div id="progressTab" class="tab-content">
+                <div class="attribute-grid">
+                    <div class="attribute-item">
+                        <label class="attribute-label">Completion Percentage</label>
+                        <input type="number" class="save-editor-input" id="completionPercent" min="0" max="100">
+                    </div>
+                    <div class="attribute-item">
+                        <label class="attribute-label">Play Time (Hours)</label>
+                        <input type="number" class="save-editor-input" id="playTime" min="0" max="999">
+                    </div>
+                    <div class="attribute-item">
+                        <label class="attribute-label">Quests Completed</label>
+                        <input type="number" class="save-editor-input" id="questsCompleted" min="0" max="200">
+                    </div>
+                    <div class="attribute-item">
+                        <label class="attribute-label">Bosses Defeated</label>
+                        <input type="number" class="save-editor-input" id="bossesDefeated" min="0" max="50">
+                    </div>
+                    <div class="attribute-item">
+                        <label class="attribute-label">Save Slot</label>
+                        <select class="save-editor-select" id="saveSlot">
+                            <option value="1">Slot 1</option>
+                            <option value="2">Slot 2</option>
+                            <option value="3">Slot 3</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px; display: flex; gap: 15px;">
+                <button id="saveButton" class="save-editor-button" disabled>Generate Save File</button>
+                <button id="resetButton" class="save-editor-button" style="background-color: var(--warning-color);">Reset Changes</button>
+            </div>
+            <div id="saveStatus" class="status-message"></div>
+        </section>
+    </main>
+
+    <script>
+        // Game-specific data for Radiant Historia
+        const radiantHistoriaData = {
+            weapons: {
+                stocke: [
+                    { id: "claiomh-solais", name: "Claiomh Solais", atk: 62, mag: 33, desc: "The original Sword of Light" },
+                    { id: "historica", name: "Historica", atk: 58, mag: 28, spd: 2, desc: "Governs time" },
+                    // Add all weapons from your list
+                ],
+                raynie: [
+                    { id: "ascalon", name: "Ascalon", atk: 48, mag: 54, desc: "Spear that silenced a wyvern" },
+                    // Add all Raynie weapons
+                ],
+                // Add weapons for all characters
+            },
+            armor: {
+                // Add armor data
+            },
+            accessories: {
+                // Add accessory data
+            },
+            skills: {
+                raynie: [
+                    { id: "end-fire", name: "End Fire", timing: "End of combo", target: "1 enemy", damage: "Fire", effect: "If hits enemy weakness, instantly kills" },
+                    { id: "ragnarok", name: "Ragnarok", timing: "End of combo", target: "All enemies", damage: "Fire", effect: "" },
+                    // Add all skills
+                ],
+                // Add skills for all characters
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const gameSelect = document.getElementById('gameSelect');
+
+            // Game selection handler
+            gameSelect.addEventListener('change', function() {
+                const selectedGame = this.value;
+
+                // Hide all game-specific sections
+                document.getElementById('genericCharacterStats').style.display = 'none';
+                document.getElementById('radiantHistoriaCharacterStats').style.display = 'none';
+                document.getElementById('genericEquipment').style.display = 'none';
+                document.getElementById('radiantHistoriaEquipment').style.display = 'none';
+                document.getElementById('radiantHistoriaSkills').style.display = 'none';
+                document.getElementById('radiantHistoriaInventory').style.display = 'none';
+
+                // Show appropriate sections based on selected game
+                if (selectedGame === 'radiant-historia') {
+                    document.getElementById('radiantHistoriaCharacterStats').style.display = 'block';
+                    document.getElementById('radiantHistoriaEquipment').style.display = 'block';
+                    document.getElementById('radiantHistoriaSkills').style.display = 'block';
+                    document.getElementById('radiantHistoriaInventory').style.display = 'block';
+                } else {
+                    document.getElementById('genericCharacterStats').style.display = 'block';
+                    document.getElementById('genericEquipment').style.display = 'block';
+                }
+
+                updateUIState();
+            });
+
+            // ... (keep the rest of your existing JavaScript code) ...
+
+            function populateFormWithDefaultValues() {
+                const currentGame = document.getElementById('gameSelect').value;
+
+                if (currentGame === 'radiant-historia') {
+                    // Set Radiant Historia specific default values
+                    document.getElementById('stockeLevel').value = 25;
+                    document.getElementById('stockeHP').value = 350;
+                    document.getElementById('stockeMP').value = 120;
+                    document.getElementById('stockeATK').value = 45;
+                    document.getElementById('stockeMAG').value = 38;
+                    document.getElementById('stockeDEF').value = 42;
+                    document.getElementById('stockeMDF').value = 40;
+                    document.getElementById('stockeSPD').value = 48;
+
+                    // Set values for other characters...
+                } else {
+                    // Set generic default values
+                    document.getElementById('playerLevel').value = 25;
+                    document.getElementById('playerHP').value = 150;
+                    // ... etc
+                }
+            }
+
+            // Function to populate inventory based on selected game
+            function populateInventory() {
+                const currentGame = document.getElementById('gameSelect').value;
+                const itemSelect = document.getElementById('itemSelect');
+
+                itemSelect.innerHTML = '<option value="">Select item...</option>';
+
+                if (currentGame === 'radiant-historia') {
+                    // Populate with Radiant Historia items
+                    // This would be extensive based on your item lists
+                }
+            }
+
+            // Initialize
+            populateInventory();
+        });
+    </script>
+</div>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GUI on The Objective Perspective</title>
+    <link>http://localhost:1313/tags/gui/</link>
+    <description>Recent content in GUI on The Objective Perspective</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright © 2026 Joshua Goth All Rights Reserved.</copyright>
+    <lastBuildDate>Tue, 04 Nov 2025 22:51:28 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/gui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Trading WordPress for the Command Line: My Static Site Awakening</title>
+      <link>http://localhost:1313/blog/2025/11/trading-wordpress-for-the-command-line-my-static-site-awakening/</link>
+      <pubDate>Tue, 04 Nov 2025 22:51:28 -0800</pubDate>
+      <guid>http://localhost:1313/blog/2025/11/trading-wordpress-for-the-command-line-my-static-site-awakening/</guid>
+      <description>&lt;h1 id=&#34;my-journey-that-led-me-to-ditch-wordpress-for-hugo&#34;&gt;My Journey That Led Me to Ditch WordPress for Hugo&lt;/h1&gt;&#xA;&lt;p&gt;After retiring from my career as a full-time network engineer, I began exploring new tech avenues as a hobby. A little over a year ago, I decided to take web development seriously. Little did I know, that decision would lead me on a path from frustration to freedom.&lt;/p&gt;&#xA;&lt;h4 id=&#34;first-steps-a-wordpress-nightmare&#34;&gt;&lt;strong&gt;First Steps: A WordPress Nightmare&lt;/strong&gt;&lt;/h4&gt;&#xA;&lt;p&gt;I&amp;rsquo;ll never forget my first frustrating encounter with WordPress. I was nearly brought to tears trying to figure out why I couldn&amp;rsquo;t just &lt;em&gt;drag and drop&lt;/em&gt; elements as I pleased! Despite that rocky start, I persevered. I worked hard, learned the ropes, and eventually built my first patchwork-style website. WordPress, as a CMS, is truly amazing for what it enables.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

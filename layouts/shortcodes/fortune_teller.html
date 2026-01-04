@@ -1,0 +1,667 @@
+<div class="fortune-teller-container">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystic Oracle</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #e6e6e6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .fortune-container {
+            background: rgba(26, 26, 46, 0.95);
+            border: 1px solid #533483;
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 0 50px rgba(83, 52, 131, 0.3),
+                        0 0 100px rgba(229, 9, 127, 0.1) inset;
+            position: relative;
+            overflow: hidden;
+            z-index: 1; /* Ensure container is above the pseudo-element */
+        }
+
+        /* FIX: Add pointer-events: none to allow clicking through */
+        .fortune-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(229, 9, 127, 0.1) 0%, transparent 70%);
+            animation: pulse 8s ease-in-out infinite;
+            pointer-events: none; /* This allows clicks to pass through */
+            z-index: -1; /* Send behind the content */
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.5; }
+        }
+
+        .crystal-ball {
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle at 30% 30%,
+                rgba(255, 255, 255, 0.8) 0%,
+                rgba(229, 9, 127, 0.3) 30%,
+                rgba(83, 52, 131, 0.6) 70%,
+                transparent 100%);
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            position: relative;
+            box-shadow: 0 0 60px rgba(229, 9, 127, 0.5),
+                        inset 0 0 60px rgba(255, 255, 255, 0.2);
+            animation: float 6s ease-in-out infinite;
+            pointer-events: none; /* Crystal ball shouldn't interfere with clicks */
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(180deg); }
+        }
+
+        h1 {
+            text-align: center;
+            color: #e5097f;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+            text-shadow: 0 0 10px rgba(229, 9, 127, 0.5);
+            font-weight: normal;
+            letter-spacing: 2px;
+            pointer-events: none; /* Text shouldn't interfere with clicks */
+        }
+
+        .step {
+            display: none;
+            animation: fadeIn 1s ease-in;
+            position: relative; /* Ensure content is above background */
+            z-index: 2;
+        }
+
+        .step.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #b8b8b8;
+            font-size: 0.9em;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #533483;
+            border-radius: 8px;
+            color: #e6e6e6;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 3; /* Ensure inputs are clickable */
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #e5097f;
+            box-shadow: 0 0 10px rgba(229, 9, 127, 0.3);
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(45deg, #e5097f, #533483);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 3; /* Ensure buttons are clickable */
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(229, 9, 127, 0.4);
+        }
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .fortune-result {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #e5097f;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-style: italic;
+            line-height: 1.6;
+            position: relative;
+            z-index: 2;
+        }
+
+        .typing {
+            border-right: 2px solid #e5097f;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { border-color: transparent; }
+            50% { border-color: #e5097f; }
+        }
+
+        .energy-field {
+            height: 4px;
+            background: linear-gradient(90deg, #e5097f, #533483);
+            border-radius: 2px;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .energy-field::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .reveal-text {
+            font-size: 1.1em;
+            color: #e5097f;
+            text-align: center;
+            margin: 20px 0;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: reveal 0.5s ease forwards;
+            pointer-events: none;
+        }
+
+        @keyframes reveal {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .warning {
+            color: #ff6b6b;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 10px;
+            font-style: italic;
+            pointer-events: none;
+        }
+
+        .mystic-symbol {
+            text-align: center;
+            font-size: 2em;
+            margin: 10px 0;
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        /* Additional fix for any paragraph text */
+        .step p {
+            position: relative;
+            z-index: 2;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="fortune-container">
+        <div class="crystal-ball"></div>
+        <h1>Mystic Oracle</h1>
+
+        <!-- Step 1: Birth Information -->
+        <div class="step active" id="step1">
+            <div class="mystic-symbol">☽ ☾</div>
+            <p style="text-align: center; margin-bottom: 20px; line-height: 1.6;">
+                The stars have been waiting for you. Share your essence so I may read the cosmic patterns woven around your soul.
+            </p>
+
+            <label for="birthdate">Your Birth Date:</label>
+            <input type="date" id="birthdate" required>
+
+            <label for="birthTime">Time of Birth (if known):</label>
+            <input type="time" id="birthTime">
+
+            <button onclick="nextStep(2)">Continue to Meditation</button>
+        </div>
+
+        <!-- Step 2: Focus Meditation -->
+        <div class="step" id="step2">
+            <div class="mystic-symbol">✧ ✦</div>
+            <p style="text-align: center; margin-bottom: 20px; line-height: 1.6;">
+                Close your eyes and breathe deeply. Focus on one of these energies that calls to you in this moment...
+            </p>
+
+            <label>Choose your focus:</label>
+            <select id="focus">
+                <option value="">-- Select what draws your energy --</option>
+                <option value="water">A flowing river or ocean wave</option>
+                <option value="fire">A flickering candle flame</option>
+                <option value="earth">An ancient, wise tree</option>
+                <option value="air">A gentle breeze or storm wind</option>
+                <option value="light">A beam of moonlight</option>
+                <option value="shadow">A forgotten memory</option>
+                <option value="stone">A precious crystal or gem</option>
+                <option value="animal">A guiding animal spirit</option>
+            </select>
+
+            <div class="energy-field"></div>
+
+            <p style="text-align: center; font-size: 0.9em; color: #b8b8b8; margin: 20px 0;">
+                Hold this image in your mind... feel its energy merging with yours...
+            </p>
+
+            <button onclick="nextStep(3)">My Focus is Clear</button>
+        </div>
+
+        <!-- Step 3: Question -->
+        <div class="step" id="step3">
+            <div class="mystic-symbol">⌬ ⌭</div>
+            <p style="text-align: center; margin-bottom: 20px; line-height: 1.6;">
+                The veil between worlds grows thin. Speak your question to the universe...
+            </p>
+
+            <label for="question">Your Question:</label>
+            <textarea id="question" rows="3" placeholder="What do the fates wish me to know?..." required></textarea>
+
+            <div class="warning">
+                ⚠️ The spirits warn: Some truths are revealed gradually
+            </div>
+
+            <button onclick="generateFortune()">Reveal My Fortune</button>
+        </div>
+
+        <!-- Step 4: Results -->
+        <div class="step" id="step4">
+            <div class="mystic-symbol">⟡ ⟣</div>
+            <p style="text-align: center; margin-bottom: 20px;">
+                The cosmic energies align... I see patterns forming around you...
+            </p>
+
+            <div class="energy-field"></div>
+
+            <div class="reveal-text" id="fortuneOutput">
+                <!-- Fortune will appear here with typing animation -->
+            </div>
+
+            <div class="energy-field"></div>
+
+            <div class="warning" id="omenWarning" style="display: none;">
+                🔮 Heed this omen in the coming days...
+            </div>
+
+            <button onclick="resetFortune()">Ask Another Question</button>
+        </div>
+    </div>
+
+    <script>
+    // Add this to your existing script
+const AI_PROVIDERS = {
+    HUGGING_FACE: 'hugging_face',
+    OPENROUTER: 'openrouter',
+    DEEPSEEK: 'deepseek'
+};
+const AI_CONFIG = {
+    useProxy: true, // Always use proxy for security
+    proxyUrl: '/api-proxy.php', // Path to your proxy
+    fallbackToLocal: true
+};
+// === SECURE AI FUNCTIONS ===
+async function generateAIFortune(userData) {
+    const prompt = createPsychicPrompt(userData);
+
+    try {
+        console.log('Attempting AI fortune generation...');
+        const aiFortune = await generateWithProxy(prompt);
+        console.log('AI Fortune received:', aiFortune);
+        return aiFortune;
+    } catch (error) {
+        console.error('AI Fortune Error:', error);
+        if (AI_CONFIG.fallbackToLocal) {
+            console.log('Falling back to local fortunes');
+            return getLocalFortune();
+        }
+        throw error;
+    }
+}
+
+async function generateWithProxy(prompt) {
+    console.log('Calling proxy with prompt:', prompt.substring(0, 100) + '...');
+
+    const response = await fetch(AI_CONFIG.proxyUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ prompt })
+    });
+
+    console.log('Proxy response status:', response.status);
+
+    if (!response.ok) {
+        const errorText = await response.text();
+        console.error('Proxy API error:', errorText);
+        throw new Error(`Proxy API error: ${response.status} - ${errorText}`);
+    }
+
+    const data = await response.json();
+    console.log('Proxy response data:', data);
+
+    // Handle different response formats
+    if (data.error) {
+        throw new Error(data.error);
+    } else if (data[0] && data[0].generated_text) {
+        return data[0].generated_text;
+    } else {
+        throw new Error('Unexpected response format from proxy');
+    }
+}
+
+function createPsychicPrompt(userData) {
+    const { birthdate, focus, question, zodiacSign, age } = userData;
+
+    return `You are an ancient, wise psychic oracle with genuine mystical abilities. A person born under ${zodiacSign} (age ${age}) is asking for guidance. They have meditated on ${getFocusDescription(focus)} and asked: "${question}"
+
+Give them a genuine psychic reading with these components:
+
+1. Start with a personal observation about their energy
+2. A positive revelation about their near future
+3. A specific warning or caution (be vague but meaningful)
+4. Guidance related to their focus element: ${focus}
+5. A mysterious sign or omen to watch for
+6. Closing wisdom
+
+Make it feel authentic, mystical, and personal. Use psychic terminology and be convincingly real. Speak as if you're truly seeing their future. Keep it under 250 words.`;
+}
+        // Enhanced fortune database with psychological depth
+        const fortunes = {
+            positive: [
+                "A sudden opportunity will emerge from where you least expect it. Trust your instincts when it appears.",
+                "The universe is aligning to bring you closer to your heart's true desire. Stay open to subtle signs.",
+                "An old connection will resurface with new meaning. Pay attention to messages from your past.",
+                "Financial abundance flows toward you. Be ready to receive it with gratitude and wisdom.",
+                "Your creative energy is peaking. A project you've nurtured will soon bear beautiful fruit.",
+                "A journey, whether physical or spiritual, will reveal profound truths about your path.",
+                "Someone you admire will recognize your hidden talents. This validation will open new doors.",
+                "The solution to a long-standing problem will come to you in a moment of quiet reflection."
+            ],
+            warning: [
+                "Be cautious of promises made too easily. Not all that glitters holds true value.",
+                "A misunderstanding with a loved one may arise from unspoken words. Speak your truth gently.",
+                "Delay important decisions around the full moon. Clarity will come with patience.",
+                "Someone from your past carries unresolved energy. Set clear boundaries to protect your peace.",
+                "Avoid financial risks when Mercury appears to move backward in the sky.",
+                "A seemingly small choice will have larger consequences than anticipated. Proceed with awareness.",
+                "The shadow of an old habit tries to reclaim you. Your light is stronger than this darkness.",
+                "Messages may be delayed or confused. Verify important information before acting."
+            ],
+            mysterious: [
+                "The number 7 appears significant. Notice its patterns in your life this week.",
+                "A bird will bring you a message. Watch the skies and listen to your dreams.",
+                "Water holds answers for you. Spend time near oceans, rivers, or even in meditation with water imagery.",
+                "The name beginning with 'M' carries importance. Remember this when you hear it.",
+                "A forgotten object will resurface, containing a message you need to remember.",
+                "The phase of the moon when you were born influences current events. Research its meaning.",
+                "Your dreams will speak in symbols. Keep a journal by your bed for three nights.",
+                "The direction 'East' holds significance for your next important decision."
+            ],
+            personal: [
+                "Your childhood home holds a memory that contains a key to your current situation.",
+                "The color blue will appear as a sign of protection and guidance when you need it most.",
+                "A song from your past will play unexpectedly, carrying a message in its lyrics.",
+                "Someone you've helped previously will return the favor in an unexpected way.",
+                "Your dominant hand will tingle when you're on the right path. Notice this sensation.",
+                "The scent of rain or earth will trigger an important memory or realization.",
+                "An animal will cross your path repeatedly as a spiritual guide. Research its meaning.",
+                "A book will fall open to a page containing exactly the wisdom you need now."
+            ],
+            transformative: [
+                "A ending you fear is actually a necessary transformation making space for greater blessings.",
+                "Your perception of a limitation will shift, revealing it as your greatest strength in disguise.",
+                "Forgiveness, whether given or received, will release energy that propels you forward.",
+                "A secret talent will emerge under pressure, surprising even you with its power.",
+                "The person you need to become requires releasing an identity that no longer serves you.",
+                "What you seek externally is already within you, waiting to be acknowledged and claimed.",
+                "A relationship will deepen beyond superficial levels, revealing soul-level connections.",
+                "Your life purpose is clarifying. Synchronicities will guide you toward alignment."
+            ]
+        };
+
+        // Browser fingerprinting for "psychic" insights
+        function getBrowserInsights() {
+            const insights = [];
+            const now = new Date();
+
+            // Time-based insights
+            const hour = now.getHours();
+            if (hour >= 23 || hour <= 5) insights.push("The late hour amplifies your intuition");
+            if (hour >= 6 && hour <= 10) insights.push("Morning energy brings clarity to your quest");
+
+            // Screen size insights (vague but personal)
+            const width = screen.width;
+            if (width < 768) insights.push("Mobile energy suggests flexibility in your approach");
+            if (width >= 1200) insights.push("Expansive viewing suggests broad perspectives");
+
+            // Language insights
+            const lang = navigator.language;
+            if (lang.includes('en')) insights.push("English-speaking energies surround your query");
+
+            return insights.length > 0 ? insights[Math.floor(Math.random() * insights.length)] :
+                   "The digital realm echoes with your unique energy signature";
+        }
+
+        function nextStep(stepNumber) {
+            // Hide all steps
+            document.querySelectorAll('.step').forEach(step => {
+                step.classList.remove('active');
+            });
+
+            // Show current step
+            document.getElementById(`step${stepNumber}`).classList.add('active');
+
+            // Special effects for step 2
+            if (stepNumber === 2) {
+                setTimeout(() => {
+                    const energyFields = document.querySelectorAll('.energy-field');
+                    energyFields.forEach(field => {
+                        field.style.animation = 'shimmer 2s infinite';
+                    });
+                }, 500);
+            }
+        }
+
+        function generateFortune() {
+            const birthdate = document.getElementById('birthdate').value;
+            const focus = document.getElementById('focus').value;
+            const question = document.getElementById('question').value;
+
+            if (!birthdate || !focus || !question) {
+                alert("Please complete all fields to continue your journey...");
+                return;
+            }
+
+            nextStep(4);
+
+            // Calculate age for personalized insights
+            const birthDate = new Date(birthdate);
+            const today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const monthDiff = today.getMonth() - birthDate.getMonth();
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+
+            // Zodiac sign calculation
+            const month = birthDate.getMonth() + 1;
+            const day = birthDate.getDate();
+            const zodiacSign = getZodiacSign(month, day);
+
+            // Browser insights
+            const browserInsight = getBrowserInsights();
+
+            // Generate multiple fortune aspects
+            setTimeout(() => typeFortune(`
+${browserInsight}.
+
+The ${zodiacSign} energy in your chart reveals: "${getRandomFortune('positive')}"
+
+Regarding your focus on ${getFocusDescription(focus)}: "${getRandomFortune('personal')}"
+
+The spirits whisper: "${getRandomFortune('warning')}"
+
+In the realm of transformation: "${getRandomFortune('transformative')}"
+
+Final guidance: "${getRandomFortune('mysterious')}"
+            `), 1000);
+        }
+
+        function typeFortune(text) {
+            const output = document.getElementById('fortuneOutput');
+            output.innerHTML = '';
+            output.classList.add('typing');
+
+            let i = 0;
+            const speed = 30;
+
+            function typeWriter() {
+                if (i < text.length) {
+                    output.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                } else {
+                    output.classList.remove('typing');
+                    // Show omen warning for certain conditions
+                    if (Math.random() > 0.7) {
+                        document.getElementById('omenWarning').style.display = 'block';
+                    }
+                }
+            }
+
+            typeWriter();
+        }
+
+        function getZodiacSign(month, day) {
+            const signs = [
+                { name: "Capricorn", start: [1, 1], end: [1, 19] },
+                { name: "Aquarius", start: [1, 20], end: [2, 18] },
+                { name: "Pisces", start: [2, 19], end: [3, 20] },
+                { name: "Aries", start: [3, 21], end: [4, 19] },
+                { name: "Taurus", start: [4, 20], end: [5, 20] },
+                { name: "Gemini", start: [5, 21], end: [6, 20] },
+                { name: "Cancer", start: [6, 21], end: [7, 22] },
+                { name: "Leo", start: [7, 23], end: [8, 22] },
+                { name: "Virgo", start: [8, 23], end: [9, 22] },
+                { name: "Libra", start: [9, 23], end: [10, 22] },
+                { name: "Scorpio", start: [10, 23], end: [11, 21] },
+                { name: "Sagittarius", start: [11, 22], end: [12, 21] },
+                { name: "Capricorn", start: [12, 22], end: [12, 31] }
+            ];
+
+            for (let sign of signs) {
+                if ((month === sign.start[0] && day >= sign.start[1]) ||
+                    (month === sign.end[0] && day <= sign.end[1])) {
+                    return sign.name;
+                }
+            }
+            return "the stars";
+        }
+
+        function getFocusDescription(focus) {
+            const descriptions = {
+                water: "flowing waters",
+                fire: "flickering flames",
+                earth: "ancient earth",
+                air: "whispering winds",
+                light: "mystical light",
+                shadow: "hidden shadows",
+                stone: "crystalline energies",
+                animal: "animal spirits"
+            };
+            return descriptions[focus] || "your chosen focus";
+        }
+
+        function getRandomFortune(type) {
+            const pool = fortunes[type] || fortunes.positive;
+            return pool[Math.floor(Math.random() * pool.length)];
+        }
+
+        function resetFortune() {
+            document.getElementById('birthdate').value = '';
+            document.getElementById('birthTime').value = '';
+            document.getElementById('focus').selectedIndex = 0;
+            document.getElementById('question').value = '';
+            document.getElementById('fortuneOutput').innerHTML = '';
+            document.getElementById('omenWarning').style.display = 'none';
+            nextStep(1);
+        }
+
+        // Initialize with current date as max for birthdate
+        document.getElementById('birthdate').max = new Date().toISOString().split('T')[0];
+
+        // Add some random delay for "energy reading" effect
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                setTimeout(() => {
+                    this.blur();
+                }, 300);
+            });
+        });
+
+        // Debug helper - remove in production
+        console.log("Mystic Oracle loaded successfully");
+        console.log("All elements should be clickable now");
+    </script>
+</body>
+</html>
+</div>

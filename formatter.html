@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    {{ partial "head.html" . }}
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-hover: #4f46e5;
+            --secondary: #10b981;
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-card: #1e293b;
+            --bg-input: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --border: #475569;
+            --border-light: #334155;
+            --success: #10b981;
+            --facebook: #1877f2;
+            --twitter: #1da1f2;
+            --instagram: #e4405f;
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border-radius: 16px;
+            box-shadow: 0 10px 25px var(--shadow);
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+            color: white;
+            padding: 30px 25px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+        }
+
+        .app-body {
+            padding: 30px;
+        }
+
+        .input-group {
+            margin-bottom: 28px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+
+        .input-hint {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 14px 16px;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            color: var(--text-primary);
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: var(--text-muted);
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+            transform: translateY(-2px);
+        }
+
+        textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .image-processing {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            border: 1px solid var(--border);
+        }
+
+        .image-processing h3 {
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        .image-tools {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .image-tool {
+            background: var(--bg-input);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid var(--border-light);
+            text-align: center;
+        }
+
+        .image-tool h4 {
+            color: var(--text-primary);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .image-tool p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .tool-link {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .tool-link:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        .platform-selection {
+            margin: 30px 0;
+        }
+
+        .platform-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 18px;
+        }
+
+        .platform-option {
+            flex: 1;
+            min-width: 130px;
+        }
+
+        .platform-option input {
+            display: none;
+        }
+
+        .platform-option label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 15px;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            height: 100%;
+        }
+
+        .platform-option label:hover {
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px var(--shadow);
+        }
+
+        .platform-option input:checked + label {
+            border-color: var(--primary);
+            background: linear-gradient(135deg, var(--bg-secondary), rgba(99, 102, 241, 0.15));
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px var(--shadow);
+        }
+
+        .platform-icon {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .facebook-icon { color: var(--facebook); }
+        .twitter-icon { color: var(--twitter); }
+        .instagram-icon { color: var(--instagram); }
+
+        .preview-section {
+            margin: 35px 0;
+            padding: 25px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .preview-section.active {
+            display: block;
+        }
+
+        .preview-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .preview-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .image-dimension-badge {
+            background: var(--primary);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .preview-content {
+            background: var(--bg-input);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid var(--border-light);
+            white-space: pre-wrap;
+            max-height: 400px;
+            overflow-y: auto;
+            color: var(--text-secondary);
+            font-family: 'Courier New', monospace;
+            line-height: 1.5;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        button {
+            padding: 14px 24px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+            color: white;
+            flex: 2;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-secondary {
+            background: var(--bg-input);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+            flex: 1;
+        }
+
+        .btn-secondary:hover {
+            background: var(--border-light);
+            transform: translateY(-2px);
+        }
+
+        .image-preview-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .image-preview {
+            display: inline-block;
+            background: var(--bg-input);
+            border: 2px dashed var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .image-placeholder {
+            width: 200px;
+            height: 125px;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-light);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .square-placeholder {
+            width: 150px;
+            height: 150px;
+        }
+
+        .copy-notification {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: var(--success);
+            color: white;
+            padding: 14px 22px;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px var(--shadow);
+            display: none;
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+            background: var(--bg-secondary);
+        }
+
+        .preview-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .preview-content::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+            border-radius: 4px;
+        }
+
+        .preview-content::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 4px;
+        }
+
+        @media (max-width: 600px) {
+            .platform-options, .action-buttons {
+                flex-direction: column;
+            }
+            .app-body { padding: 20px; }
+            header { padding: 25px 20px; }
+            h1 { font-size: 2rem; }
+            .image-tools { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    {{ partial "header.html" . }}
+
+    <div class="container">
+        <header>
+            <h1>Social Media Post Formatter</h1>
+            <p class="subtitle">Format posts and resize images for optimal social media sharing</p>
+        </header>
+
+        <div class="app-body">
+            <div class="input-group">
+                <label for="post-title">Blog Post Title</label>
+                <input type="text" id="post-title" placeholder="Enter your blog post title">
+            </div>
+
+            <div class="input-group">
+                <label for="post-content">Blog Post Content/Excerpt</label>
+                <textarea id="post-content" placeholder="Enter the content or excerpt from your blog post"></textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="post-url">Blog Post URL</label>
+                <input type="text" id="post-url" placeholder="Enter the URL to your blog post">
+                <div class="input-hint">Make sure to use the full URL including https://</div>
+            </div>
+
+            <div class="input-group">
+                <label for="image-url">Blog Post Featured Image URL</label>
+                <input type="text" id="image-url" placeholder="Enter the URL to your blog post's featured image">
+                <div class="input-hint">Paste the direct URL to your blog's featured image</div>
+            </div>
+
+            <div class="image-processing">
+                <h3>🛠️ Image Resizing Tools</h3>
+                <div class="image-tools">
+                    <div class="image-tool">
+                        <h4>Online Image Resizer</h4>
+                        <p>Use free online tools to resize and crop your images to the required dimensions for each platform.</p>
+                        <a href="https://www.iloveimg.com/resize-image" target="_blank" class="tool-link">Resize Images Online</a>
+                    </div>
+                    <div class="image-tool">
+                        <h4>Bulk Image Processor</h4>
+                        <p>For multiple images, use batch processing tools to resize all images at once.</p>
+                        <a href="https://www.birme.com/" target="_blank" class="tool-link">Batch Resize Tool</a>
+                    </div>
+                    <div class="image-tool">
+                        <h4>Smart Cropping</h4>
+                        <p>Tools that automatically crop images to focus on the most important parts.</p>
+                        <a href="https://www.adobe.com/express/feature/image/resize" target="_blank" class="tool-link">Smart Crop Tool</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="platform-selection">
+                <label>Select Social Media Platforms</label>
+                <div class="platform-options">
+                    <div class="platform-option">
+                        <input type="checkbox" id="facebook" value="facebook">
+                        <label for="facebook">
+                            <div class="platform-icon facebook-icon">f</div>
+                            <span>Facebook</span>
+                            <small>1280×628px</small>
+                        </label>
+                    </div>
+
+                    <div class="platform-option">
+                        <input type="checkbox" id="twitter" value="twitter">
+                        <label for="twitter">
+                            <div class="platform-icon twitter-icon">𝕏</div>
+                            <span>Twitter</span>
+                            <small>1080×1080px</small>
+                        </label>
+                    </div>
+
+                    <div class="platform-option">
+                        <input type="checkbox" id="instagram" value="instagram">
+                        <label for="instagram">
+                            <div class="platform-icon instagram-icon">📷</div>
+                            <span>Instagram</span>
+                            <small>1080×1080px</small>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div id="facebook-preview" class="preview-section">
+                <div class="preview-header">
+                    <div class="preview-title">Facebook Post</div>
+                    <div class="image-dimension-badge">Image: 1280 × 628px</div>
+                </div>
+
+                <div class="image-preview-container">
+                    <div class="image-preview">
+                        <div class="image-placeholder" style="width: 200px; height: 105px;">
+                            Facebook Image Preview<br>1280×628px
+                        </div>
+                    </div>
+                </div>
+
+                <div class="preview-content" id="facebook-content"></div>
+
+                <div class="action-buttons">
+                    <button class="btn-primary" onclick="copyToClipboard('facebook-content')">
+                        <span>Copy Facebook Post</span>
+                    </button>
+                    <button class="btn-secondary" onclick="resizeImageForPlatform('facebook')">
+                        <span>Get Resized Image</span>
+                    </button>
+                    <button class="btn-secondary" onclick="shareOnFacebook()">
+                        <span>Share on Facebook</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="twitter-preview" class="preview-section">
+                <div class="preview-header">
+                    <div class="preview-title">Twitter Post</div>
+                    <div class="image-dimension-badge">Image: 1080 × 1080px</div>
+                </div>
+
+                <div class="image-preview-container">
+                    <div class="image-preview">
+                        <div class="image-placeholder square-placeholder">
+                            Twitter Image<br>1080×1080px
+                        </div>
+                    </div>
+                </div>
+
+                <div class="preview-content" id="twitter-content"></div>
+
+                <div class="action-buttons">
+                    <button class="btn-primary" onclick="copyToClipboard('twitter-content')">
+                        <span>Copy Twitter Post</span>
+                    </button>
+                    <button class="btn-secondary" onclick="resizeImageForPlatform('twitter')">
+                        <span>Get Resized Image</span>
+                    </button>
+                    <button class="btn-secondary" onclick="shareOnTwitter()">
+                        <span>Share on Twitter</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="instagram-preview" class="preview-section">
+                <div class="preview-header">
+                    <div class="preview-title">Instagram Post</div>
+                    <div class="image-dimension-badge">Image: 1080 × 1080px</div>
+                </div>
+
+                <div class="image-preview-container">
+                    <div class="image-preview">
+                        <div class="image-placeholder square-placeholder">
+                            Instagram Image<br>1080×1080px
+                        </div>
+                    </div>
+                </div>
+
+                <div class="preview-content" id="instagram-content"></div>
+
+                <div class="action-buttons">
+                    <button class="btn-primary" onclick="copyToClipboard('instagram-content')">
+                        <span>Copy Instagram Post</span>
+                    </button>
+                    <button class="btn-secondary" onclick="resizeImageForPlatform('instagram')">
+                        <span>Get Resized Image</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn-primary" onclick="formatPosts()">
+                    <span>Format All Posts</span>
+                </button>
+                <button class="btn-secondary" onclick="clearAll()">
+                    <span>Clear All</span>
+                </button>
+            </div>
+        </div>
+
+        <footer>
+            <p>Designed for your Hugo hbstack blog • Includes image resizing tools and platform-specific formatting</p>
+        </footer>
+    </div>
+
+    <div class="copy-notification" id="copyNotification">
+        ✅ Text copied to clipboard!
+    </div>
+
+    <script>
+        function formatPosts() {
+            const title = document.getElementById('post-title').value.trim();
+            const content = document.getElementById('post-content').value.trim();
+            const url = document.getElementById('post-url').value.trim();
+            const imageUrl = document.getElementById('image-url').value.trim();
+
+            if (!title || !content || !url) {
+                alert('Please fill in all required fields before formatting posts.');
+                return;
+            }
+
+            const platforms = [];
+            if (document.getElementById('facebook').checked) platforms.push('facebook');
+            if (document.getElementById('twitter').checked) platforms.push('twitter');
+            if (document.getElementById('instagram').checked) platforms.push('instagram');
+
+            if (platforms.length === 0) {
+                alert('Please select at least one social media platform.');
+                return;
+            }
+
+            platforms.forEach(platform => {
+                const previewSection = document.getElementById(`${platform}-preview`);
+                const contentElement = document.getElementById(`${platform}-content`);
+
+                previewSection.classList.add('active');
+
+                let formattedContent = '';
+
+                switch(platform) {
+                    case 'facebook':
+                        formattedContent = formatFacebookPost(title, content, url, imageUrl);
+                        break;
+                    case 'twitter':
+                        formattedContent = formatTwitterPost(title, content, url, imageUrl);
+                        break;
+                    case 'instagram':
+                        formattedContent = formatInstagramPost(title, content, url, imageUrl);
+                        break;
+                }
+
+                contentElement.textContent = formattedContent;
+            });
+        }
+
+        function formatFacebookPost(title, content, url, imageUrl) {
+            const maxLength = 200;
+            let excerpt = content.length > maxLength ? content.substring(0, maxLength) + '...' : content;
+
+            return `New Blog Post: ${title}
+
+${excerpt}
+
+Read more: ${url}
+
+#blogging #content #hugo #webdev`;
+        }
+
+        function formatTwitterPost(title, content, url, imageUrl) {
+            const maxTitleLength = 80;
+            const maxContentLength = 150;
+
+            let shortTitle = title.length > maxTitleLength ? title.substring(0, maxTitleLength) + '...' : title;
+            let excerpt = content.length > maxContentLength ? content.substring(0, maxContentLength) + '...' : content;
+
+            const basePost = `New Post: ${shortTitle}\n\n${excerpt}\n\n${url}\n\n`;
+            const remainingChars = 280 - basePost.length;
+
+            let hashtags = '';
+            if (remainingChars >= 30) {
+                hashtags = '#blogging #content #hugo';
+            } else if (remainingChars >= 15) {
+                hashtags = '#blogging #hugo';
+            } else if (remainingChars >= 7) {
+                hashtags = '#blogging';
+            }
+
+            return basePost + hashtags;
+        }
+
+        function formatInstagramPost(title, content, url, imageUrl) {
+            const maxLength = 150;
+            let excerpt = content.length > maxLength ? content.substring(0, maxLength) + '...' : content;
+
+            return `New Blog Post: ${title}
+
+${excerpt}
+
+Read the full post at the link in my bio!
+
+#blogging #content #hugo #blog #writing #webdevelopment`;
+        }
+
+        function resizeImageForPlatform(platform) {
+            const imageUrl = document.getElementById('image-url').value.trim();
+
+            if (!imageUrl) {
+                alert('Please enter an image URL first.');
+                return;
+            }
+
+            let dimensions = '';
+            let serviceUrl = '';
+
+            switch(platform) {
+                case 'facebook':
+                    dimensions = '1280x628';
+                    serviceUrl = `https://www.iloveimg.com/resize-image?url=${encodeURIComponent(imageUrl)}&width=1280&height=628`;
+                    break;
+                case 'twitter':
+                case 'instagram':
+                    dimensions = '1080x1080';
+                    serviceUrl = `https://www.iloveimg.com/resize-image?url=${encodeURIComponent(imageUrl)}&width=1080&height=1080`;
+                    break;
+            }
+
+            // Open image resizing service in new tab
+            window.open(serviceUrl, '_blank');
+
+            // Show instructions
+            alert(`Opening image resizer for ${platform.toUpperCase()}.\n\nRequired dimensions: ${dimensions}\n\nUse the online tool to resize and download your image.`);
+        }
+
+        function copyToClipboard(elementId) {
+            const text = document.getElementById(elementId).textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                showNotification();
+            });
+        }
+
+        function showNotification() {
+            const notification = document.getElementById('copyNotification');
+            notification.style.display = 'block';
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+
+        function shareOnFacebook() {
+            const url = document.getElementById('post-url').value.trim();
+            if (url) {
+                window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
+            } else {
+                alert('Please enter a URL to share on Facebook.');
+            }
+        }
+
+        function shareOnTwitter() {
+            const title = document.getElementById('post-title').value.trim();
+            const url = document.getElementById('post-url').value.trim();
+            if (title && url) {
+                const text = `New Blog Post: ${title}`;
+                window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+            } else {
+                alert('Please enter both title and URL to share on Twitter.');
+            }
+        }
+
+        function clearAll() {
+            document.getElementById('post-title').value = '';
+            document.getElementById('post-content').value = '';
+            document.getElementById('post-url').value = '';
+            document.getElementById('image-url').value = '';
+
+            document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                checkbox.checked = false;
+            });
+
+            document.querySelectorAll('.preview-section').forEach(section => {
+                section.classList.remove('active');
+            });
+        }
+    </script>
+
+    {{ partial "footer.html" . }}
+</body>
+</html>

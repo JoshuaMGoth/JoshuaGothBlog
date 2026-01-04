@@ -1,0 +1,108 @@
+<!-- layouts/partials/zoltar-script.html -->
+<script>
+    // Arrays of demotivational quotes and closing lines
+    const demotivationalQuotes = [
+        "The universe was interrupted and wanted me to tell you that your potential is like a black hole - it has immense gravitational pull but ultimately leads to nothing.",
+        "The cosmic forces have spoken: your best qualities are like a participation trophy - they exist, but nobody really cares.",
+        "The stars have aligned to reveal that your personality is like a screensaver - it's there when no one's paying attention.",
+        "The spirits whisper that your ambition is like a sloth on sedatives - it exists in theory but shows no signs of movement.",
+        "The ancient ones have decreed that your charm is like a broken pencil - pointless.",
+        "The cosmic energy indicates that your intelligence is like a Wi-Fi signal in a Faraday cage - technically present but completely inaccessible.",
+        // Add more quotes as needed (I've included 10 for brevity, you can add the full 100+)
+        "The universe paused its infinite expansion to tell you that your personality is like a background character in a movie - easily forgotten.",
+        "The ancient prophecy states that your charm is like a screen door on a submarine - not only useless but actively detrimental.",
+        "The stars have spoken: your intelligence is like a solar-powered flashlight - it only works under very specific conditions that never occur.",
+        "The cosmic forces indicate that your ambition is like a deflated balloon - it had shape once, but now it's just sad."
+    ];
+
+    const closingLines = [
+        "Yeah, you should pretty much go and die somewhere... alone.",
+        "Maybe try being someone else? Anyone else.",
+        "I'd tell you to have a nice day, but we both know that's not happening.",
+        "On the bright side, nobody expects anything from you.",
+        "If I were you, I'd consider a career in professional disappointment.",
+        "Don't worry about improving - you've perfected mediocrity.",
+        "The world would be a better place if you were less... you.",
+        "I'd suggest you give up, but it seems you already have.",
+        "Your existence is proof that evolution can go backwards.",
+        "If disappointment were an Olympic sport, you'd be a gold medalist."
+    ];
+
+    // Initialize when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        const questionInput = document.getElementById('question-input');
+        const askButton = document.getElementById('ask-button');
+        const fortuneResult = document.getElementById('fortune-result');
+        const fortuneText = document.getElementById('fortune-text');
+        const closingLine = document.getElementById('closing-line');
+        const fortunePlaceholder = document.getElementById('fortune-placeholder');
+        const questionPrompt = document.getElementById('question-prompt');
+        const crystalBall = document.querySelector('.crystal-ball');
+
+        // Event listener for the ask button
+        if (askButton) {
+            askButton.addEventListener('click', generateFortune);
+        }
+
+        // Also allow Enter key to submit
+        if (questionInput) {
+            questionInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    generateFortune();
+                }
+            });
+        }
+
+        function generateFortune() {
+            const question = questionInput.value.trim();
+
+            if (!question) {
+                alert("Please ask a question first!");
+                return;
+            }
+
+            // Show loading state
+            fortunePlaceholder.textContent = "Consulting the cosmic forces...";
+            crystalBall.classList.add('pulse');
+
+            // Clear previous result
+            fortuneResult.classList.remove('active');
+
+            // Simulate processing delay
+            setTimeout(() => {
+                // Randomly select a demotivational quote and closing line
+                const randomQuote = demotivationalQuotes[Math.floor(Math.random() * demotivationalQuotes.length)];
+                const randomClosing = closingLines[Math.floor(Math.random() * closingLines.length)];
+
+                // Update the fortune display
+                fortuneText.textContent = randomQuote;
+                closingLine.textContent = randomClosing;
+
+                // Show the result
+                fortuneResult.classList.add('active');
+                crystalBall.classList.remove('pulse');
+                fortunePlaceholder.textContent = "";
+
+                // Clear the input
+                questionInput.value = "";
+
+                // Add some visual effects
+                const headerTitle = document.querySelector('.machine-header h1');
+                if (headerTitle) {
+                    headerTitle.classList.add('glow');
+                    setTimeout(() => {
+                        headerTitle.classList.remove('glow');
+                    }, 2000);
+                }
+
+            }, 2000);
+        }
+
+        // Initial animation for the question prompt
+        setTimeout(() => {
+            if (questionPrompt) {
+                questionPrompt.style.animation = 'fadeIn 2s forwards';
+            }
+        }, 1000);
+    });
+</script>

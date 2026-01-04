@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Frogger</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            touch-action: none;
+        }
+
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 800px;
+            padding: 10px;
+        }
+
+        .title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #00ffff;
+            text-shadow: 0 0 10px #00ffff;
+            text-align: center;
+        }
+
+        .game-board {
+            background-color: #000;
+            border: 2px solid #444;
+            padding: 5px;
+            margin: 10px 0;
+            font-size: 12px;
+            line-height: 1;
+            white-space: pre;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+            font-family: 'Courier New', monospace;
+            min-width: 640px;
+            min-height: 250px;
+        }
+
+        .controls {
+            margin: 10px 0;
+            text-align: center;
+            color: #00ff00;
+        }
+
+        .key {
+            display: inline-block;
+            background-color: #333;
+            color: #0f0;
+            padding: 4px 8px;
+            margin: 0 2px;
+            border-radius: 3px;
+            border: 1px solid #0f0;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .stat {
+            background-color: #222;
+            color: #00ff00;
+            padding: 6px 12px;
+            border-radius: 4px;
+            border: 1px solid #444;
+            font-family: 'Courier New', monospace;
+        }
+
+        .game-over {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.95);
+            padding: 30px;
+            border: 3px solid #ff0000;
+            border-radius: 10px;
+            text-align: center;
+            z-index: 100;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+        }
+
+        .game-over h2 {
+            color: #ff0000;
+            margin-bottom: 15px;
+            font-size: 28px;
+            text-shadow: 0 0 10px #ff0000;
+        }
+
+        .game-over button {
+            background-color: #00ff00;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .game-over button:hover {
+            background-color: #00cc00;
+        }
+
+        @media (max-width: 768px) {
+            .game-board {
+                font-size: 10px;
+                min-width: 320px;
+                min-height: 200px;
+            }
+
+            .title {
+                font-size: 20px;
+            }
+
+            .key {
+                padding: 3px 6px;
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .game-board {
+                font-size: 8px;
+                min-width: 240px;
+                min-height: 150px;
+            }
+
+            .title {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="title">ASCII FROGGER</div>
+
+        <div class="game-board" id="gameBoard"></div>
+
+        <div class="controls">
+            <div>Move: <span class="key">↑</span> <span class="key">↓</span> <span class="key">←</span> <span class="key">→</span></div>
+            <div>Quit: <span class="key">ESC</span> (returns to site)</div>
+        </div>
+
+        <div class="stats">
+            <div class="stat">Lives: <span id="lives">3</span></div>
+            <div class="stat">Score: <span id="score">0</span></div>
+            <div class="stat">Level: <span id="level">1</span></div>
+        </div>
+    </div>
+
+    <div class="game-over" id="gameOver">
+        <h2>GAME OVER</h2>
+        <div style="margin-bottom: 10px;">Final Score: <span id="finalScore">0</span></div>
+        <div style="margin-bottom: 20px;">You reached Level <span id="finalLevel">1</span></div>
+        <button onclick="restartGame()">PLAY AGAIN</button>
+        <div style="color: #888; margin-top: 20px; font-size: 12px;">Press ESC to return to website</div>
+    </div>
+
+    <script>
+        // Game configuration
+        const BOARD_WIDTH = 80;
+        const BOARD_HEIGHT = 25;
+
+        // Game state
+        let player = {
+            x: Math.floor(BOARD_WIDTH / 2),
+            y: BOARD_HEIGHT - 2,
+            alive: true
+        };
+
+        let cars = [];
+        let score = 0;
+        let level = 1;
+        let lives = 3;
+        let gameActive = true;
+        let lastTime = 0;
+        let animationFrameId = null;
+
+        // DOM elements
+        const gameBoard = document.getElementById('gameBoard');
+        const livesElement = document.getElementById('lives');
+        const scoreElement = document.getElementById('score');
+        const levelElement = document.getElementById('level');
+        const gameOverScreen = document.getElementById('gameOver');
+        const finalScoreElement = document.getElementById('finalScore');
+        const finalLevelElement = document.getElementById('finalLevel');
+
+        // Initialize game board
+        function initBoard() {
+            let board = '';
+            for (let y = 0; y < BOARD_HEIGHT; y++) {
+                for (let x = 0; x < BOARD_WIDTH; x++) {
+                    // Draw borders
+                    if (y === 0 || y === BOARD_HEIGHT - 1) {
+                        board += '═';
+                    } else if (x === 0 || x === BOARD_WIDTH - 1) {
+                        board += '║';
+                    }
+                    // Draw grass (safe zones)
+                    else if (y >= 2 && y <= 4) {
+                        board += '▓'; // Top grass
+                    } else if (y >= 20 && y <= 22) {
+                        board += '▓'; // Bottom grass
+                    }
+                    // Draw road
+                    else if (y >= 5 && y <= 19) {
+                        board += '.'; // Road surface
+                    }
+                    // Empty space
+                    else {
+                        board += ' ';
+                    }
+                }
+                board += '\n';
+            }
+            gameBoard.textContent = board;
+        }
+
+        // Create a new car
+        function createCar() {
+            const lane = Math.floor(Math.random() * 13) + 5; // Lanes 5-17
+            const direction = Math.random() > 0.5 ? 1 : -1;
+            const speed = 0.5 + Math.random() * 0.5 + (level * 0.1);
+            const length = Math.floor(Math.random() * 5) + 3; // 3-7 characters long
+
+            cars.push({
+                x: direction > 0 ? 1 : BOARD_WIDTH - 2,
+                y: lane,
+                direction: direction,
+                speed: speed,
+                length: length,
+                honk: false,
+                honkTimer: 0
+            });
+        }
+
+        // Update game state
+        function updateGame(currentTime) {
+            if (!gameActive) return;
+
+            const deltaTime = currentTime - lastTime;
+            lastTime = currentTime;
+
+            // Move all cars
+            cars.forEach(car => {
+                car.x += car.direction * car.speed * (deltaTime / 16);
+
+                // Wrap cars around screen
+                if (car.direction > 0 && car.x > BOARD_WIDTH) {
+                    car.x = -car.length;
+                } else if (car.direction < 0 && car.x < -car.length) {
+                    car.x = BOARD_WIDTH + car.length;
+                }
+
+                // Update honk timer
+                if (car.honk) {
+                    car.honkTimer -= deltaTime;
+                    if (car.honkTimer <= 0) {
+                        car.honk = false;
+                    }
+                }
+            });
+
+            // Check for collisions if player is alive
+            if (player.alive) {
+                cars.forEach(car => {
+                    if (Math.abs(player.y - car.y) < 1) {
+                        const carLeft = Math.floor(car.x);
+                        const carRight = Math.floor(car.x + car.length);
+
+                        if (player.x >= carLeft && player.x <= carRight) {
+                            playerHit(car);
+                        }
+                    }
+                });
+
+                // Check if player reached top (win condition)
+                if (player.y <= 2) {
+                    score += 100 * level;
+                    level++;
+                    player.x = Math.floor(BOARD_WIDTH / 2);
+                    player.y = BOARD_HEIGHT - 2;
+                    updateStats();
+
+                    // Add more cars for increased difficulty
+                    for (let i = 0; i < 2; i++) {
+                        createCar();
+                    }
+
+                    // Optional: Show level up message
+                    console.log(`Level up! Now level ${level}`);
+                }
+            }
+
+            // Randomly spawn new cars
+            if (Math.random() < 0.02) {
+                createCar();
+            }
+
+            // Remove cars that are far off screen
+            cars = cars.filter(car => {
+                return !(car.direction > 0 && car.x > BOARD_WIDTH + 20) &&
+                       !(car.direction < 0 && car.x < -20);
+            });
+
+            // Draw everything
+            draw();
+
+            // Continue game loop
+            if (gameActive) {
+                animationFrameId = requestAnimationFrame(updateGame);
+            }
+        }
+
+        // Handle player getting hit by a car
+        function playerHit(hittingCar) {
+            player.alive = false;
+            lives--;
+            hittingCar.honk = true;
+            hittingCar.honkTimer = 1000; // Honk for 1 second
+
+            updateStats();
+
+            if (lives <= 0) {
+                // Game over
+                setTimeout(() => {
+                    gameOver();
+                }, 1000);
+            } else {
+                // Respawn player after delay
+                setTimeout(() => {
+                    player.x = Math.floor(BOARD_WIDTH / 2);
+                    player.y = BOARD_HEIGHT - 2;
+                    player.alive = true;
+                }, 1000);
+            }
+        }
+
+        // Draw the game board
+        function draw() {
+            let boardArray = [];
+
+            // Create empty board with borders and road
+            for (let y = 0; y < BOARD_HEIGHT; y++) {
+                let row = '';
+                for (let x = 0; x < BOARD_WIDTH; x++) {
+                    if (y === 0 || y === BOARD_HEIGHT - 1) {
+                        row += '═';
+                    } else if (x === 0 || x === BOARD_WIDTH - 1) {
+                        row += '║';
+                    } else if (y >= 2 && y <= 4) {
+                        row += '▓'; // Grass top
+                    } else if (y >= 20 && y <= 22) {
+                        row += '▓'; // Grass bottom
+                    } else if (y >= 5 && y <= 19) {
+                        row += '.'; // Road
+                    } else {
+                        row += ' ';
+                    }
+                }
+                boardArray.push(row.split(''));
+            }
+
+            // Draw all cars
+            cars.forEach(car => {
+                const carX = Math.floor(car.x);
+                const carY = Math.floor(car.y);
+
+                // Draw car body
+                for (let i = 0; i < car.length; i++) {
+                    const x = carX + i * car.direction;
+                    if (x >= 1 && x < BOARD_WIDTH - 1 && carY >= 1 && carY < BOARD_HEIGHT - 1) {
+                        // Draw car brackets and body
+                        if (i === 0) {
+                            // Front of car
+                            boardArray[carY][x] = car.direction > 0 ? '[' : ']';
+                        } else if (i === car.length - 1) {
+                            // Back of car
+                            boardArray[carY][x] = car.direction > 0 ? ']' : '[';
+                        } else {
+                            // Car body
+                            boardArray[carY][x] = '#';
+                        }
+                    }
+                }
+
+                // Draw "HONK" if car is honking
+                if (car.honk) {
+                    const honkX = carX + (car.direction > 0 ? car.length + 1 : -4);
+                    const honkY = carY;
+
+                    if (honkX >= 1 && honkX + 3 < BOARD_WIDTH - 1) {
+                        const honkText = "HONK";
+                        for (let i = 0; i < 4; i++) {
+                            if (honkX + i >= 1 && honkX + i < BOARD_WIDTH - 1) {
+                                boardArray[honkY][honkX + i] = honkText[i];
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Draw player if alive
+            if (player.alive) {
+                const x = Math.floor(player.x);
+                const y = Math.floor(player.y);
+
+                if (x >= 1 && x < BOARD_WIDTH - 1 && y >= 1 && y < BOARD_HEIGHT - 1) {
+                    // Draw stick figure: O for head, | for body, /|\ for legs
+                    boardArray[y][x] = 'O'; // Head
+                    if (y + 1 < BOARD_HEIGHT - 1) {
+                        boardArray[y + 1][x] = '|'; // Body
+                    }
+                    if (y + 2 < BOARD_HEIGHT - 1) {
+                        boardArray[y + 2][x - 1] = '/'; // Left leg
+                        boardArray[y + 2][x] = '|';     // Body continuation
+                        boardArray[y + 2][x + 1] = '\\'; // Right leg
+                    }
+                }
+            } else {
+                // Draw death animation (shattered pieces)
+                const x = Math.floor(player.x);
+                const y = Math.floor(player.y);
+                const pieces = ['*', '+', 'x', '!', '%', '@', '#', '&'];
+
+                // Scatter 8 pieces around the player's position
+                for (let i = 0; i < 8; i++) {
+                    const pieceX = Math.max(1, Math.min(BOARD_WIDTH - 2,
+                        x + Math.floor(Math.random() * 7) - 3));
+                    const pieceY = Math.max(1, Math.min(BOARD_HEIGHT - 2,
+                        y + Math.floor(Math.random() * 7) - 3));
+                    boardArray[pieceY][pieceX] = pieces[Math.floor(Math.random() * pieces.length)];
+                }
+            }
+
+            // Convert board array to string
+            let boardString = '';
+            for (let y = 0; y < BOARD_HEIGHT; y++) {
+                boardString += boardArray[y].join('') + '\n';
+            }
+
+            gameBoard.textContent = boardString;
+        }
+
+        // Update statistics display
+        function updateStats() {
+            livesElement.textContent = lives;
+            scoreElement.textContent = score;
+            levelElement.textContent = level;
+        }
+
+        // Game over function
+        function gameOver() {
+            gameActive = false;
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+            }
+
+            finalScoreElement.textContent = score;
+            finalLevelElement.textContent = level;
+            gameOverScreen.style.display = 'block';
+        }
+
+        // Restart game
+        function restartGame() {
+            // Reset game state
+            player = {
+                x: Math.floor(BOARD_WIDTH / 2),
+                y: BOARD_HEIGHT - 2,
+                alive: true
+            };
+            cars = [];
+            score = 0;
+            level = 1;
+            lives = 3;
+            gameActive = true;
+
+            // Reset display
+            gameOverScreen.style.display = 'none';
+            updateStats();
+            initBoard();
+
+            // Create initial cars
+            for (let i = 0; i < 5 + level; i++) {
+                createCar();
+            }
+
+            // Start game loop
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+            }
+            lastTime = performance.now();
+            animationFrameId = requestAnimationFrame(updateGame);
+        }
+
+        // Keyboard controls
+        document.addEventListener('keydown', (event) => {
+            // Prevent default behavior for arrow keys and ESC
+            if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Escape'].includes(event.code)) {
+                event.preventDefault();
+            }
+
+            // Handle ESC key to exit game
+            if (event.code === 'Escape') {
+                // Send message to parent window to close the game
+                if (window.parent && window.parent !== window) {
+                    try {
+                        window.parent.postMessage('closeFrogger', '*');
+                    } catch (e) {
+                        console.log('Could not communicate with parent window');
+                    }
+                }
+                return;
+            }
+
+            // Only process movement keys if player is alive and game is active
+            if (!player.alive || !gameActive) return;
+
+            switch (event.code) {
+                case 'ArrowUp':
+                    player.y = Math.max(1, player.y - 1);
+                    break;
+                case 'ArrowDown':
+                    player.y = Math.min(BOARD_HEIGHT - 2, player.y + 1);
+                    break;
+                case 'ArrowLeft':
+                    player.x = Math.max(1, player.x - 1);
+                    break;
+                case 'ArrowRight':
+                    player.x = Math.min(BOARD_WIDTH - 2, player.x + 1);
+                    break;
+            }
+        });
+
+        // Initialize the game
+        function initGame() {
+            initBoard();
+            updateStats();
+
+            // Create initial cars
+            for (let i = 0; i < 5 + level; i++) {
+                createCar();
+            }
+
+            // Start game loop
+            lastTime = performance.now();
+            animationFrameId = requestAnimationFrame(updateGame);
+
+            // Focus the game for keyboard input
+            document.body.focus();
+
+            console.log('ASCII Frogger game initialized!');
+        }
+
+        // Make sure the game has focus
+        document.body.tabIndex = 0;
+        document.body.style.outline = 'none';
+
+        // Add click handler to focus the game
+        document.addEventListener('click', () => {
+            document.body.focus();
+        });
+
+        // Listen for messages from parent window
+        window.addEventListener('message', (event) => {
+            if (event.data === 'restartGame') {
+                restartGame();
+            }
+        });
+
+        // Initialize game when page loads
+        window.addEventListener('load', initGame);
+
+        // Handle page visibility changes
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                // Pause game when tab is not visible
+                if (animationFrameId) {
+                    cancelAnimationFrame(animationFrameId);
+                    animationFrameId = null;
+                }
+            } else if (gameActive && !animationFrameId) {
+                // Resume game when tab becomes visible
+                lastTime = performance.now();
+                animationFrameId = requestAnimationFrame(updateGame);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+{{ $imdbID := .Get "imdb_id" }}
+{{ $myRating := .Get "my_rating" | default "" }}
+
+{{ if $imdbID }}
+    {{ $cacheKey := printf "omdb-%s" $imdbID }}
+    {{ $url := printf "https://www.omdbapi.com/?i=%s&apikey=60d4013f" $imdbID }}
+    
+    {{/* Check cache first */}}
+    {{ $cached := resources.GetMatch (printf "cache/%s.json" $cacheKey) }}
+    {{ $movie := dict }}
+    {{ $errorMsg := "" }}
+    
+    {{ if not $cached }}
+        {{/* Fetch from API and cache */}}
+        {{ $data := resources.GetRemote $url (dict 
+            "key" $cacheKey
+        ) }}
+        
+        {{ if $data }}
+            {{/* Check if the resource content indicates an error */}}
+            {{ $content := $data.Content }}
+            {{ if findRE "Error" $content }}
+                {{ $errorMsg = "API returned an error" }}
+            {{ else }}
+                {{ $movie = $content | transform.Unmarshal }}
+            {{ end }}
+        {{ else }}
+            {{ $errorMsg = "Failed to fetch data from OMDB API" }}
+        {{ end }}
+    {{ else }}
+        {{ $movie = $cached.Content | transform.Unmarshal }}
+    {{ end }}
+
+    {{ if $errorMsg }}
+        <div class="movie-error" style="color: #dc3545; padding: 1rem; background: #f8d7da; border-radius: 4px; margin: 2rem auto; max-width: 800px;">
+            Error: {{ $errorMsg }} for IMDb ID {{ $imdbID }}
+        </div>
+    {{ else if and $movie (eq $movie.Response "True") }}
+    <div class="movie-review" style="max-width: 800px; margin: 2rem auto; font-family: system-ui, sans-serif;">
+        
+        <!-- Movie Header -->
+        <div class="movie-header" style="display: flex; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap;">
+            {{ if and $movie.Poster (ne $movie.Poster "N/A") }}
+            <img src="{{ $movie.Poster }}" alt="{{ $movie.Title }} poster" 
+                 style="width: 300px; height: auto; border-radius: 8px; flex-shrink: 0;">
+            {{ else }}
+            <div style="width: 300px; height: 450px; background: #f0f0f0; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #666; flex-shrink: 0;">
+                No poster available
+            </div>
+            {{ end }}
+            
+            <div class="movie-info" style="flex: 1; min-width: 300px;">
+                <h1 style="margin: 0 0 0.5rem 0; font-size: 2rem;">
+                    {{ $movie.Title }} <span style="font-weight: normal; color: #666;">({{ $movie.Year }})</span>
+                </h1>
+                
+                <div class="movie-meta" style="color: #666; margin-bottom: 1.5rem;">
+                    {{ with $movie.Runtime }}<span>{{ . }}</span> • {{ end }}
+                    {{ with $movie.Genre }}<span>{{ . }}</span> • {{ end }}
+                    {{ with $movie.imdbRating }}<span>IMDb: {{ . }}/10</span>{{ end }}
+                    {{ with $myRating }} • <span style="font-weight: bold;">My Rating: {{ . }}/10</span>{{ end }}
+                </div>
+                
+                <div class="movie-details" style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px;">
+                    {{ with $movie.Director }}<p style="margin: 0.5rem 0;"><strong>Director:</strong> {{ . }}</p>{{ end }}
+                    {{ with $movie.Actors }}<p style="margin: 0.5rem 0;"><strong>Cast:</strong> {{ . }}</p>{{ end }}
+                    {{ with $movie.Released }}<p style="margin: 0.5rem 0;"><strong>Released:</strong> {{ . }}</p>{{ end }}
+                    {{ with $movie.Rated }}<p style="margin: 0.5rem 0;"><strong>Rating:</strong> {{ . }}</p>{{ end }}
+                    {{ with $movie.BoxOffice }}<p style="margin: 0.5rem 0;"><strong>Box Office:</strong> {{ . }}</p>{{ end }}
+                    {{ with $movie.Awards }}<p style="margin: 0.5rem 0;"><strong>Awards:</strong> {{ . }}</p>{{ end }}
+                </div>
+            </div>
+        </div>
+        
+        <!-- Plot -->
+        {{ with $movie.Plot }}
+        <div class="plot-section" style="margin-bottom: 2rem;">
+            <h2 style="border-bottom: 2px solid #e9ecef; padding-bottom: 0.5rem;">Plot Summary</h2>
+            <p style="line-height: 1.6;">{{ . }}</p>
+        </div>
+        {{ end }}
+        
+        <!-- Ratings -->
+        {{ with $movie.Ratings }}
+        <div class="ratings-section" style="margin-bottom: 2rem;">
+            <h2 style="border-bottom: 2px solid #e9ecef; padding-bottom: 0.5rem;">Ratings</h2>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                {{ range . }}
+                <div style="background: #e9ecef; padding: 0.5rem 1rem; border-radius: 4px;">
+                    <strong>{{ .Source }}</strong>: {{ .Value }}
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+        
+        <!-- Review Content -->
+        <div class="review-content" style="line-height: 1.6;">
+            <h2 style="border-bottom: 2px solid #e9ecef; padding-bottom: 0.5rem;">My Review</h2>
+            {{ .Inner | markdownify }}
+        </div>
+
+    </div>
+    {{ else if $movie }}
+        <div class="movie-error" style="color: #dc3545; padding: 1rem; background: #f8d7da; border-radius: 4px; margin: 2rem auto; max-width: 800px;">
+            Error: {{ $movie.Error | default "Movie not found" }}
+        </div>
+    {{ else }}
+        <div class="movie-error" style="color: #dc3545; padding: 1rem; background: #f8d7da; border-radius: 4px; margin: 2rem auto; max-width: 800px;">
+            Error: Unable to load movie data for IMDb ID {{ $imdbID }}
+        </div>
+    {{ end }}
+{{ else }}
+    <div class="movie-error" style="color: #dc3545; padding: 1rem; background: #f8d7da; border-radius: 4px; margin: 2rem auto; max-width: 800px;">
+        Error: No IMDb ID provided. Use {{ "{{< movie_review imdb_id=\"tt0111161\" my_rating=\"9.5\" >}}" | safeHTML }}
+    </div>
+{{ end }}

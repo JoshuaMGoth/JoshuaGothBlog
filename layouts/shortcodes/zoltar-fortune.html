@@ -1,0 +1,46 @@
+<!-- layouts/shortcodes/zoltar-fortune.html -->
+<div id="zoltar-fortune-app" class="zoltar-container">
+    <div class="machine-header">
+        <h1>ZOLTAR</h1>
+        <p>Demotivational Fortune Teller</p>
+    </div>
+
+    <div class="zoltar-figure">
+        <div class="zoltar-turban"></div>
+        <div class="zoltar-face">
+            <div class="zoltar-eyes">
+                <div class="eye"><div class="pupil"></div></div>
+                <div class="eye"><div class="pupil"></div></div>
+            </div>
+            <div class="zoltar-mouth"></div>
+        </div>
+    </div>
+
+    <div class="crystal-ball pulse">
+        <div class="fortune-display">
+            <div id="fortune-placeholder">Your fortune awaits...</div>
+        </div>
+    </div>
+
+    <div class="question-prompt" id="question-prompt">Ask me Anything.</div>
+
+    <div class="input-area">
+        <input type="text" id="question-input" placeholder="Type your question here...">
+        <button id="ask-button">ASK ZOLTAR</button>
+    </div>
+
+    <div class="fortune-result" id="fortune-result">
+        <div class="fortune-text" id="fortune-text"></div>
+        <div class="closing-line" id="closing-line"></div>
+    </div>
+
+    <div class="footer">
+        <p>Disclaimer: Zoltar's fortunes are intentionally demotivational and meant for entertainment purposes only.</p>
+    </div>
+</div>
+
+<!-- Include CSS -->
+{{ partial "zoltar-styles" . }}
+
+<!-- Include JavaScript -->
+{{ partial "zoltar-script" . }}

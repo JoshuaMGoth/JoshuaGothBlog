@@ -1,0 +1,695 @@
+{{/* ASCII Art Generator Shortcode */}}
+{{/* Usage: {{< ascii-art >}} */}}
+
+<div class="ascii-art-generator" id="ascii-art-generator-{{ now.UnixNano }}">
+    <!-- Scoped CSS Styles -->
+    <style>
+        /* RESET: Ensure our styles don't leak out */
+        #ascii-art-generator-{{ now.UnixNano }} {
+            all: initial;
+            font-family: 'Courier New', monospace;
+            display: block;
+        }
+
+        /* Scope all styles to our container */
+        #ascii-art-generator-{{ now.UnixNano }} * {
+            all: revert;
+            box-sizing: border-box;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .ascii-container {
+            font-family: 'Courier New', monospace;
+            background: #1a1a1a;
+            color: #00ff00;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 2rem 0;
+            border: 1px solid #333;
+            display: block;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .ascii-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .ascii-subtitle {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #88ff88;
+            font-family: 'Courier New', monospace;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .watermark-notice {
+            background: rgba(255, 153, 0, 0.1);
+            color: #ff9900;
+            border: 1px solid #ff9900;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .upload-area {
+            border: 3px dashed #00ff00;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: rgba(0, 255, 0, 0.05);
+            font-family: 'Courier New', monospace;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .upload-area:hover {
+            background: rgba(0, 255, 0, 0.1);
+            border-color: #88ff88;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .upload-icon {
+            font-size: 48px;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .ascii-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #222;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .control-group {
+            margin-bottom: 15px;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .control-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #88ff88;
+            font-family: 'Courier New', monospace;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .slider {
+            width: 100%;
+            margin-bottom: 10px;
+            height: 8px;
+            background: #444;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .slider::-webkit-slider-thumb {
+            width: 20px;
+            height: 20px;
+            background: #00ff00;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} select,
+        #ascii-art-generator-{{ now.UnixNano }} .btn {
+            width: 100%;
+            padding: 10px;
+            background: #333;
+            color: #00ff00;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} select:hover,
+        #ascii-art-generator-{{ now.UnixNano }} .btn:hover {
+            background: #00ff00;
+            color: #1a1a1a;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .char-set {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .char-option {
+            padding: 5px 10px;
+            background: #333;
+            border: 1px solid #00ff00;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Courier New', monospace;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .char-option:hover {
+            background: #00ff00;
+            color: #1a1a1a;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .char-option.active {
+            background: #00ff00;
+            color: #1a1a1a;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .preview-area {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .preview-box {
+            background: #222;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #444;
+            font-family: 'Courier New', monospace;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .preview-box h3 {
+            margin-bottom: 15px;
+            color: #88ff88;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .image-preview {
+            max-width: 100%;
+            max-height: 300px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .ascii-output {
+            font-family: 'Courier New', monospace;
+            white-space: pre;
+            overflow-x: auto;
+            background: #111;
+            padding: 15px;
+            border-radius: 5px;
+            line-height: 1;
+            letter-spacing: 0;
+            max-height: 500px;
+            overflow-y: auto;
+            border: 1px solid #444;
+            font-size: 8px;
+            margin: 0;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .output-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .output-controls .btn {
+            flex: 1;
+            min-width: 150px;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .info-panel {
+            margin-top: 30px;
+            padding: 20px;
+            background: #222;
+            border-radius: 8px;
+            border-left: 4px solid #00ff00;
+            font-family: 'Courier New', monospace;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #ascii-art-generator-{{ now.UnixNano }} .loading-spinner {
+            border: 4px solid #333;
+            border-top: 4px solid #00ff00;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            #ascii-art-generator-{{ now.UnixNano }} .preview-area {
+                grid-template-columns: 1fr;
+            }
+
+            #ascii-art-generator-{{ now.UnixNano }} .ascii-controls {
+                grid-template-columns: 1fr;
+            }
+
+            #ascii-art-generator-{{ now.UnixNano }} .ascii-container {
+                padding: 15px;
+            }
+
+            #ascii-art-generator-{{ now.UnixNano }} .ascii-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+
+    <!-- HTML Structure -->
+    <div class="ascii-container">
+        <h1 class="ascii-title">🖼️ ASCII Art Generator</h1>
+        <p class="ascii-subtitle">Create Masterpieces!</p>
+
+        <div class="watermark-notice">
+            🔒 If you enjoy this tool, please share with others!
+        </div>
+
+        <div class="upload-area" id="uploadArea">
+            <span class="upload-icon">📁</span>
+            <h3>Drag & Drop or Click to Upload</h3>
+            <p>Supports JPG, PNG, GIF, WebP (Max 10MB)</p>
+            <input type="file" id="fileInput" accept="image/*" style="display: none;">
+        </div>
+
+        <div class="ascii-controls">
+            <div class="control-group">
+                <label class="control-label">Character Density: <span id="densityValue">70</span></label>
+                <input type="range" class="slider" id="charDensity" min="10" max="150" value="70">
+
+                <label class="control-label">Contrast: <span id="contrastValue">100</span>%</label>
+                <input type="range" class="slider" id="contrast" min="50" max="200" value="100">
+            </div>
+
+            <div class="control-group">
+                <label class="control-label">Color Mode:</label>
+                <select id="colorMode">
+                    <option value="monochrome">Monochrome (Green)</option>
+                    <option value="grayscale">Grayscale</option>
+                    <option value="color">Color Preserved</option>
+                    <option value="invert">Inverted</option>
+                </select>
+
+                <label class="control-label">Font Size: <span id="sizeValue">8</span>px</label>
+                <input type="range" class="slider" id="asciiSize" min="2" max="20" value="8">
+            </div>
+
+            <div class="control-group">
+                <label class="control-label">Character Set:</label>
+                <div class="char-set">
+                    <div class="char-option active" data-chars="@%#*+=-:. ">Standard</div>
+                    <div class="char-option" data-chars="$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,^`'. ">Detailed</div>
+                    <div class="char-option" data-chars="█▓▒░ ">Blocks</div>
+                    <div class="char-option" data-chars="01 ">Binary</div>
+                </div>
+
+                <button class="btn" id="invertChars">Invert Characters</button>
+            </div>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="loading-spinner"></div>
+            <p>Processing image...</p>
+        </div>
+
+        <div class="preview-area">
+            <div class="preview-box">
+                <h3>Original Image</h3>
+                <img class="image-preview" id="imagePreview" alt="Image preview">
+            </div>
+
+            <div class="preview-box">
+                <h3>ASCII Art Output</h3>
+                <pre class="ascii-output" id="asciiOutput">Upload an image to begin</pre>
+            </div>
+        </div>
+
+        <div class="output-controls">
+            <button class="btn" id="copyText">📋 Copy Text</button>
+            <button class="btn" id="downloadText">💾 Download .txt</button>
+            <button class="btn" id="downloadHTML">🌐 Download HTML</button>
+            <button class="btn" id="resetAll">🔄 Reset</button>
+        </div>
+
+        <div class="info-panel">
+            <h3>💡 Tips:</h3>
+            <p>• High-contrast images work best</p>
+            <p>• Try different character sets for unique effects</p>
+            <p>• Processing happens in your browser - no uploads</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        (function() {
+            // Create unique IDs based on container ID
+            const container = document.currentScript.closest('.ascii-art-generator');
+            const containerId = container.id;
+
+            // Configuration
+            const WATERMARK = '@JOSHUAGOTH.COM';
+
+            // DOM Elements - scoped to this container
+            const elements = {
+                fileInput: container.querySelector('#fileInput'),
+                uploadArea: container.querySelector('#uploadArea'),
+                imagePreview: container.querySelector('#imagePreview'),
+                asciiOutput: container.querySelector('#asciiOutput'),
+                loading: container.querySelector('#loading'),
+                charDensity: container.querySelector('#charDensity'),
+                densityValue: container.querySelector('#densityValue'),
+                contrast: container.querySelector('#contrast'),
+                contrastValue: container.querySelector('#contrastValue'),
+                colorMode: container.querySelector('#colorMode'),
+                asciiSize: container.querySelector('#asciiSize'),
+                sizeValue: container.querySelector('#sizeValue'),
+                charOptions: container.querySelectorAll('.char-option'),
+                invertCharsBtn: container.querySelector('#invertChars'),
+                copyTextBtn: container.querySelector('#copyText'),
+                downloadTextBtn: container.querySelector('#downloadText'),
+                downloadHTMLBtn: container.querySelector('#downloadHTML'),
+                resetAllBtn: container.querySelector('#resetAll')
+            };
+
+            // State
+            let currentImage = null;
+            let currentChars = '@%#*+=-:. ';
+            let asciiResult = '';
+
+            // Initialize
+            function init() {
+                setupEventListeners();
+                if (elements.asciiOutput) {
+                    elements.asciiOutput.style.fontSize = '8px';
+                }
+            }
+
+            // Event Listeners
+            function setupEventListeners() {
+                // Upload
+                elements.uploadArea.addEventListener('click', () => elements.fileInput.click());
+                elements.uploadArea.addEventListener('dragover', handleDragOver);
+                elements.uploadArea.addEventListener('dragleave', handleDragLeave);
+                elements.uploadArea.addEventListener('drop', handleDrop);
+                elements.fileInput.addEventListener('change', handleFileSelect);
+
+                // Controls
+                elements.charDensity.addEventListener('input', updateDensity);
+                elements.contrast.addEventListener('input', updateContrast);
+                elements.colorMode.addEventListener('change', convertToAscii);
+                elements.asciiSize.addEventListener('input', updateFontSize);
+
+                // Character sets
+                elements.charOptions.forEach(option => {
+                    option.addEventListener('click', () => {
+                        elements.charOptions.forEach(opt => opt.classList.remove('active'));
+                        option.classList.add('active');
+                        currentChars = option.dataset.chars;
+                        if (currentImage) convertToAscii();
+                    });
+                });
+
+                // Buttons
+                elements.invertCharsBtn.addEventListener('click', invertCharacters);
+                elements.copyTextBtn.addEventListener('click', copyAsciiText);
+                elements.downloadTextBtn.addEventListener('click', downloadAsciiText);
+                elements.downloadHTMLBtn.addEventListener('click', downloadAsciiHTML);
+                elements.resetAllBtn.addEventListener('click', resetAll);
+            }
+
+            // Drag and Drop
+            function handleDragOver(e) {
+                e.preventDefault();
+                elements.uploadArea.style.background = 'rgba(0, 255, 0, 0.1)';
+            }
+
+            function handleDragLeave() {
+                elements.uploadArea.style.background = '';
+            }
+
+            function handleDrop(e) {
+                e.preventDefault();
+                elements.uploadArea.style.background = '';
+                if (e.dataTransfer.files.length) {
+                    handleImageUpload(e.dataTransfer.files[0]);
+                }
+            }
+
+            function handleFileSelect(e) {
+                if (e.target.files.length) {
+                    handleImageUpload(e.target.files[0]);
+                }
+            }
+
+            // Image Upload
+            function handleImageUpload(file) {
+                if (!file.type.match('image.*')) {
+                    alert('Please upload an image file.');
+                    return;
+                }
+
+                if (file.size > 10 * 1024 * 1024) {
+                    alert('File size must be less than 10MB.');
+                    return;
+                }
+
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    currentImage = new Image();
+                    currentImage.onload = () => {
+                        elements.imagePreview.src = e.target.result;
+                        convertToAscii();
+                    };
+                    currentImage.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+
+            // Control Updates
+            function updateDensity() {
+                elements.densityValue.textContent = elements.charDensity.value;
+                if (currentImage) convertToAscii();
+            }
+
+            function updateContrast() {
+                elements.contrastValue.textContent = elements.contrast.value;
+                if (currentImage) convertToAscii();
+            }
+
+            function updateFontSize() {
+                elements.sizeValue.textContent = elements.asciiSize.value;
+                elements.asciiOutput.style.fontSize = elements.asciiSize.value + 'px';
+            }
+
+            // Invert Characters
+            function invertCharacters() {
+                currentChars = currentChars.split('').reverse().join('');
+                if (currentImage) convertToAscii();
+                updateActiveCharOption();
+            }
+
+            function updateActiveCharOption() {
+                elements.charOptions.forEach(option => {
+                    if (option.dataset.chars === currentChars) {
+                        option.classList.add('active');
+                    } else {
+                        option.classList.remove('active');
+                    }
+                });
+            }
+
+            // Main ASCII Conversion
+            function convertToAscii() {
+                elements.loading.style.display = 'block';
+
+                setTimeout(() => {
+                    const canvas = document.createElement('canvas');
+                    const ctx = canvas.getContext('2d');
+
+                    const density = parseInt(elements.charDensity.value);
+                    const width = Math.floor(currentImage.width * (density / 100));
+                    const height = Math.floor(currentImage.height * (density / 200));
+
+                    canvas.width = width;
+                    canvas.height = height;
+
+                    ctx.drawImage(currentImage, 0, 0, width, height);
+                    const imageData = ctx.getImageData(0, 0, width, height);
+                    const data = imageData.data;
+
+                    // Apply contrast
+                    const contrastVal = parseInt(elements.contrast.value) / 100;
+                    const contrastFactor = (259 * (contrastVal + 255)) / (255 * (259 - contrastVal));
+
+                    for (let i = 0; i < data.length; i += 4) {
+                        data[i] = contrastFactor * (data[i] - 128) + 128;
+                        data[i + 1] = contrastFactor * (data[i + 1] - 128) + 128;
+                        data[i + 2] = contrastFactor * (data[i + 2] - 128) + 128;
+
+                        data[i] = Math.max(0, Math.min(255, data[i]));
+                        data[i + 1] = Math.max(0, Math.min(255, data[i + 1]));
+                        data[i + 2] = Math.max(0, Math.min(255, data[i + 2]));
+                    }
+
+                    // Generate ASCII with watermark
+                    let ascii = '';
+                    const charLength = currentChars.length;
+
+                    for (let y = 0; y < height; y++) {
+                        for (let x = 0; x < width; x++) {
+                            const index = (y * width + x) * 4;
+                            const r = data[index];
+                            const g = data[index + 1];
+                            const b = data[index + 2];
+
+                            const brightness = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+                            const charIndex = Math.floor((1 - brightness) * (charLength - 1));
+                            let char = currentChars[charIndex] || ' ';
+
+                            // Apply watermark pattern (subtle diagonal)
+                            if (shouldAddWatermark(x, y, width, height)) {
+                                char = getWatermarkChar(x, y);
+                            }
+
+                            // Apply color
+                            char = applyColor(char, r, g, b);
+
+                            ascii += char;
+                        }
+                        ascii += '\n';
+                    }
+
+                    // Add watermark footer
+                    ascii += '\n' + createWatermarkFooter(width);
+
+                    asciiResult = ascii;
+                    elements.asciiOutput.innerHTML = ascii;
+                    elements.loading.style.display = 'none';
+                }, 50);
+            }
+
+            // Watermark Functions
+            function shouldAddWatermark(x, y, width, height) {
+                // Add watermark every 4th pixel in a diagonal pattern
+                return (x + y) % 4 === 0 &&
+                       x % (WATERMARK.length + 3) === y % (WATERMARK.length + 3);
+            }
+
+            function getWatermarkChar(x, y) {
+                const index = (x + y) % WATERMARK.length;
+                return WATERMARK[index];
+            }
+
+            function createWatermarkFooter(width) {
+                const border = '─'.repeat(Math.min(width, 50));
+                const padding = Math.max(0, Math.floor((width - WATERMARK.length - 2) / 2));
+                const centered = ' '.repeat(padding) + WATERMARK + ' '.repeat(padding);
+                return border + '\n' + centered + '\n' + border;
+            }
+
+            // Color Application
+            function applyColor(char, r, g, b) {
+                const mode = elements.colorMode.value;
+
+                switch(mode) {
+                    case 'color':
+                        return `<span style="color:rgb(${Math.floor(r)},${Math.floor(g)},${Math.floor(b)})">${char}</span>`;
+                    case 'grayscale':
+                        const gray = Math.floor((r + g + b) / 3);
+                        return `<span style="color:rgb(${gray},${gray},${gray})">${char}</span>`;
+                    case 'invert':
+                        return `<span style="color:rgb(${255-Math.floor(r)},${255-Math.floor(g)},${255-Math.floor(b)})">${char}</span>`;
+                    case 'monochrome':
+                        const green = Math.floor((r + g + b) / 3);
+                        return `<span style="color:rgb(0,${green},0)">${char}</span>`;
+                    default:
+                        return char;
+                }
+            }
+
+            // Output Functions
+            function copyAsciiText() {
+                const text = asciiResult.replace(/<[^>]*>/g, '');
+                navigator.clipboard.writeText(text)
+                    .then(() => alert('ASCII text copied to clipboard!'))
+                    .catch(err => alert('Error copying: ' + err));
+            }
+
+            function downloadAsciiText() {
+                const text = asciiResult.replace(/<[^>]*>/g, '');
+                const blob = new Blob([text], { type: 'text/plain' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'ascii-art.txt';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }
+
+            function downloadAsciiHTML() {
+                const html = `<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ASCII Art - ${WATERMARK}</title>
+    <style>
+        body { background: #000; color: #0f0; font-family: monospace;
+               white-space: pre; padding: 20px; font-size: ${elements.asciiSize.value}px; }
+    </style>
+</head>
+<body>
+${elements.asciiOutput.innerHTML}
+</body>
+</html>`;
+
+                const blob = new Blob([html], { type: 'text/html' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'ascii-art.html';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }
+
+            // Reset
+            function resetAll() {
+                elements.fileInput.value = '';
+                elements.imagePreview.src = '';
+                elements.asciiOutput.textContent = 'Upload an image to begin';
+                currentImage = null;
+                elements.charDensity.value = 70;
+                elements.densityValue.textContent = '70';
+                elements.contrast.value = 100;
+                elements.contrastValue.textContent = '100';
+                elements.colorMode.value = 'monochrome';
+                elements.asciiSize.value = 8;
+                elements.sizeValue.textContent = '8';
+                elements.asciiOutput.style.fontSize = '8px';
+                currentChars = '@%#*+=-:. ';
+                updateActiveCharOption();
+            }
+
+            // Initialize
+            init();
+        })();
+    </script>
+</div>
