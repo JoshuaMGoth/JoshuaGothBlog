@@ -3,8 +3,8 @@ module github.com/JoshuaGoth/blog
 go 1.19
 
 require (
-	github.com/GoogleChrome/workbox v7.3.0+incompatible // indirect
-	github.com/KaTeX/KaTeX v0.16.25 // indirect
+	github.com/GoogleChrome/workbox v7.4.0+incompatible // indirect
+	github.com/KaTeX/KaTeX v0.16.27 // indirect
 	github.com/desandro/masonry v4.2.2+incompatible // indirect
 	github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20400 // indirect
 	github.com/gohugoio/hugo-mod-jslibs-dist/popperjs/v2 v2.21100.20000 // indirect
@@ -69,7 +69,7 @@ require (
 	github.com/henrygd/bigger-picture v1.1.19 // indirect
 	github.com/hugomods/ascii v0.1.0 // indirect
 	github.com/hugomods/base v0.7.3 // indirect
-	github.com/hugomods/bootstrap v0.24.1 // indirect
+	github.com/hugomods/bootstrap v0.24.2 // indirect
 	github.com/hugomods/code-block-panel v0.9.0 // indirect
 	github.com/hugomods/font-awesome v6.7.1+incompatible // indirect
 	github.com/hugomods/fuse-js v0.1.0 // indirect

@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Guides on The Objective Perspective</title>
-    <link>http://localhost:1313/categories/guides/</link>
+    <link>https://joshuagoth.com/categories/guides/</link>
     <description>Recent content in Guides on The Objective Perspective</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright © 2026 Joshua Goth All Rights Reserved.</copyright>
     <lastBuildDate>Wed, 26 Nov 2025 12:08:03 -0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/guides/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://joshuagoth.com/categories/guides/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux Shut-Down and Auto-Save Script</title>
-      <link>http://localhost:1313/docs/2025/11/linux-shut-down-and-auto-save-script/</link>
+      <link>https://joshuagoth.com/docs/2025/11/linux-shut-down-and-auto-save-script/</link>
       <pubDate>Wed, 26 Nov 2025 12:08:03 -0800</pubDate>
-      <guid>http://localhost:1313/docs/2025/11/linux-shut-down-and-auto-save-script/</guid>
+      <guid>https://joshuagoth.com/docs/2025/11/linux-shut-down-and-auto-save-script/</guid>
       <description>&lt;h1 id=&#34;a-shut-down-prompt-that-can-save-us-all&#34;&gt;A Shut-Down Prompt That Can &lt;code&gt;Save&lt;/code&gt; Us All&lt;/h1&gt;&#xA;&lt;p&gt;I have memory problems. As one that suffers from CRS (cant remember sh!t), anything that I can use to aid my handicap from day-to-day, I am all for. As such, I forget to save things and end up losing work on a daily basis during the evenings shutdown of the PC.&lt;/p&gt;&#xA;&lt;p&gt;There are countless sites with walkthroughs, guides, programs, etc, so I do my best as to not reinvent the wheel, and share things that I have found useful that there may not have had enough attention to gain traction.&lt;/p&gt;</description>
     </item>
     <item>
       <title>5 Linux Shortcuts That Changed How I Work</title>
-      <link>http://localhost:1313/blog/2025/11/5-linux-shortcuts-that-changed-how-i-work/</link>
+      <link>https://joshuagoth.com/blog/2025/11/5-linux-shortcuts-that-changed-how-i-work/</link>
       <pubDate>Thu, 06 Nov 2025 16:13:02 -0800</pubDate>
-      <guid>http://localhost:1313/blog/2025/11/5-linux-shortcuts-that-changed-how-i-work/</guid>
+      <guid>https://joshuagoth.com/blog/2025/11/5-linux-shortcuts-that-changed-how-i-work/</guid>
       <description>&lt;h1 id=&#34;5-linux-command-line-shortcuts-that-will-make-you-10x-more-productive&#34;&gt;5 Linux Command Line Shortcuts That Will Make You 10x More Productive&lt;/h1&gt;&#xA;&lt;p&gt;Although having to work with Linux throughout my career, only within the last year have I switched to use Linux as a full-time, daily driver. Although very comfortable, I still consider myself a laymen (lacking in-depth knowledge of programming languages).&lt;/p&gt;&#xA;&lt;p&gt;However, I wanted to share some commands that I picked up along the way that have made my every day life easier. I made a conscience effort&amp;ndash;in the early days of full-time Linux&amp;ndash; to stay away from the GUI, and unlock the power of the terminal / command line. This, by far, was the best choice I have made, as I cannot tell you the amount of control that I have (not to mention the time I have saved) when working on my many projects.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The One Windows Feature That Solves Everything: A Public Service Announcement</title>
-      <link>http://localhost:1313/blog/2025/11/the-one-windows-feature-that-solves-everything-a-public-service-announcement/</link>
+      <link>https://joshuagoth.com/blog/2025/11/the-one-windows-feature-that-solves-everything-a-public-service-announcement/</link>
       <pubDate>Thu, 06 Nov 2025 15:17:47 -0800</pubDate>
-      <guid>http://localhost:1313/blog/2025/11/the-one-windows-feature-that-solves-everything-a-public-service-announcement/</guid>
+      <guid>https://joshuagoth.com/blog/2025/11/the-one-windows-feature-that-solves-everything-a-public-service-announcement/</guid>
       <description>&lt;h1 id=&#34;the-one-windows-feature-that-solves-everything-a-public-service-announcement&#34;&gt;The One Windows Feature That Solves Everything: A Public Service Announcement&lt;/h1&gt;&#xA;&lt;p&gt;Long before nerds were cool, cell phones and the internet itself, I remember upgrading from Dos to MS Windows 3.1. There was nothing back then that could condition your patience like the installation of an operating system&amp;hellip;1.44 megabytes of data (and countesses floppy disks) at a time.&lt;/p&gt;&#xA;&lt;p&gt;Fast forward through the decades. We’ve survived the psychedelic paisley of Windows 95, the existential dread of the Clippy paperclip, the bold experiment that was Windows ME (we don’t talk about ME), and the soothing blue tones of Windows XP. We’ve witnessed the rise of the internet, the fall of the dial-up tone, and the mysterious migration of all our data to a celestial entity we call “the cloud.”&lt;/p&gt;</description>
     </item>
     <item>
       <title>Getting your foot in the door - Tips from an IT Vet</title>
-      <link>http://localhost:1313/blog/2025/08/getting-your-foot-in-the-door-tips-from-an-it-vet/</link>
+      <link>https://joshuagoth.com/blog/2025/08/getting-your-foot-in-the-door-tips-from-an-it-vet/</link>
       <pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2025/08/getting-your-foot-in-the-door-tips-from-an-it-vet/</guid>
+      <guid>https://joshuagoth.com/blog/2025/08/getting-your-foot-in-the-door-tips-from-an-it-vet/</guid>
       <description>&lt;h3 id=&#34;how-to-land-a-job-in-it-without-prior-work-experience&#34;&gt;&lt;strong&gt;How To Land a Job in IT Without Prior Work Experience&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Getting hired can be difficult enough, but getting hired without any experience is damn near impossible. After all, how can you get hired without experience in order to obtain the experience you need in order to get hired in the first place?&lt;/p&gt;&#xA;&lt;p&gt;I hope to answer that question for you.&lt;/p&gt;&#xA;&lt;p&gt;I will be writing this with the assumption that you do not have any work history, a fresh degree, and not a whole lot of real world experience. Please pick and choose what applies to your unique situation according to your skill set and what you feel comfortable with.&lt;/p&gt;</description>
     </item>
   </channel>
