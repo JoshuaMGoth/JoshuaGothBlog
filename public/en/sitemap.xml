@@ -3,10 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://joshuagoth.com/blog/</loc>
-    <lastmod>2026-01-04T09:54:56+00:00</lastmod>
+    <lastmod>2026-01-04T10:18:47+00:00</lastmod>
   </url><url>
     <loc>https://joshuagoth.com/categories/</loc>
-    <lastmod>2026-01-04T09:54:56+00:00</lastmod>
+    <lastmod>2026-01-04T10:18:47+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hans"
@@ -18,11 +18,17 @@
                 href="https://joshuagoth.com/categories/"
                 />
   </url><url>
-    <loc>https://joshuagoth.com/blog/2026/01/healing-family-dynamics-how-to-talk-to-your-in-laws-about-their-parenting-impact/</loc>
-    <lastmod>2026-01-04T09:54:56+00:00</lastmod>
+    <loc>https://joshuagoth.com/tags/envy/</loc>
+    <lastmod>2026-01-04T10:18:47+00:00</lastmod>
+  </url><url>
+    <loc>https://joshuagoth.com/tags/happiness/</loc>
+    <lastmod>2026-01-04T10:18:47+00:00</lastmod>
+  </url><url>
+    <loc>https://joshuagoth.com/blog/2026/01/is-your-lens-limiting-you-how-to-change-your-perspective-for-a-better-life/</loc>
+    <lastmod>2026-01-04T10:18:47+00:00</lastmod>
   </url><url>
     <loc>https://joshuagoth.com/</loc>
-    <lastmod>2026-01-04T09:54:56+00:00</lastmod>
+    <lastmod>2026-01-04T10:18:47+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hans"
@@ -35,6 +41,25 @@
                 />
   </url><url>
     <loc>https://joshuagoth.com/categories/mental-health/</loc>
+    <lastmod>2026-01-04T10:18:47+00:00</lastmod>
+  </url><url>
+    <loc>https://joshuagoth.com/tags/</loc>
+    <lastmod>2026-01-04T10:18:47+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hans"
+                href="https://joshuagoth.com/zh-hans/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joshuagoth.com/tags/"
+                />
+  </url><url>
+    <loc>https://joshuagoth.com/tags/well-being/</loc>
+    <lastmod>2026-01-04T10:18:47+00:00</lastmod>
+  </url><url>
+    <loc>https://joshuagoth.com/blog/2026/01/healing-family-dynamics-how-to-talk-to-your-in-laws-about-their-parenting-impact/</loc>
     <lastmod>2026-01-04T09:54:56+00:00</lastmod>
   </url><url>
     <loc>https://joshuagoth.com/series/parentification/</loc>
@@ -70,19 +95,6 @@
   </url><url>
     <loc>https://joshuagoth.com/tags/parentized/</loc>
     <lastmod>2026-01-04T09:23:16+00:00</lastmod>
-  </url><url>
-    <loc>https://joshuagoth.com/tags/</loc>
-    <lastmod>2026-01-04T09:23:16+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-hans"
-                href="https://joshuagoth.com/zh-hans/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joshuagoth.com/tags/"
-                />
   </url><url>
     <loc>https://joshuagoth.com/blog/2026/01/when-family-comes-first-exploring-the-emotional-duty-to-care-for-adult-siblings/</loc>
     <lastmod>2026-01-04T09:23:16+00:00</lastmod>
@@ -239,9 +251,6 @@
     <lastmod>2025-11-25T02:53:45-08:00</lastmod>
   </url><url>
     <loc>https://joshuagoth.com/tags/books/</loc>
-    <lastmod>2025-11-21T16:19:45-08:00</lastmod>
-  </url><url>
-    <loc>https://joshuagoth.com/tags/happiness/</loc>
     <lastmod>2025-11-21T16:19:45-08:00</lastmod>
   </url><url>
     <loc>https://joshuagoth.com/blog/2025/11/happiness-and-the-currency-of-the-soul/</loc>
