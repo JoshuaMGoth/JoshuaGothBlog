@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Thirst on The Objective Perspective</title>
-    <link>https://joshuagoth.com/tags/thirst/</link>
+    <link>http://localhost:1313/tags/thirst/</link>
     <description>Recent content in Thirst on The Objective Perspective</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright © 2026 Joshua Goth All Rights Reserved.</copyright>
     <lastBuildDate>Sat, 11 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://joshuagoth.com/tags/thirst/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/thirst/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Unquenchable AI. Our Thirst for Technology are Drinking the Rivers Dry.</title>
-      <link>https://joshuagoth.com/blog/2025/10/the-unquenchable-ai.-our-thirst-for-technology-are-drinking-the-rivers-dry./</link>
+      <link>http://localhost:1313/blog/2025/10/the-unquenchable-ai.-our-thirst-for-technology-are-drinking-the-rivers-dry./</link>
       <pubDate>Sat, 11 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://joshuagoth.com/blog/2025/10/the-unquenchable-ai.-our-thirst-for-technology-are-drinking-the-rivers-dry./</guid>
+      <guid>http://localhost:1313/blog/2025/10/the-unquenchable-ai.-our-thirst-for-technology-are-drinking-the-rivers-dry./</guid>
       <description>&lt;h1 id=&#34;but-who-cares-right&#34;&gt;&lt;strong&gt;(But Who Cares, Right?)&lt;/strong&gt;&lt;/h1&gt;&#xA;&lt;p&gt;Are you enjoying your seamless AI-powered life? You know, the one where you ask ChatGPT to write your emails, let Midjourney create your Instagram aesthetic, and rely on Google Assistant to remind you to drink water (ironic, isn’t it?). Isn’t it just &lt;em&gt;so convenient&lt;/em&gt; to have machines do all the thinking for us? Sure, it’s amazing—until you realize that every time you ask AI to generate a haiku about your cat, it’s guzzling enough water to fill a swimming pool.&lt;/p&gt;</description>
     </item>
   </channel>

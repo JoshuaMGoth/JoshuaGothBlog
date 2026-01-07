@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cinema on The Objective Perspective</title>
-    <link>https://joshuagoth.com/categories/cinema/</link>
+    <link>http://localhost:1313/categories/cinema/</link>
     <description>Recent content in Cinema on The Objective Perspective</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright © 2026 Joshua Goth All Rights Reserved.</copyright>
     <lastBuildDate>Thu, 06 Nov 2025 17:35:17 -0800</lastBuildDate>
-    <atom:link href="https://joshuagoth.com/categories/cinema/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/cinema/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction to Joshua Goth&#39;s Movie Review Series</title>
-      <link>https://joshuagoth.com/blog/2025/11/introduction-to-joshua-goths-movie-review-series/</link>
+      <link>http://localhost:1313/blog/2025/11/introduction-to-joshua-goths-movie-review-series/</link>
       <pubDate>Thu, 06 Nov 2025 17:35:17 -0800</pubDate>
-      <guid>https://joshuagoth.com/blog/2025/11/introduction-to-joshua-goths-movie-review-series/</guid>
+      <guid>http://localhost:1313/blog/2025/11/introduction-to-joshua-goths-movie-review-series/</guid>
       <description>&lt;h1 id=&#34;welcome-to-my-cine-sadism-an-unnecessarily-thorough-and-objective-critique-on-fims&#34;&gt;Welcome to My Cine-Sadism: An Unnecessarily Thorough, and Objective Critique on Fims&lt;/h1&gt;&#xA;&lt;p&gt;I am, by the sacred and often-misguided traditions of cinema, what you might call a “tough critic.” But let’s be specific, because I don’t just hate things for funsies (okay, maybe a little for funsies). My particular brand of pedantry is laser-focused on one thing: &lt;strong&gt;the writing.&lt;/strong&gt; The prose. The script. The sacred text that some director probably used to line a birdcage before filming began.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Script on The Objective Perspective</title>
-    <link>https://joshuagoth.com/tags/script/</link>
+    <link>http://localhost:1313/tags/script/</link>
     <description>Recent content in Script on The Objective Perspective</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright © 2026 Joshua Goth All Rights Reserved.</copyright>
     <lastBuildDate>Wed, 26 Nov 2025 12:08:03 -0800</lastBuildDate>
-    <atom:link href="https://joshuagoth.com/tags/script/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/script/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux Shut-Down and Auto-Save Script</title>
-      <link>https://joshuagoth.com/docs/2025/11/linux-shut-down-and-auto-save-script/</link>
+      <link>http://localhost:1313/docs/2025/11/linux-shut-down-and-auto-save-script/</link>
       <pubDate>Wed, 26 Nov 2025 12:08:03 -0800</pubDate>
-      <guid>https://joshuagoth.com/docs/2025/11/linux-shut-down-and-auto-save-script/</guid>
+      <guid>http://localhost:1313/docs/2025/11/linux-shut-down-and-auto-save-script/</guid>
       <description>&lt;h1 id=&#34;a-shut-down-prompt-that-can-save-us-all&#34;&gt;A Shut-Down Prompt That Can &lt;code&gt;Save&lt;/code&gt; Us All&lt;/h1&gt;&#xA;&lt;p&gt;I have memory problems. As one that suffers from CRS (cant remember sh!t), anything that I can use to aid my handicap from day-to-day, I am all for. As such, I forget to save things and end up losing work on a daily basis during the evenings shutdown of the PC.&lt;/p&gt;&#xA;&lt;p&gt;There are countless sites with walkthroughs, guides, programs, etc, so I do my best as to not reinvent the wheel, and share things that I have found useful that there may not have had enough attention to gain traction.&lt;/p&gt;</description>
     </item>
   </channel>

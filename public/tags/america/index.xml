@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>America on The Objective Perspective</title>
-    <link>https://joshuagoth.com/tags/america/</link>
+    <link>http://localhost:1313/tags/america/</link>
     <description>Recent content in America on The Objective Perspective</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright © 2026 Joshua Goth All Rights Reserved.</copyright>
     <lastBuildDate>Sun, 05 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://joshuagoth.com/tags/america/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/america/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Political Divide in America</title>
-      <link>https://joshuagoth.com/blog/2025/10/the-political-divide-in-america/</link>
+      <link>http://localhost:1313/blog/2025/10/the-political-divide-in-america/</link>
       <pubDate>Sun, 05 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://joshuagoth.com/blog/2025/10/the-political-divide-in-america/</guid>
+      <guid>http://localhost:1313/blog/2025/10/the-political-divide-in-america/</guid>
       <description>&lt;h3 id=&#34;the-true-cost-of-politics-a-call-to-unite&#34;&gt;&lt;strong&gt;The True Cost of Politics: A Call to Unite&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;As I navigate the complexities of our society, I&amp;rsquo;m compelled to acknowledge that I don&amp;rsquo;t engage in political discussions. My decision isn&amp;rsquo;t driven by a lack of interest or willingness to debate; rather, it stems from a profound understanding of politics&amp;rsquo; divisive nature. The truth is, politics can cleave even the most closely-knit relationships – families, friends, and loved ones – apart.&lt;/p&gt;</description>
     </item>
   </channel>

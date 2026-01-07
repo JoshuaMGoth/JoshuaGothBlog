@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>IT on The Objective Perspective</title>
-    <link>https://joshuagoth.com/tags/it/</link>
+    <link>http://localhost:1313/tags/it/</link>
     <description>Recent content in IT on The Objective Perspective</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright © 2026 Joshua Goth All Rights Reserved.</copyright>
     <lastBuildDate>Mon, 04 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://joshuagoth.com/tags/it/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/it/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Getting your foot in the door - Tips from an IT Vet</title>
-      <link>https://joshuagoth.com/blog/2025/08/getting-your-foot-in-the-door-tips-from-an-it-vet/</link>
+      <link>http://localhost:1313/blog/2025/08/getting-your-foot-in-the-door-tips-from-an-it-vet/</link>
       <pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://joshuagoth.com/blog/2025/08/getting-your-foot-in-the-door-tips-from-an-it-vet/</guid>
+      <guid>http://localhost:1313/blog/2025/08/getting-your-foot-in-the-door-tips-from-an-it-vet/</guid>
       <description>&lt;h3 id=&#34;how-to-land-a-job-in-it-without-prior-work-experience&#34;&gt;&lt;strong&gt;How To Land a Job in IT Without Prior Work Experience&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Getting hired can be difficult enough, but getting hired without any experience is damn near impossible. After all, how can you get hired without experience in order to obtain the experience you need in order to get hired in the first place?&lt;/p&gt;&#xA;&lt;p&gt;I hope to answer that question for you.&lt;/p&gt;&#xA;&lt;p&gt;I will be writing this with the assumption that you do not have any work history, a fresh degree, and not a whole lot of real world experience. Please pick and choose what applies to your unique situation according to your skill set and what you feel comfortable with.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Avoid Tech Fires in the Workplace</title>
-      <link>https://joshuagoth.com/blog/2025/08/how-to-avoid-tech-fires-in-the-workplace/</link>
+      <link>http://localhost:1313/blog/2025/08/how-to-avoid-tech-fires-in-the-workplace/</link>
       <pubDate>Sun, 03 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://joshuagoth.com/blog/2025/08/how-to-avoid-tech-fires-in-the-workplace/</guid>
+      <guid>http://localhost:1313/blog/2025/08/how-to-avoid-tech-fires-in-the-workplace/</guid>
       <description>&lt;h1 id=&#34;lessons-learned-from-a-25-year-network-engineer-veteran&#34;&gt;Lessons Learned from a 25-Year Network Engineer, Veteran&lt;/h1&gt;&#xA;&lt;p&gt;Hey there, fellow network enthusiasts! As a network veteran, I&amp;rsquo;m here to share some super valuable tips on how to minimize downtime in the workplace. After all, who doesn&amp;rsquo;t love a productive workday without those pesky IT issues getting in the way? Many of these are hard lessons I had to learn on my own.&lt;/p&gt;&#xA;&lt;h3 id=&#34;the-stats-are-scary-but-honest&#34;&gt;&lt;strong&gt;The Stats are Scary (But Honest)&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s face it: downtime can be a major productivity killer. According to a report by IT Brand Pulse (1), 80% of businesses experience at least one hour of downtime per week, resulting in an average loss of $5,000 per minute! That&amp;rsquo;s a whole lotta money just sitting idle.&lt;/p&gt;</description>
     </item>
     <item>
       <title>What to Expect When Starting a Career in Technology</title>
-      <link>https://joshuagoth.com/blog/2025/08/what-to-expect-when-starting-a-career-in-technology/</link>
+      <link>http://localhost:1313/blog/2025/08/what-to-expect-when-starting-a-career-in-technology/</link>
       <pubDate>Sat, 02 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://joshuagoth.com/blog/2025/08/what-to-expect-when-starting-a-career-in-technology/</guid>
+      <guid>http://localhost:1313/blog/2025/08/what-to-expect-when-starting-a-career-in-technology/</guid>
       <description>&lt;h1 id=&#34;from-the-eyes-of-a-25-year-network-engineer-veteran&#34;&gt;From The Eyes of a 25-Year Network Engineer, Veteran&lt;/h1&gt;&#xA;&lt;p&gt;Think back to high school, and think about life now. What &lt;em&gt;should&lt;/em&gt; school have taught you in order to help you prepare for the real world? The importance of having good credit? How to balance a checkbook? Budgeting and the basics of managing finances, maybe?&lt;/p&gt;&#xA;&lt;p&gt;College and careers, in relation, are no exception. There are things that you wish you were taught, or real-world knowledge in the field that books just never mentioned. I have separated this post into two distinct categories: Things that you needed to know but were never taught, and what you were never told about working in the industry. Some of what I&amp;rsquo;ll tell you may fall under the umbrella of the white-collar office life, in general, so I will try to be as specific as possible.&lt;/p&gt;</description>
     </item>
   </channel>
