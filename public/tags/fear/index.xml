@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fear on The Objective Perspective</title>
-    <link>http://localhost:1313/tags/fear/</link>
+    <link>https://joshuagoth.com/tags/fear/</link>
     <description>Recent content in Fear on The Objective Perspective</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright © 2026 Joshua Goth All Rights Reserved.</copyright>
     <lastBuildDate>Mon, 03 Nov 2025 18:15:17 -0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/fear/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://joshuagoth.com/tags/fear/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why I Gave Up Windows for Linux</title>
-      <link>http://localhost:1313/blog/2025/11/why-i-gave-up-windows-for-linux/</link>
+      <link>https://joshuagoth.com/blog/2025/11/why-i-gave-up-windows-for-linux/</link>
       <pubDate>Mon, 03 Nov 2025 18:15:17 -0800</pubDate>
-      <guid>http://localhost:1313/blog/2025/11/why-i-gave-up-windows-for-linux/</guid>
+      <guid>https://joshuagoth.com/blog/2025/11/why-i-gave-up-windows-for-linux/</guid>
       <description>&lt;h1 id=&#34;trading-up-to-linux-why-i-dumped-windows&#34;&gt;Trading up to Linux. Why I dumped Windows.&lt;/h1&gt;&#xA;&lt;p&gt;Put simply, I know what I don&amp;rsquo;t know.&lt;/p&gt;&#xA;&lt;p&gt;This means I am aware that there is a whole lot going on behind the scenes that I am not privy to and, furthermore, can do little to change. Crypticism aside, what it all boils down to, at least for me, is &lt;strong&gt;trust&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h3 id=&#34;major-trust-issues&#34;&gt;Major Trust Issues&lt;/h3&gt;&#xA;&lt;p&gt;I have trust issues, and rightfully so. I have hacked and been hacked. I have gained and I have lost. My journey toward taking security seriously, on a personal level, went far beyond the methods I employed and trained in while working as a network engineer for the better half of my career.&lt;/p&gt;</description>
     </item>
   </channel>

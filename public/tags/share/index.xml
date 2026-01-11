@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Share on The Objective Perspective</title>
-    <link>http://localhost:1313/tags/share/</link>
+    <link>https://joshuagoth.com/tags/share/</link>
     <description>Recent content in Share on The Objective Perspective</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright © 2026 Joshua Goth All Rights Reserved.</copyright>
     <lastBuildDate>Tue, 25 Nov 2025 18:18:52 -0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/share/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://joshuagoth.com/tags/share/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Buy Me a Coffee</title>
-      <link>http://localhost:1313/blog/2025/11/buy-me-a-coffee/</link>
+      <link>https://joshuagoth.com/blog/2025/11/buy-me-a-coffee/</link>
       <pubDate>Tue, 25 Nov 2025 18:18:52 -0800</pubDate>
-      <guid>http://localhost:1313/blog/2025/11/buy-me-a-coffee/</guid>
+      <guid>https://joshuagoth.com/blog/2025/11/buy-me-a-coffee/</guid>
       <description>&lt;h1 id=&#34;hello-everyone&#34;&gt;Hello, everyone!&lt;/h1&gt;&#xA;&lt;p&gt;A quick and honest note from me today. I’m working on growing this blog&amp;rsquo;s reach, and am thrilled with things I plan to add and to do in order to help and entertain. The most powerful way you can help is, of course by sharing. If you read a post that resonates with you or think it could help a friend or loved one, please pass it along. Sharing these posts is the best way to help increase traffic which will, in turn, aid to keep my blog online.&lt;/p&gt;</description>
     </item>
   </channel>

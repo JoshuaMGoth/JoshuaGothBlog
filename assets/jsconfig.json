@@ -4,6 +4,11 @@
   "paths": {
    "*": [
     "*",
+    "../../../../.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/!google!chrome/workbox@v7.4.0+incompatible/packages/workbox-cacheable-response/src/*",
+    "../../../../.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/!google!chrome/workbox@v7.4.0+incompatible/packages/workbox-core/src/*",
+    "../../../../.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/!google!chrome/workbox@v7.4.0+incompatible/packages/workbox-expiration/src/*",
+    "../../../../.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/!google!chrome/workbox@v7.4.0+incompatible/packages/workbox-routing/src/*",
+    "../../../../.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/!google!chrome/workbox@v7.4.0+incompatible/packages/workbox-strategies/src/*",
     "../../../../.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/gohugoio/hugo-mod-jslibs-dist/popperjs/v2@v2.21100.20000/package/dist/cjs/*",
     "../../../../.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hbstack/back-to-top@v0.2.0/assets/*",
     "../../../../.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hbstack/bigger-picture@v0.10.1/assets/*",
@@ -26,6 +31,7 @@
     "../../../../.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/i18n-js@v0.2.1/assets/*",
     "../../../../.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.20.0/assets/*",
     "../../../../.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/snackbar@v0.1.2/assets/*",
+    "../../../../.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/jakearchibald/idb@v8.0.3+incompatible/src/*",
     "../../../../.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/krisk/!fuse@v7.1.0+incompatible/dist/*",
     "../../../../.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/twbs/bootstrap@v5.3.8+incompatible/js/*"
    ]

@@ -2,953 +2,977 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/categories/ai/</loc>
-    <lastmod>2026-01-06T23:38:21+00:00</lastmod>
+    <loc>https://joshuagoth.com/categories/arcade/</loc>
+    <lastmod>2026-01-10T00:17:01+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2026/01/beyond-the-elite-how-ai-is-unlocking-potential-for-the-rest-of-us/</loc>
-    <lastmod>2026-01-06T23:38:21+00:00</lastmod>
+    <loc>https://joshuagoth.com/blog/</loc>
+    <lastmod>2026-01-10T00:17:01+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2026-01-06T23:38:21+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/business/</loc>
-    <lastmod>2026-01-06T23:38:21+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-01-06T23:38:21+00:00</lastmod>
+    <loc>https://joshuagoth.com/categories/</loc>
+    <lastmod>2026-01-10T00:17:01+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hans"
-                href="http://localhost:1313/zh-hans/categories/"
+                href="https://joshuagoth.com/zh-hans/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/categories/"
+                href="https://joshuagoth.com/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/creation/</loc>
-    <lastmod>2026-01-06T23:38:21+00:00</lastmod>
+    <loc>https://joshuagoth.com/tags/download/</loc>
+    <lastmod>2026-01-10T00:17:01+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/development/</loc>
-    <lastmod>2026-01-06T23:38:21+00:00</lastmod>
+    <loc>https://joshuagoth.com/categories/games/</loc>
+    <lastmod>2026-01-10T00:17:01+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/intelligence/</loc>
-    <lastmod>2026-01-06T23:38:21+00:00</lastmod>
+    <loc>https://joshuagoth.com/tags/games/</loc>
+    <lastmod>2026-01-10T00:17:01+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2026-01-06T23:38:21+00:00</lastmod>
+    <loc>https://joshuagoth.com/tags/gba/</loc>
+    <lastmod>2026-01-10T00:17:01+00:00</lastmod>
+  </url><url>
+    <loc>https://joshuagoth.com/</loc>
+    <lastmod>2026-01-10T00:17:01+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hans"
-                href="http://localhost:1313/zh-hans/"
+                href="https://joshuagoth.com/zh-hans/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/"
+                href="https://joshuagoth.com/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/power/</loc>
-    <lastmod>2026-01-06T23:38:21+00:00</lastmod>
+    <loc>https://joshuagoth.com/tags/n64/</loc>
+    <lastmod>2026-01-10T00:17:01+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-01-06T23:38:21+00:00</lastmod>
+    <loc>https://joshuagoth.com/tags/nes/</loc>
+    <lastmod>2026-01-10T00:17:01+00:00</lastmod>
+  </url><url>
+    <loc>https://joshuagoth.com/tags/retro/</loc>
+    <lastmod>2026-01-10T00:17:01+00:00</lastmod>
+  </url><url>
+    <loc>https://joshuagoth.com/tags/roms/</loc>
+    <lastmod>2026-01-10T00:17:01+00:00</lastmod>
+  </url><url>
+    <loc>https://joshuagoth.com/tags/snes/</loc>
+    <lastmod>2026-01-10T00:17:01+00:00</lastmod>
+  </url><url>
+    <loc>https://joshuagoth.com/tags/</loc>
+    <lastmod>2026-01-10T00:17:01+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hans"
-                href="http://localhost:1313/zh-hans/tags/"
+                href="https://joshuagoth.com/zh-hans/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/tags/"
+                href="https://joshuagoth.com/tags/"
                 />
   </url><url>
-    <loc>http://localhost:1313/categories/technology/</loc>
+    <loc>https://joshuagoth.com/blog/2026/01/your-free-retro-arcade-awaits-play-classic-games-instantly/</loc>
+    <lastmod>2026-01-10T00:17:01+00:00</lastmod>
+  </url><url>
+    <loc>https://joshuagoth.com/categories/ai/</loc>
     <lastmod>2026-01-06T23:38:21+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ai/</loc>
+    <loc>https://joshuagoth.com/blog/2026/01/beyond-the-elite-how-ai-is-unlocking-potential-for-the-rest-of-us/</loc>
+    <lastmod>2026-01-06T23:38:21+00:00</lastmod>
+  </url><url>
+    <loc>https://joshuagoth.com/tags/business/</loc>
+    <lastmod>2026-01-06T23:38:21+00:00</lastmod>
+  </url><url>
+    <loc>https://joshuagoth.com/tags/creation/</loc>
+    <lastmod>2026-01-06T23:38:21+00:00</lastmod>
+  </url><url>
+    <loc>https://joshuagoth.com/tags/development/</loc>
+    <lastmod>2026-01-06T23:38:21+00:00</lastmod>
+  </url><url>
+    <loc>https://joshuagoth.com/tags/intelligence/</loc>
+    <lastmod>2026-01-06T23:38:21+00:00</lastmod>
+  </url><url>
+    <loc>https://joshuagoth.com/tags/power/</loc>
+    <lastmod>2026-01-06T23:38:21+00:00</lastmod>
+  </url><url>
+    <loc>https://joshuagoth.com/categories/technology/</loc>
+    <lastmod>2026-01-06T23:38:21+00:00</lastmod>
+  </url><url>
+    <loc>https://joshuagoth.com/tags/ai/</loc>
     <lastmod>2026-01-04T11:31:18+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hope/</loc>
+    <loc>https://joshuagoth.com/tags/hope/</loc>
     <lastmod>2026-01-04T11:31:18+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/survival/</loc>
+    <loc>https://joshuagoth.com/tags/survival/</loc>
     <lastmod>2026-01-04T11:31:18+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2026/01/the-paradox-of-discovery-why-we-fear-and-crave-the-unknown/</loc>
+    <loc>https://joshuagoth.com/blog/2026/01/the-paradox-of-discovery-why-we-fear-and-crave-the-unknown/</loc>
     <lastmod>2026-01-04T11:31:18+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2026/01/the-last-hope-hypothesis-debating-ais-role-in-securing-humanitys-survival/</loc>
+    <loc>https://joshuagoth.com/blog/2026/01/the-last-hope-hypothesis-debating-ais-role-in-securing-humanitys-survival/</loc>
     <lastmod>2026-01-04T11:13:24+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/envy/</loc>
+    <loc>https://joshuagoth.com/tags/envy/</loc>
     <lastmod>2026-01-04T10:18:47+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/happiness/</loc>
+    <loc>https://joshuagoth.com/tags/happiness/</loc>
     <lastmod>2026-01-04T10:18:47+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2026/01/is-your-lens-limiting-you-how-to-change-your-perspective-for-a-better-life/</loc>
+    <loc>https://joshuagoth.com/blog/2026/01/is-your-lens-limiting-you-how-to-change-your-perspective-for-a-better-life/</loc>
     <lastmod>2026-01-04T10:18:47+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/mental-health/</loc>
+    <loc>https://joshuagoth.com/categories/mental-health/</loc>
     <lastmod>2026-01-04T10:18:47+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/well-being/</loc>
+    <loc>https://joshuagoth.com/tags/well-being/</loc>
     <lastmod>2026-01-04T10:18:47+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2026/01/healing-family-dynamics-how-to-talk-to-your-in-laws-about-their-parenting-impact/</loc>
+    <loc>https://joshuagoth.com/blog/2026/01/healing-family-dynamics-how-to-talk-to-your-in-laws-about-their-parenting-impact/</loc>
     <lastmod>2026-01-04T09:54:56+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/series/parentification/</loc>
+    <loc>https://joshuagoth.com/series/parentification/</loc>
     <lastmod>2026-01-04T09:54:56+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/parenting/</loc>
+    <loc>https://joshuagoth.com/categories/parenting/</loc>
     <lastmod>2026-01-04T09:54:56+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/series/</loc>
+    <loc>https://joshuagoth.com/series/</loc>
     <lastmod>2026-01-04T09:54:56+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hans"
-                href="http://localhost:1313/zh-hans/series/"
+                href="https://joshuagoth.com/zh-hans/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/series/"
+                href="https://joshuagoth.com/series/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/brothers/</loc>
+    <loc>https://joshuagoth.com/tags/brothers/</loc>
     <lastmod>2026-01-04T09:23:16+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/family/</loc>
+    <loc>https://joshuagoth.com/categories/family/</loc>
     <lastmod>2026-01-04T09:23:16+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/health/</loc>
+    <loc>https://joshuagoth.com/tags/health/</loc>
     <lastmod>2026-01-04T09:23:16+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/marriage/</loc>
+    <loc>https://joshuagoth.com/tags/marriage/</loc>
     <lastmod>2026-01-04T09:23:16+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/parentized/</loc>
+    <loc>https://joshuagoth.com/tags/parentized/</loc>
     <lastmod>2026-01-04T09:23:16+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2026/01/when-family-comes-first-exploring-the-emotional-duty-to-care-for-adult-siblings/</loc>
+    <loc>https://joshuagoth.com/blog/2026/01/when-family-comes-first-exploring-the-emotional-duty-to-care-for-adult-siblings/</loc>
     <lastmod>2026-01-04T09:23:16+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2026/01/breaking-the-cycle-when-your-spouse-feels-obligated-to-their-parents-and-siblings/</loc>
+    <loc>https://joshuagoth.com/blog/2026/01/breaking-the-cycle-when-your-spouse-feels-obligated-to-their-parents-and-siblings/</loc>
     <lastmod>2026-01-04T08:48:35+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/children/</loc>
+    <loc>https://joshuagoth.com/tags/children/</loc>
     <lastmod>2026-01-04T08:48:35+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/family/</loc>
+    <loc>https://joshuagoth.com/tags/family/</loc>
     <lastmod>2026-01-04T08:48:35+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2026/01/the-parentified-spouse-how-childhood-roles-can-reshape-your-marriage/</loc>
+    <loc>https://joshuagoth.com/blog/2026/01/the-parentified-spouse-how-childhood-roles-can-reshape-your-marriage/</loc>
     <lastmod>2026-01-03T23:06:49+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/love/</loc>
+    <loc>https://joshuagoth.com/tags/love/</loc>
     <lastmod>2026-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/new-year/</loc>
+    <loc>https://joshuagoth.com/tags/new-year/</loc>
     <lastmod>2026-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/struggle/</loc>
+    <loc>https://joshuagoth.com/categories/struggle/</loc>
     <lastmod>2026-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2026/01/the-gentle-art-of-crafting-a-new-years-resolution/</loc>
+    <loc>https://joshuagoth.com/blog/2026/01/the-gentle-art-of-crafting-a-new-years-resolution/</loc>
     <lastmod>2026-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2026/01/the-love-birds.-a-story-by-joshua-m.-goth/</loc>
+    <loc>https://joshuagoth.com/blog/2026/01/the-love-birds.-a-story-by-joshua-m.-goth/</loc>
     <lastmod>2026-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/authors/</loc>
+    <loc>https://joshuagoth.com/authors/</loc>
     <lastmod>2025-12-06T01:14:55-08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hans"
-                href="http://localhost:1313/zh-hans/authors/"
+                href="https://joshuagoth.com/zh-hans/authors/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/authors/"
+                href="https://joshuagoth.com/authors/"
                 />
   </url><url>
-    <loc>http://localhost:1313/docs/</loc>
+    <loc>https://joshuagoth.com/docs/</loc>
     <lastmod>2025-12-06T01:14:55-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/2025/12/image-to-ascii-art-converter/</loc>
+    <loc>https://joshuagoth.com/docs/2025/12/image-to-ascii-art-converter/</loc>
     <lastmod>2025-12-06T01:14:55-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/authors/joshuagoth/</loc>
+    <loc>https://joshuagoth.com/authors/joshuagoth/</loc>
     <lastmod>2025-12-06T01:14:55-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/tools/</loc>
+    <loc>https://joshuagoth.com/categories/tools/</loc>
     <lastmod>2025-12-06T01:14:55-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ascii-art/</loc>
+    <loc>https://joshuagoth.com/ascii-art/</loc>
     <lastmod>2025-12-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/misc-notes/</loc>
+    <loc>https://joshuagoth.com/docs/misc-notes/</loc>
     <lastmod>2025-11-26T21:19:28-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/scripts/</loc>
+    <loc>https://joshuagoth.com/docs/scripts/</loc>
     <lastmod>2025-11-26T12:29:15-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/tools/</loc>
+    <loc>https://joshuagoth.com/docs/tools/</loc>
     <lastmod>2025-11-26T12:25:42-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/application/</loc>
+    <loc>https://joshuagoth.com/categories/application/</loc>
     <lastmod>2025-11-26T12:08:03-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/bro/</loc>
+    <loc>https://joshuagoth.com/tags/bro/</loc>
     <lastmod>2025-11-26T12:08:03-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/documentation/</loc>
+    <loc>https://joshuagoth.com/categories/documentation/</loc>
     <lastmod>2025-11-26T12:08:03-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/guides/</loc>
+    <loc>https://joshuagoth.com/categories/guides/</loc>
     <lastmod>2025-11-26T12:08:03-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/linux/</loc>
+    <loc>https://joshuagoth.com/categories/linux/</loc>
     <lastmod>2025-11-26T12:08:03-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/2025/11/linux-shut-down-and-auto-save-script/</loc>
+    <loc>https://joshuagoth.com/docs/2025/11/linux-shut-down-and-auto-save-script/</loc>
     <lastmod>2025-11-26T12:08:03-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/script/</loc>
+    <loc>https://joshuagoth.com/tags/script/</loc>
     <lastmod>2025-11-26T12:08:03-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/shutdown/</loc>
+    <loc>https://joshuagoth.com/tags/shutdown/</loc>
     <lastmod>2025-11-26T12:08:03-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tool/</loc>
+    <loc>https://joshuagoth.com/tags/tool/</loc>
     <lastmod>2025-11-26T12:08:03-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/11/buy-me-a-coffee/</loc>
+    <loc>https://joshuagoth.com/blog/2025/11/buy-me-a-coffee/</loc>
     <lastmod>2025-11-25T18:18:52-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/dontate/</loc>
+    <loc>https://joshuagoth.com/tags/dontate/</loc>
     <lastmod>2025-11-25T18:18:52-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/help/</loc>
+    <loc>https://joshuagoth.com/tags/help/</loc>
     <lastmod>2025-11-25T18:18:52-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/self-help/</loc>
+    <loc>https://joshuagoth.com/categories/self-help/</loc>
     <lastmod>2025-11-25T18:18:52-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/share/</loc>
+    <loc>https://joshuagoth.com/tags/share/</loc>
     <lastmod>2025-11-25T18:18:52-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/support/</loc>
+    <loc>https://joshuagoth.com/categories/support/</loc>
     <lastmod>2025-11-25T18:18:52-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/time/</loc>
+    <loc>https://joshuagoth.com/tags/time/</loc>
     <lastmod>2025-11-25T18:18:52-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/web/</loc>
+    <loc>https://joshuagoth.com/tags/web/</loc>
     <lastmod>2025-11-25T18:18:52-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/2ds/</loc>
+    <loc>https://joshuagoth.com/tags/2ds/</loc>
     <lastmod>2025-11-25T02:53:45-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/3ds/</loc>
+    <loc>https://joshuagoth.com/tags/3ds/</loc>
     <lastmod>2025-11-25T02:53:45-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/app/</loc>
+    <loc>https://joshuagoth.com/tags/app/</loc>
     <lastmod>2025-11-25T02:53:45-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/applications/</loc>
+    <loc>https://joshuagoth.com/categories/applications/</loc>
     <lastmod>2025-11-25T02:53:45-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/games/</loc>
+    <loc>https://joshuagoth.com/categories/gaming/</loc>
     <lastmod>2025-11-25T02:53:45-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/gaming/</loc>
+    <loc>https://joshuagoth.com/blog/2025/11/new-nintendo-gaming-project-coming-soon/</loc>
     <lastmod>2025-11-25T02:53:45-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/gba/</loc>
+    <loc>https://joshuagoth.com/categories/projects/</loc>
     <lastmod>2025-11-25T02:53:45-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/nes/</loc>
+    <loc>https://joshuagoth.com/tags/rpg/</loc>
     <lastmod>2025-11-25T02:53:45-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/11/new-nintendo-gaming-project-coming-soon/</loc>
-    <lastmod>2025-11-25T02:53:45-08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/projects/</loc>
-    <lastmod>2025-11-25T02:53:45-08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/rpg/</loc>
-    <lastmod>2025-11-25T02:53:45-08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/snes/</loc>
-    <lastmod>2025-11-25T02:53:45-08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/books/</loc>
+    <loc>https://joshuagoth.com/tags/books/</loc>
     <lastmod>2025-11-21T16:19:45-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/11/happiness-and-the-currency-of-the-soul/</loc>
+    <loc>https://joshuagoth.com/blog/2025/11/happiness-and-the-currency-of-the-soul/</loc>
     <lastmod>2025-11-21T16:19:45-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/joy/</loc>
+    <loc>https://joshuagoth.com/tags/joy/</loc>
     <lastmod>2025-11-21T16:19:45-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/mindful/</loc>
+    <loc>https://joshuagoth.com/tags/mindful/</loc>
     <lastmod>2025-11-21T16:19:45-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/mindfulness/</loc>
+    <loc>https://joshuagoth.com/categories/mindfulness/</loc>
     <lastmod>2025-11-21T16:19:45-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/novel/</loc>
+    <loc>https://joshuagoth.com/categories/novel/</loc>
     <lastmod>2025-11-21T16:19:45-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/philosophy/</loc>
+    <loc>https://joshuagoth.com/categories/philosophy/</loc>
     <lastmod>2025-11-21T16:19:45-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/thoughts/</loc>
+    <loc>https://joshuagoth.com/tags/thoughts/</loc>
     <lastmod>2025-11-21T16:19:45-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/conspiracy/</loc>
+    <loc>https://joshuagoth.com/tags/conspiracy/</loc>
     <lastmod>2025-11-17T14:14:14-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/datacenter/</loc>
+    <loc>https://joshuagoth.com/tags/datacenter/</loc>
     <lastmod>2025-11-17T14:14:14-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/politics/</loc>
+    <loc>https://joshuagoth.com/categories/politics/</loc>
     <lastmod>2025-11-17T14:14:14-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/project/</loc>
+    <loc>https://joshuagoth.com/tags/project/</loc>
     <lastmod>2025-11-17T14:14:14-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/secret/</loc>
+    <loc>https://joshuagoth.com/tags/secret/</loc>
     <lastmod>2025-11-17T14:14:14-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/11/the-ballroom-mirage-decoding-the-secret-project-at-the-heart-of-power/</loc>
+    <loc>https://joshuagoth.com/blog/2025/11/the-ballroom-mirage-decoding-the-secret-project-at-the-heart-of-power/</loc>
     <lastmod>2025-11-17T14:14:14-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/thought-trot/</loc>
+    <loc>https://joshuagoth.com/categories/thought-trot/</loc>
     <lastmod>2025-11-17T14:14:14-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/trump/</loc>
+    <loc>https://joshuagoth.com/tags/trump/</loc>
     <lastmod>2025-11-17T14:14:14-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/11/geek-bar-vs.-geek-boost-an-honest-review-of-the-vape-doppelg%C3%A4nger/</loc>
+    <loc>https://joshuagoth.com/blog/2025/11/geek-bar-vs.-geek-boost-an-honest-review-of-the-vape-doppelg%C3%A4nger/</loc>
     <lastmod>2025-11-17T13:39:23-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/review/</loc>
+    <loc>https://joshuagoth.com/categories/review/</loc>
     <lastmod>2025-11-17T13:39:23-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/savings/</loc>
+    <loc>https://joshuagoth.com/tags/savings/</loc>
     <lastmod>2025-11-17T13:39:23-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/smoke/</loc>
+    <loc>https://joshuagoth.com/tags/smoke/</loc>
     <lastmod>2025-11-17T13:39:23-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/vape/</loc>
+    <loc>https://joshuagoth.com/tags/vape/</loc>
     <lastmod>2025-11-17T13:39:23-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/vaping/</loc>
+    <loc>https://joshuagoth.com/categories/vaping/</loc>
     <lastmod>2025-11-17T13:39:23-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/artificial-intelligence/</loc>
+    <loc>https://joshuagoth.com/categories/artificial-intelligence/</loc>
     <lastmod>2025-11-11T16:13:13-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/change/</loc>
+    <loc>https://joshuagoth.com/tags/change/</loc>
     <lastmod>2025-11-11T16:13:13-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/humanity/</loc>
+    <loc>https://joshuagoth.com/categories/humanity/</loc>
     <lastmod>2025-11-11T16:13:13-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tech/</loc>
+    <loc>https://joshuagoth.com/tags/tech/</loc>
     <lastmod>2025-11-11T16:13:13-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/11/the-human-upgrade.-why-our-survival-depends-on-redefining-humanity/</loc>
+    <loc>https://joshuagoth.com/blog/2025/11/the-human-upgrade.-why-our-survival-depends-on-redefining-humanity/</loc>
     <lastmod>2025-11-11T16:13:13-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/thought-trot/</loc>
+    <loc>https://joshuagoth.com/tags/thought-trot/</loc>
     <lastmod>2025-11-11T16:13:13-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/earth/</loc>
+    <loc>https://joshuagoth.com/tags/earth/</loc>
     <lastmod>2025-11-11T15:02:32-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/humanity/</loc>
+    <loc>https://joshuagoth.com/tags/humanity/</loc>
     <lastmod>2025-11-11T15:02:32-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/11/legacy-of-greed-the-future-were-choosing-not-to-build/</loc>
+    <loc>https://joshuagoth.com/blog/2025/11/legacy-of-greed-the-future-were-choosing-not-to-build/</loc>
     <lastmod>2025-11-11T15:02:32-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/artifical-intelligence/</loc>
+    <loc>https://joshuagoth.com/categories/artifical-intelligence/</loc>
     <lastmod>2025-11-10T18:36:56-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/birth/</loc>
+    <loc>https://joshuagoth.com/tags/birth/</loc>
     <lastmod>2025-11-10T18:36:56-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/create/</loc>
+    <loc>https://joshuagoth.com/tags/create/</loc>
     <lastmod>2025-11-10T18:36:56-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/11/our-responsibility-in-creating-sentient-ai/</loc>
+    <loc>https://joshuagoth.com/blog/2025/11/our-responsibility-in-creating-sentient-ai/</loc>
     <lastmod>2025-11-10T18:36:56-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/parents/</loc>
+    <loc>https://joshuagoth.com/tags/parents/</loc>
     <lastmod>2025-11-10T18:36:56-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/cinema/</loc>
+    <loc>https://joshuagoth.com/categories/cinema/</loc>
     <lastmod>2025-11-06T17:35:17-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/entertainment/</loc>
+    <loc>https://joshuagoth.com/categories/entertainment/</loc>
     <lastmod>2025-11-06T17:35:17-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/11/introduction-to-joshua-goths-movie-review-series/</loc>
+    <loc>https://joshuagoth.com/blog/2025/11/introduction-to-joshua-goths-movie-review-series/</loc>
     <lastmod>2025-11-06T17:35:17-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/series/movie-review/</loc>
+    <loc>https://joshuagoth.com/series/movie-review/</loc>
     <lastmod>2025-11-06T17:35:17-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/movies/</loc>
+    <loc>https://joshuagoth.com/tags/movies/</loc>
     <lastmod>2025-11-06T17:35:17-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/review/</loc>
+    <loc>https://joshuagoth.com/tags/review/</loc>
     <lastmod>2025-11-06T17:35:17-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/series/</loc>
+    <loc>https://joshuagoth.com/tags/series/</loc>
     <lastmod>2025-11-06T17:35:17-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/shows/</loc>
+    <loc>https://joshuagoth.com/tags/shows/</loc>
     <lastmod>2025-11-06T17:35:17-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tv/</loc>
+    <loc>https://joshuagoth.com/tags/tv/</loc>
     <lastmod>2025-11-06T17:35:17-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/11/5-linux-shortcuts-that-changed-how-i-work/</loc>
+    <loc>https://joshuagoth.com/blog/2025/11/5-linux-shortcuts-that-changed-how-i-work/</loc>
     <lastmod>2025-11-06T16:13:02-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cli/</loc>
+    <loc>https://joshuagoth.com/tags/cli/</loc>
     <lastmod>2025-11-06T16:13:02-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/howto/</loc>
+    <loc>https://joshuagoth.com/tags/howto/</loc>
     <lastmod>2025-11-06T16:13:02-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/shortcuts/</loc>
+    <loc>https://joshuagoth.com/tags/shortcuts/</loc>
     <lastmod>2025-11-06T16:13:02-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tips/</loc>
+    <loc>https://joshuagoth.com/tags/tips/</loc>
     <lastmod>2025-11-06T16:13:02-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tricks/</loc>
+    <loc>https://joshuagoth.com/tags/tricks/</loc>
     <lastmod>2025-11-06T16:13:02-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/feature/</loc>
+    <loc>https://joshuagoth.com/tags/feature/</loc>
     <lastmod>2025-11-06T15:17:47-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hackers/</loc>
+    <loc>https://joshuagoth.com/tags/hackers/</loc>
     <lastmod>2025-11-06T15:17:47-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/internet/</loc>
+    <loc>https://joshuagoth.com/tags/internet/</loc>
     <lastmod>2025-11-06T15:17:47-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/os/</loc>
+    <loc>https://joshuagoth.com/tags/os/</loc>
     <lastmod>2025-11-06T15:17:47-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/11/the-one-windows-feature-that-solves-everything-a-public-service-announcement/</loc>
+    <loc>https://joshuagoth.com/blog/2025/11/the-one-windows-feature-that-solves-everything-a-public-service-announcement/</loc>
     <lastmod>2025-11-06T15:17:47-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/windows/</loc>
+    <loc>https://joshuagoth.com/categories/windows/</loc>
     <lastmod>2025-11-06T15:17:47-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/assistance/</loc>
+    <loc>https://joshuagoth.com/categories/assistance/</loc>
     <lastmod>2025-11-05T01:59:05-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/health/</loc>
+    <loc>https://joshuagoth.com/categories/health/</loc>
     <lastmod>2025-11-05T01:59:05-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/11/navigating-financial-help.-resources-for-when-times-are-tough/</loc>
+    <loc>https://joshuagoth.com/blog/2025/11/navigating-financial-help.-resources-for-when-times-are-tough/</loc>
     <lastmod>2025-11-05T01:59:05-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/need/</loc>
+    <loc>https://joshuagoth.com/tags/need/</loc>
     <lastmod>2025-11-05T01:59:05-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/resources/</loc>
+    <loc>https://joshuagoth.com/tags/resources/</loc>
     <lastmod>2025-11-05T01:59:05-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/snap/</loc>
+    <loc>https://joshuagoth.com/tags/snap/</loc>
     <lastmod>2025-11-05T01:59:05-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/series/survival-series/</loc>
+    <loc>https://joshuagoth.com/series/survival-series/</loc>
     <lastmod>2025-11-05T01:59:05-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tough/</loc>
+    <loc>https://joshuagoth.com/tags/tough/</loc>
     <lastmod>2025-11-05T01:59:05-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cms/</loc>
+    <loc>https://joshuagoth.com/tags/cms/</loc>
     <lastmod>2025-11-04T22:51:28-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/gui/</loc>
+    <loc>https://joshuagoth.com/tags/gui/</loc>
     <lastmod>2025-11-04T22:51:28-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/html/</loc>
+    <loc>https://joshuagoth.com/tags/html/</loc>
     <lastmod>2025-11-04T22:51:28-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/hugo/</loc>
+    <loc>https://joshuagoth.com/categories/hugo/</loc>
     <lastmod>2025-11-04T22:51:28-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/11/trading-wordpress-for-the-command-line-my-static-site-awakening/</loc>
+    <loc>https://joshuagoth.com/blog/2025/11/trading-wordpress-for-the-command-line-my-static-site-awakening/</loc>
     <lastmod>2025-11-04T22:51:28-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/web-design/</loc>
+    <loc>https://joshuagoth.com/categories/web-design/</loc>
     <lastmod>2025-11-04T22:51:28-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/wordpress/</loc>
+    <loc>https://joshuagoth.com/categories/wordpress/</loc>
     <lastmod>2025-11-04T22:51:28-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/breathing/</loc>
+    <loc>https://joshuagoth.com/tags/breathing/</loc>
     <lastmod>2025-11-04T16:40:37-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cure/</loc>
+    <loc>https://joshuagoth.com/tags/cure/</loc>
     <lastmod>2025-11-04T16:40:37-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/energy/</loc>
+    <loc>https://joshuagoth.com/tags/energy/</loc>
     <lastmod>2025-11-04T16:40:37-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/healing/</loc>
+    <loc>https://joshuagoth.com/tags/healing/</loc>
     <lastmod>2025-11-04T16:40:37-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/meditation/</loc>
+    <loc>https://joshuagoth.com/categories/meditation/</loc>
     <lastmod>2025-11-04T16:40:37-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/stenosis/</loc>
+    <loc>https://joshuagoth.com/tags/stenosis/</loc>
     <lastmod>2025-11-04T16:40:37-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/11/the-impossible-cure-how-i-unlocked-my-bodys-power-to-heal-itself/</loc>
+    <loc>https://joshuagoth.com/blog/2025/11/the-impossible-cure-how-i-unlocked-my-bodys-power-to-heal-itself/</loc>
     <lastmod>2025-11-04T16:40:37-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hardship/</loc>
+    <loc>https://joshuagoth.com/tags/hardship/</loc>
     <lastmod>2025-11-04T14:25:38-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/life/</loc>
+    <loc>https://joshuagoth.com/tags/life/</loc>
     <lastmod>2025-11-04T14:25:38-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/reflection/</loc>
+    <loc>https://joshuagoth.com/tags/reflection/</loc>
     <lastmod>2025-11-04T14:25:38-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/struggle/</loc>
+    <loc>https://joshuagoth.com/tags/struggle/</loc>
     <lastmod>2025-11-04T14:25:38-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/11/the-myth-of-easy-times-why-were-always-preparing-for-a-storm/</loc>
+    <loc>https://joshuagoth.com/blog/2025/11/the-myth-of-easy-times-why-were-always-preparing-for-a-storm/</loc>
     <lastmod>2025-11-04T14:25:38-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/food/</loc>
+    <loc>https://joshuagoth.com/tags/food/</loc>
     <lastmod>2025-11-03T20:24:37-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/11/snap-benefit-cuts-making-food-last/</loc>
+    <loc>https://joshuagoth.com/blog/2025/11/snap-benefit-cuts-making-food-last/</loc>
     <lastmod>2025-11-03T20:24:37-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/fear/</loc>
+    <loc>https://joshuagoth.com/tags/fear/</loc>
     <lastmod>2025-11-03T18:15:17-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/malware/</loc>
+    <loc>https://joshuagoth.com/tags/malware/</loc>
     <lastmod>2025-11-03T18:15:17-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/virus/</loc>
+    <loc>https://joshuagoth.com/tags/virus/</loc>
     <lastmod>2025-11-03T18:15:17-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/11/why-i-gave-up-windows-for-linux/</loc>
+    <loc>https://joshuagoth.com/blog/2025/11/why-i-gave-up-windows-for-linux/</loc>
     <lastmod>2025-11-03T18:15:17-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/11/hello-world.-ten-years-later/</loc>
+    <loc>https://joshuagoth.com/blog/2025/11/hello-world.-ten-years-later/</loc>
     <lastmod>2025-11-01T09:24:24-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/introduction/</loc>
+    <loc>https://joshuagoth.com/tags/introduction/</loc>
     <lastmod>2025-11-01T09:24:24-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/contact/</loc>
+    <loc>https://joshuagoth.com/contact/</loc>
     <lastmod>2025-10-31T21:09:54-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://joshuagoth.com/project-cloudstrap/</loc>
+    <lastmod>2025-10-31T21:09:54-07:00</lastmod>
+  </url><url>
+    <loc>https://joshuagoth.com/about/</loc>
     <lastmod>2025-10-31T20:59:56-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/extraterrestrial/</loc>
+    <loc>https://joshuagoth.com/tags/extraterrestrial/</loc>
     <lastmod>2025-10-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/10/is-our-new-internet-old-extraterrestrial-technology/</loc>
+    <loc>https://joshuagoth.com/blog/2025/10/is-our-new-internet-old-extraterrestrial-technology/</loc>
     <lastmod>2025-10-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/10/the-unquenchable-ai.-our-thirst-for-technology-are-drinking-the-rivers-dry./</loc>
+    <loc>https://joshuagoth.com/blog/2025/10/the-unquenchable-ai.-our-thirst-for-technology-are-drinking-the-rivers-dry./</loc>
     <lastmod>2025-10-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/thirst/</loc>
+    <loc>https://joshuagoth.com/tags/thirst/</loc>
     <lastmod>2025-10-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/trap/</loc>
+    <loc>https://joshuagoth.com/tags/trap/</loc>
     <lastmod>2025-10-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/bad-idea/</loc>
+    <loc>https://joshuagoth.com/tags/bad-idea/</loc>
     <lastmod>2025-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/10/why-true-ai-is-a-bad-idea/</loc>
+    <loc>https://joshuagoth.com/blog/2025/10/why-true-ai-is-a-bad-idea/</loc>
     <lastmod>2025-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/10/changing-our-views-on-success-./</loc>
+    <loc>https://joshuagoth.com/blog/2025/10/changing-our-views-on-success-./</loc>
     <lastmod>2025-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/crying-out/</loc>
+    <loc>https://joshuagoth.com/tags/crying-out/</loc>
     <lastmod>2025-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/10/failing-words-how-self-harm-becomes-a-teens-only-voice/</loc>
+    <loc>https://joshuagoth.com/blog/2025/10/failing-words-how-self-harm-becomes-a-teens-only-voice/</loc>
     <lastmod>2025-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/important/</loc>
+    <loc>https://joshuagoth.com/tags/important/</loc>
     <lastmod>2025-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/self-harm/</loc>
+    <loc>https://joshuagoth.com/categories/self-harm/</loc>
     <lastmod>2025-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/self-harm/</loc>
+    <loc>https://joshuagoth.com/tags/self-harm/</loc>
     <lastmod>2025-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/success/</loc>
+    <loc>https://joshuagoth.com/categories/success/</loc>
     <lastmod>2025-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/success/</loc>
+    <loc>https://joshuagoth.com/tags/success/</loc>
     <lastmod>2025-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/teenagers/</loc>
+    <loc>https://joshuagoth.com/tags/teenagers/</loc>
     <lastmod>2025-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/views/</loc>
+    <loc>https://joshuagoth.com/tags/views/</loc>
     <lastmod>2025-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/10/when-artifical-intelligence-is-no-longer-artifical/</loc>
+    <loc>https://joshuagoth.com/blog/2025/10/when-artifical-intelligence-is-no-longer-artifical/</loc>
     <lastmod>2025-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/america/</loc>
+    <loc>https://joshuagoth.com/tags/america/</loc>
     <lastmod>2025-10-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/politics/</loc>
+    <loc>https://joshuagoth.com/tags/politics/</loc>
     <lastmod>2025-10-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/problems/</loc>
+    <loc>https://joshuagoth.com/tags/problems/</loc>
     <lastmod>2025-10-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/10/the-political-divide-in-america/</loc>
+    <loc>https://joshuagoth.com/blog/2025/10/the-political-divide-in-america/</loc>
     <lastmod>2025-10-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/admitting/</loc>
+    <loc>https://joshuagoth.com/tags/admitting/</loc>
     <lastmod>2025-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/aware/</loc>
+    <loc>https://joshuagoth.com/tags/aware/</loc>
     <lastmod>2025-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/courage/</loc>
+    <loc>https://joshuagoth.com/categories/courage/</loc>
     <lastmod>2025-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/courage/</loc>
+    <loc>https://joshuagoth.com/tags/courage/</loc>
     <lastmod>2025-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/10/how-mindfulness-puts-you-on-the-path-to-become-a-great-parent/</loc>
+    <loc>https://joshuagoth.com/blog/2025/10/how-mindfulness-puts-you-on-the-path-to-become-a-great-parent/</loc>
     <lastmod>2025-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/mistakes/</loc>
+    <loc>https://joshuagoth.com/tags/mistakes/</loc>
     <lastmod>2025-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/parenting/</loc>
+    <loc>https://joshuagoth.com/tags/parenting/</loc>
     <lastmod>2025-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/philosophy/</loc>
+    <loc>https://joshuagoth.com/tags/philosophy/</loc>
     <lastmod>2025-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/saticlym/</loc>
+    <loc>https://joshuagoth.com/tags/saticlym/</loc>
     <lastmod>2025-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/10/the-courage-to-admit-mistakes/</loc>
+    <loc>https://joshuagoth.com/blog/2025/10/the-courage-to-admit-mistakes/</loc>
     <lastmod>2025-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/10/the-saticlysm-philosophy.-a-simple-way-of-living/</loc>
+    <loc>https://joshuagoth.com/blog/2025/10/the-saticlysm-philosophy.-a-simple-way-of-living/</loc>
     <lastmod>2025-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/depression/</loc>
+    <loc>https://joshuagoth.com/categories/depression/</loc>
     <lastmod>2025-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/depression/</loc>
+    <loc>https://joshuagoth.com/tags/depression/</loc>
     <lastmod>2025-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/happy/</loc>
+    <loc>https://joshuagoth.com/tags/happy/</loc>
     <lastmod>2025-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/09/how-to-manage-depression-lead-a-happy-life/</loc>
+    <loc>https://joshuagoth.com/blog/2025/09/how-to-manage-depression-lead-a-happy-life/</loc>
     <lastmod>2025-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/09/how-to-manage-depression-lead-a-happy-life-part-2/</loc>
+    <loc>https://joshuagoth.com/blog/2025/09/how-to-manage-depression-lead-a-happy-life-part-2/</loc>
     <lastmod>2025-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/series/living-with-depression/</loc>
+    <loc>https://joshuagoth.com/series/living-with-depression/</loc>
     <lastmod>2025-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/09/how-to-stay-positive-while-living-with-chronic-pain/</loc>
+    <loc>https://joshuagoth.com/blog/2025/09/how-to-stay-positive-while-living-with-chronic-pain/</loc>
     <lastmod>2025-09-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/pain/</loc>
+    <loc>https://joshuagoth.com/tags/pain/</loc>
     <lastmod>2025-09-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/positivity/</loc>
+    <loc>https://joshuagoth.com/tags/positivity/</loc>
     <lastmod>2025-09-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/careers/</loc>
+    <loc>https://joshuagoth.com/categories/careers/</loc>
     <lastmod>2025-08-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/08/getting-your-foot-in-the-door-tips-from-an-it-vet/</loc>
+    <loc>https://joshuagoth.com/blog/2025/08/getting-your-foot-in-the-door-tips-from-an-it-vet/</loc>
     <lastmod>2025-08-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/it/</loc>
+    <loc>https://joshuagoth.com/tags/it/</loc>
     <lastmod>2025-08-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/jobs/</loc>
+    <loc>https://joshuagoth.com/tags/jobs/</loc>
     <lastmod>2025-08-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/communication/</loc>
+    <loc>https://joshuagoth.com/tags/communication/</loc>
     <lastmod>2025-08-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/difficult/</loc>
+    <loc>https://joshuagoth.com/tags/difficult/</loc>
     <lastmod>2025-08-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/effects/</loc>
+    <loc>https://joshuagoth.com/tags/effects/</loc>
     <lastmod>2025-08-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/fires/</loc>
+    <loc>https://joshuagoth.com/tags/fires/</loc>
     <lastmod>2025-08-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/homeless/</loc>
+    <loc>https://joshuagoth.com/tags/homeless/</loc>
     <lastmod>2025-08-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/homelessness/</loc>
+    <loc>https://joshuagoth.com/categories/homelessness/</loc>
     <lastmod>2025-08-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/08/how-to-avoid-tech-fires-in-the-workplace/</loc>
+    <loc>https://joshuagoth.com/blog/2025/08/how-to-avoid-tech-fires-in-the-workplace/</loc>
     <lastmod>2025-08-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/reality/</loc>
+    <loc>https://joshuagoth.com/categories/reality/</loc>
     <lastmod>2025-08-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/reality/</loc>
+    <loc>https://joshuagoth.com/tags/reality/</loc>
     <lastmod>2025-08-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/self-help/</loc>
+    <loc>https://joshuagoth.com/tags/self-help/</loc>
     <lastmod>2025-08-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/08/the-devistating-and-long-term-effects-of-being-homeless/</loc>
+    <loc>https://joshuagoth.com/blog/2025/08/the-devistating-and-long-term-effects-of-being-homeless/</loc>
     <lastmod>2025-08-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/08/why-difficult-family-members-shut-down-upon-hearing-the-truth/</loc>
+    <loc>https://joshuagoth.com/blog/2025/08/why-difficult-family-members-shut-down-upon-hearing-the-truth/</loc>
     <lastmod>2025-08-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/workplace/</loc>
+    <loc>https://joshuagoth.com/tags/workplace/</loc>
     <lastmod>2025-08-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/08/10-proven-methods-on-how-to-communicate-with-impossible-family-members/</loc>
+    <loc>https://joshuagoth.com/blog/2025/08/10-proven-methods-on-how-to-communicate-with-impossible-family-members/</loc>
     <lastmod>2025-08-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/expect/</loc>
+    <loc>https://joshuagoth.com/tags/expect/</loc>
     <lastmod>2025-08-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/starting/</loc>
+    <loc>https://joshuagoth.com/tags/starting/</loc>
     <lastmod>2025-08-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/08/what-to-expect-when-starting-a-career-in-technology/</loc>
+    <loc>https://joshuagoth.com/blog/2025/08/what-to-expect-when-starting-a-career-in-technology/</loc>
     <lastmod>2025-08-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/dreams/</loc>
+    <loc>https://joshuagoth.com/categories/dreams/</loc>
     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/dreams/</loc>
+    <loc>https://joshuagoth.com/tags/dreams/</loc>
     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/meaning/</loc>
+    <loc>https://joshuagoth.com/tags/meaning/</loc>
     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/08/what-it-means-to-dream/</loc>
+    <loc>https://joshuagoth.com/blog/2025/08/what-it-means-to-dream/</loc>
     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/awareness/</loc>
+    <loc>https://joshuagoth.com/categories/awareness/</loc>
     <lastmod>2025-07-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/07/becoming-mindful.-choosing-the-path-to-a-better-life/</loc>
+    <loc>https://joshuagoth.com/blog/2025/07/becoming-mindful.-choosing-the-path-to-a-better-life/</loc>
     <lastmod>2025-07-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/meditation/</loc>
+    <loc>https://joshuagoth.com/tags/meditation/</loc>
     <lastmod>2025-07-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/archives/2025/</loc>
+    <loc>https://joshuagoth.com/archives/2025/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hans"
-                href="http://localhost:1313/zh-hans/archives/2025/"
+                href="https://joshuagoth.com/zh-hans/archives/2025/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/archives/2025/"
+                href="https://joshuagoth.com/archives/2025/"
                 />
   </url><url>
-    <loc>http://localhost:1313/archives/2025/04/</loc>
+    <loc>https://joshuagoth.com/archives/2025/04/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hans"
-                href="http://localhost:1313/zh-hans/archives/2025/04/"
+                href="https://joshuagoth.com/zh-hans/archives/2025/04/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/archives/2025/04/"
+                href="https://joshuagoth.com/archives/2025/04/"
                 />
   </url><url>
-    <loc>http://localhost:1313/archives/</loc>
+    <loc>https://joshuagoth.com/archives/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hans"
-                href="http://localhost:1313/zh-hans/archives/"
+                href="https://joshuagoth.com/zh-hans/archives/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/archives/"
+                href="https://joshuagoth.com/archives/"
                 />
   </url><url>
-    <loc>http://localhost:1313/archives/2025/08/</loc>
+    <loc>https://joshuagoth.com/archives/2025/08/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hans"
-                href="http://localhost:1313/zh-hans/archives/2025/08/"
+                href="https://joshuagoth.com/zh-hans/archives/2025/08/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/archives/2025/08/"
+                href="https://joshuagoth.com/archives/2025/08/"
                 />
   </url><url>
-    <loc>http://localhost:1313/archives/2025/12/</loc>
+    <loc>https://joshuagoth.com/archives/2025/12/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hans"
-                href="http://localhost:1313/zh-hans/archives/2025/12/"
+                href="https://joshuagoth.com/zh-hans/archives/2025/12/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/archives/2025/12/"
+                href="https://joshuagoth.com/archives/2025/12/"
                 />
   </url><url>
-    <loc>http://localhost:1313/archives/2025/02/</loc>
+    <loc>https://joshuagoth.com/archives/2025/02/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hans"
-                href="http://localhost:1313/zh-hans/archives/2025/02/"
+                href="https://joshuagoth.com/zh-hans/archives/2025/02/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/archives/2025/02/"
+                href="https://joshuagoth.com/archives/2025/02/"
                 />
   </url><url>
-    <loc>http://localhost:1313/archives/2025/01/</loc>
+    <loc>https://joshuagoth.com/archives/2025/01/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hans"
-                href="http://localhost:1313/zh-hans/archives/2025/01/"
+                href="https://joshuagoth.com/zh-hans/archives/2025/01/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/archives/2025/01/"
+                href="https://joshuagoth.com/archives/2025/01/"
                 />
   </url><url>
-    <loc>http://localhost:1313/archives/2025/07/</loc>
+    <loc>https://joshuagoth.com/archives/2025/07/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hans"
-                href="http://localhost:1313/zh-hans/archives/2025/07/"
+                href="https://joshuagoth.com/zh-hans/archives/2025/07/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/archives/2025/07/"
+                href="https://joshuagoth.com/archives/2025/07/"
                 />
   </url><url>
-    <loc>http://localhost:1313/archives/2025/06/</loc>
+    <loc>https://joshuagoth.com/archives/2025/06/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hans"
-                href="http://localhost:1313/zh-hans/archives/2025/06/"
+                href="https://joshuagoth.com/zh-hans/archives/2025/06/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/archives/2025/06/"
+                href="https://joshuagoth.com/archives/2025/06/"
                 />
   </url><url>
-    <loc>http://localhost:1313/archives/2025/03/</loc>
+    <loc>https://joshuagoth.com/archives/2025/03/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hans"
-                href="http://localhost:1313/zh-hans/archives/2025/03/"
+                href="https://joshuagoth.com/zh-hans/archives/2025/03/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/archives/2025/03/"
+                href="https://joshuagoth.com/archives/2025/03/"
                 />
   </url><url>
-    <loc>http://localhost:1313/archives/2025/05/</loc>
+    <loc>https://joshuagoth.com/archives/2025/05/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hans"
-                href="http://localhost:1313/zh-hans/archives/2025/05/"
+                href="https://joshuagoth.com/zh-hans/archives/2025/05/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/archives/2025/05/"
+                href="https://joshuagoth.com/archives/2025/05/"
                 />
   </url><url>
-    <loc>http://localhost:1313/archives/2025/11/</loc>
+    <loc>https://joshuagoth.com/archives/2025/11/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hans"
-                href="http://localhost:1313/zh-hans/archives/2025/11/"
+                href="https://joshuagoth.com/zh-hans/archives/2025/11/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/archives/2025/11/"
+                href="https://joshuagoth.com/archives/2025/11/"
                 />
   </url><url>
-    <loc>http://localhost:1313/archives/2025/10/</loc>
+    <loc>https://joshuagoth.com/archives/2025/10/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hans"
-                href="http://localhost:1313/zh-hans/archives/2025/10/"
+                href="https://joshuagoth.com/zh-hans/archives/2025/10/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/archives/2025/10/"
+                href="https://joshuagoth.com/archives/2025/10/"
                 />
   </url><url>
-    <loc>http://localhost:1313/archives/2025/09/</loc>
+    <loc>https://joshuagoth.com/archives/2025/09/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hans"
-                href="http://localhost:1313/zh-hans/archives/2025/09/"
+                href="https://joshuagoth.com/zh-hans/archives/2025/09/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/archives/2025/09/"
+                href="https://joshuagoth.com/archives/2025/09/"
                 />
   </url><url>
-    <loc>http://localhost:1313/updates/</loc>
+    <loc>https://joshuagoth.com/updates/</loc>
   </url>
 </urlset>
